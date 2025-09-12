@@ -32,8 +32,9 @@ const About = () => {
             </p>
 
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              Com anos de experiência no mercado, combinamos expertise técnica com criatividade 
-              para entregar soluções que realmente fazem a diferença no seu negócio ou carreira.
+              Iniciamos nossos trabalhos em janeiro de 2026, mas nossa equipe já tem anos de 
+              experiência no mercado, combinando expertise técnica com criatividade para entregar 
+              soluções que realmente fazem a diferença no seu negócio ou carreira.
             </p>
 
             {/* Technologies */}
