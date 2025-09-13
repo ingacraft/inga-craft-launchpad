@@ -45,7 +45,7 @@ const Services = () => {
             return (
               <Card 
                 key={service.title} 
-                className="glass-card hover:scale-105 transition-smooth animate-fade-in group cursor-pointer"
+                className="glass-card hover:scale-105 hover:shadow-[0_0_30px_rgba(34,197,94,0.3)] transition-all duration-300 animate-fade-in group cursor-pointer"
                 style={{ animationDelay: `${(index + 1) * 0.2}s` }}
               >
                 <CardHeader className="text-center pb-4">
