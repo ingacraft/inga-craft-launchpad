@@ -176,7 +176,7 @@ All colors MUST be HSL.
     content: '';
     position: absolute;
     inset: -2px;
-    background: conic-gradient(from 0deg, hsl(217 91% 60%), transparent, transparent, transparent, hsl(217 91% 60%));
+    background: conic-gradient(from 0deg, hsl(217 91% 60%), hsl(217 91% 60%), transparent, transparent, transparent, transparent, hsl(217 91% 60%));
     border-radius: inherit;
     animation: rotate 6s linear infinite;
     z-index: -1;
@@ -200,7 +200,7 @@ All colors MUST be HSL.
     content: '';
     position: absolute;
     inset: -2px;
-    background: conic-gradient(from 0deg, hsl(142 76% 36%), transparent, transparent, transparent, hsl(142 76% 36%));
+    background: conic-gradient(from 0deg, hsl(142 76% 36%), hsl(142 76% 36%), transparent, transparent, transparent, transparent, hsl(142 76% 36%));
     border-radius: inherit;
     animation: rotate 6s linear infinite;
     z-index: -1;
@@ -224,7 +224,7 @@ All colors MUST be HSL.
     content: '';
     position: absolute;
     inset: -2px;
-    background: conic-gradient(from 0deg, hsl(262 83% 58%), transparent, transparent, transparent, hsl(262 83% 58%));
+    background: conic-gradient(from 0deg, hsl(262 83% 58%), hsl(262 83% 58%), transparent, transparent, transparent, transparent, hsl(262 83% 58%));
     border-radius: inherit;
     animation: rotate 6s linear infinite;
     z-index: -1;
