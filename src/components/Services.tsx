@@ -42,10 +42,15 @@ const Services = () => {
         <div className="grid md:grid-cols-3 gap-8">
           {services.map((service, index) => {
             const Icon = service.icon;
+            const borderClasses = [
+              'rotating-border-blue',
+              'rotating-border-green', 
+              'rotating-border-purple'
+            ];
             return (
               <Card 
                 key={service.title} 
-                className="glass-card hover:scale-105 hover:shadow-[0_0_30px_rgba(34,197,94,0.3)] transition-all duration-300 animate-fade-in group cursor-pointer"
+                className={`glass-card hover:scale-105 hover:shadow-[0_0_30px_rgba(34,197,94,0.3)] transition-all duration-300 animate-fade-in group cursor-pointer ${borderClasses[index]}`}
                 style={{ animationDelay: `${(index + 1) * 0.2}s` }}
               >
                 <CardHeader className="text-center pb-4">
