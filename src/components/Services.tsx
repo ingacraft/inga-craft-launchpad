@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Code2, Monitor, GraduationCap, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Services = () => {
   const services = [
@@ -74,10 +75,19 @@ const Services = () => {
                     ))}
                   </ul>
                   
-                  <Button variant="outline" className="group w-full">
-                    Saiba Mais
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </Button>
+                  {service.title === "Desenvolvimento Web" ? (
+                    <Button variant="outline" className="group w-full" asChild>
+                      <Link to="/desenvolvimento-web">
+                        Saiba Mais
+                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                      </Link>
+                    </Button>
+                  ) : (
+                    <Button variant="outline" className="group w-full">
+                      Saiba Mais
+                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    </Button>
+                  )}
                 </CardContent>
               </Card>
             );
