@@ -262,7 +262,7 @@ All colors MUST be HSL.
   }
   
   .tiktok-gradient {
-    background: linear-gradient(135deg, #000000, #ff0050, #00f2ea);
+    background: #000000;
   }
   
   .youtube-red {
