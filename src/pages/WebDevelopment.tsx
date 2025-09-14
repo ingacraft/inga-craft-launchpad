@@ -7,18 +7,19 @@ import { Check, Star, Code2, Database, Globe, GitBranch } from "lucide-react";
 
 const WebDevelopment = () => {
   const technologies = [
-    { name: "HTML5", icon: "🌐", category: "Frontend" },
-    { name: "CSS3", icon: "🎨", category: "Frontend" },
-    { name: "JavaScript", icon: "⚡", category: "Frontend" },
-    { name: "React", icon: "⚛️", category: "Frontend" },
-    { name: "Next.js", icon: "▲", category: "Frontend" },
-    { name: "TailwindCSS", icon: "🎯", category: "Frontend" },
-    { name: "Bootstrap", icon: "📱", category: "Frontend" },
-    { name: "Node.js", icon: "💚", category: "Backend" },
-    { name: "Express", icon: "🚀", category: "Backend" },
-    { name: "MySQL", icon: "🐬", category: "Database" },
-    { name: "MongoDB", icon: "🍃", category: "Database" },
-    { name: "Git/GitHub", icon: "🔗", category: "Version Control" }
+    { name: "HTML5", color: "#E34F26", textColor: "white" },
+    { name: "CSS3", color: "#1572B6", textColor: "white" },
+    { name: "JavaScript", color: "#F7DF1E", textColor: "black" },
+    { name: "React", color: "#61DAFB", textColor: "black" },
+    { name: "Next.js", color: "#000000", textColor: "white" },
+    { name: "TailwindCSS", color: "#38B2AC", textColor: "white" },
+    { name: "Bootstrap", color: "#7952B3", textColor: "white" },
+    { name: "Node.js", color: "#339933", textColor: "white" },
+    { name: "Express", color: "#000000", textColor: "white" },
+    { name: "MySQL", color: "#4479A1", textColor: "white" },
+    { name: "MongoDB", color: "#47A248", textColor: "white" },
+    { name: "Git", color: "#F05032", textColor: "white" },
+    { name: "GitHub", color: "#181717", textColor: "white" }
   ];
 
   const plans = [
@@ -122,17 +123,18 @@ const WebDevelopment = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
             {technologies.map((tech, index) => (
-              <Card key={tech.name} className="glass-card hover:scale-105 transition-all duration-300 text-center group">
-                <CardContent className="pt-6">
-                  <div className="text-4xl mb-3">{tech.icon}</div>
-                  <h3 className="font-semibold text-lg mb-2">{tech.name}</h3>
-                  <Badge variant="outline" className="text-xs">
-                    {tech.category}
-                  </Badge>
-                </CardContent>
-              </Card>
+              <div 
+                key={tech.name} 
+                className="rounded-lg p-4 hover:scale-105 transition-all duration-300 text-center font-semibold shadow-lg"
+                style={{ 
+                  backgroundColor: tech.color,
+                  color: tech.textColor
+                }}
+              >
+                {tech.name}
+              </div>
             ))}
           </div>
         </div>
