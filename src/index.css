@@ -283,7 +283,7 @@ All colors MUST be HSL.
   }
   
   .shadow-tiktok {
-    box-shadow: 0 10px 30px rgba(255, 0, 80, 0.4);
+    box-shadow: 0 10px 30px rgba(128, 128, 128, 0.4);
   }
   
   .shadow-youtube {
