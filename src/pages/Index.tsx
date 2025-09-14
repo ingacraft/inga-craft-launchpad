@@ -3,6 +3,7 @@ import Navigation from "@/components/Navigation";
 import Services from "@/components/Services";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
+import SocialMedia from "@/components/SocialMedia";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -13,6 +14,7 @@ const Index = () => {
       <Services />
       <About />
       <Contact />
+      <SocialMedia />
       <Footer />
     </div>
   );
