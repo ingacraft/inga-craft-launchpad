@@ -96,25 +96,22 @@ const WebDevelopment = () => {
   ];
 
   return (
-    <div 
-      className="min-h-screen bg-background relative"
-      style={{
-        backgroundImage: `url(${codeBackground})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        backgroundAttachment: 'fixed'
-      }}
-    >
-      {/* Overlay for opacity control */}
-      <div className="absolute inset-0 bg-background/60 z-0"></div>
-      
-      {/* Content wrapper */}
-      <div className="relative z-10">
-        <Navigation />
+    <div className="min-h-screen bg-background">
+      <Navigation />
       
       {/* Hero Section */}
-      <section className="gradient-hero py-20 px-6 mt-20">
+      <section 
+        className="gradient-hero py-20 px-6 mt-20 relative"
+        style={{
+          backgroundImage: `url(${codeBackground})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        {/* Overlay for opacity control */}
+        <div className="absolute inset-0 bg-background/40 z-0"></div>
+        <div className="relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in">
             Desenvolvimento Web
@@ -125,11 +122,23 @@ const WebDevelopment = () => {
           <Button size="lg" className="gradient-primary text-white font-semibold px-8 py-3 animate-fade-in" style={{ animationDelay: "0.4s" }}>
             Solicitar Orçamento
           </Button>
+          </div>
         </div>
       </section>
 
       {/* Technologies Section */}
-      <section className="py-20 px-6">
+      <section 
+        className="py-20 px-6 relative"
+        style={{
+          backgroundImage: `url(${codeBackground})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        {/* Overlay for opacity control */}
+        <div className="absolute inset-0 bg-background/40 z-0"></div>
+        <div className="relative z-10">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Tecnologias Utilizadas</h2>
@@ -151,6 +160,7 @@ const WebDevelopment = () => {
                 {tech.name}
               </div>
             ))}
+          </div>
           </div>
         </div>
       </section>
@@ -242,8 +252,7 @@ const WebDevelopment = () => {
         </div>
       </section>
 
-        <Footer />
-      </div>
+      <Footer />
     </div>
   );
 };
