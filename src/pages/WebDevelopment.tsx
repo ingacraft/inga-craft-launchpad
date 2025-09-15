@@ -20,7 +20,9 @@ const WebDevelopment = () => {
     { name: "MySQL", color: "#4479A1", textColor: "white" },
     { name: "MongoDB", color: "#47A248", textColor: "white" },
     { name: "Git", color: "#F05032", textColor: "white" },
-    { name: "GitHub", color: "#181717", textColor: "white" }
+    { name: "GitHub", color: "#181717", textColor: "white" },
+    { name: "WordPress", color: "#1d7edaff", textColor: "white" },
+    { name: "NuvemShop", color: "#085ba0ff", textColor: "white" },
   ];
 
   const plans = [
