@@ -3,23 +3,23 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Check, Star } from "lucide-react";
+import { Check, Star, Code2, Database, Globe, GitBranch } from "lucide-react";
 
 const WebDevelopment = () => {
   const technologies = [
-    { name: "HTML5", color: "rgba(227, 79, 38, 0.4)", textColor: "white" },
-    { name: "CSS3", color: "rgba(21, 114, 182, 0.4)", textColor: "white" },
-    { name: "JavaScript", color: "rgba(247, 221, 29, 0.4)", textColor: "black" },
-    { name: "React", color: "rgba(97, 218, 251, 0.4)", textColor: "black" },
-    { name: "Next.js", color: "rgba(0, 0, 0, 0.4)", textColor: "white" },
-    { name: "TailwindCSS", color: "rgba(56, 178, 172, 0.4)", textColor: "white" },
-    { name: "Bootstrap", color: "rgba(121, 82, 179, 0.4)", textColor: "white" },
-    { name: "Node.js", color: "rgba(51, 153, 51, 0.4)", textColor: "white" },
-    { name: "Express", color: "rgba(0, 0, 0, 0.4)", textColor: "white" },
-    { name: "MySQL", color: "rgba(68, 121, 161, 0.4)", textColor: "white" },
-    { name: "MongoDB", color: "rgba(71, 162, 72, 0.4)", textColor: "white" },
-    { name: "Git", color: "rgba(240, 80, 50, 0.4)", textColor: "white" },
-    { name: "GitHub", color: "rgba(24, 23, 23, 0.4)", textColor: "white" },
+    { name: "HTML5", color: "#E34F26", textColor: "white" },
+    { name: "CSS3", color: "#1572B6", textColor: "white" },
+    { name: "JavaScript", color: "#F7DF1E", textColor: "black" },
+    { name: "React", color: "#61DAFB", textColor: "black" },
+    { name: "Next.js", color: "#000000", textColor: "white" },
+    { name: "TailwindCSS", color: "#38B2AC", textColor: "white" },
+    { name: "Bootstrap", color: "#7952B3", textColor: "white" },
+    { name: "Node.js", color: "#339933", textColor: "white" },
+    { name: "Express", color: "#000000", textColor: "white" },
+    { name: "MySQL", color: "#4479A1", textColor: "white" },
+    { name: "MongoDB", color: "#47A248", textColor: "white" },
+    { name: "Git", color: "#F05032", textColor: "white" },
+    { name: "GitHub", color: "#181717", textColor: "white" }
   ];
 
   const plans = [
@@ -99,64 +99,44 @@ const WebDevelopment = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section
-        className="relative py-20 px-6 mt-20 bg-cover bg-center"
-        style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1581090700227-4c4c78cd6df9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')",
-        }}
-      >
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-black/70 z-0"></div>
-
-        {/* Conteúdo */}
-        <div className="relative z-10 max-w-4xl mx-auto text-center text-white">
+      <section className="gradient-hero py-20 px-6 mt-20">
+        <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in">
             Desenvolvimento Web
           </h1>
-          <p
-            className="text-xl md:text-2xl text-gray-200 mb-8 animate-fade-in"
-            style={{ animationDelay: "0.2s" }}
-          >
-            Construímos sites modernos, rápidos, responsivos e pensados para gerar
-            resultados.
+          <p className="text-xl md:text-2xl text-muted-foreground mb-8 animate-fade-in" style={{ animationDelay: "0.2s" }}>
+            Construímos sites modernos, rápidos, responsivos e pensados para gerar resultados.
           </p>
-          <Button
-            size="lg"
-            className="gradient-primary text-white font-semibold px-8 py-3 animate-fade-in"
-            style={{ animationDelay: "0.4s" }}
-          >
+          <Button size="lg" className="gradient-primary text-white font-semibold px-8 py-3 animate-fade-in" style={{ animationDelay: "0.4s" }}>
             Solicitar Orçamento
           </Button>
         </div>
       </section>
 
       {/* Technologies Section */}
-      <section className="py-20 px-6 relative bg-gradient-to-br from-gray-900 via-gray-800 to-black">
-        <div className="max-w-6xl mx-auto text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Tecnologias que Utilizamos
-          </h2>
-          <p className="text-lg text-gray-300">
-            Construímos soluções modernas usando as principais ferramentas do
-            mercado.
-          </p>
-        </div>
+      <section className="py-20 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">Tecnologias Utilizadas</h2>
+            <p className="text-xl text-muted-foreground">
+              Trabalhamos com as mais modernas tecnologias do mercado
+            </p>
+          </div>
 
-        {/* Grid das tecnologias */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
-          {technologies.map((tech) => (
-            <div
-              key={tech.name}
-              className="px-6 py-4 rounded-2xl shadow-lg backdrop-blur-md border border-white/10 flex items-center justify-center font-semibold text-lg"
-              style={{
-                backgroundColor: tech.color, // cor com transparência
-                color: tech.textColor,
-              }}
-            >
-              {tech.name}
-            </div>
-          ))}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+            {technologies.map((tech, index) => (
+              <div 
+                key={tech.name} 
+                className="rounded-lg p-4 hover:scale-105 transition-all duration-300 text-center font-semibold shadow-lg"
+                style={{ 
+                  backgroundColor: tech.color,
+                  color: tech.textColor
+                }}
+              >
+                {tech.name}
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -171,7 +151,7 @@ const WebDevelopment = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {plans.map((plan) => (
+            {plans.map((plan, index) => (
               <Card 
                 key={plan.name} 
                 className={`relative glass-card hover:scale-105 transition-all duration-300 ${
@@ -227,7 +207,7 @@ const WebDevelopment = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project) => (
+            {projects.map((project, index) => (
               <Card key={project.name} className="glass-card hover:scale-105 transition-all duration-300 overflow-hidden group">
                 <div className="relative overflow-hidden">
                   <img 
