@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Check, Star, Code2, Database, Globe, GitBranch } from "lucide-react";
+import codeBackground from "@/assets/code-background.jpg";
 
 const WebDevelopment = () => {
   const technologies = [
@@ -95,8 +96,22 @@ const WebDevelopment = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
-      <Navigation />
+    <div 
+      className="min-h-screen bg-background relative"
+      style={{
+        backgroundImage: `url(${codeBackground})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundAttachment: 'fixed'
+      }}
+    >
+      {/* Overlay for opacity control */}
+      <div className="absolute inset-0 bg-background/60 z-0"></div>
+      
+      {/* Content wrapper */}
+      <div className="relative z-10">
+        <Navigation />
       
       {/* Hero Section */}
       <section className="gradient-hero py-20 px-6 mt-20">
@@ -127,10 +142,10 @@ const WebDevelopment = () => {
             {technologies.map((tech, index) => (
               <div 
                 key={tech.name} 
-                className="rounded-lg p-4 hover:scale-105 transition-all duration-300 text-center font-semibold shadow-lg"
+                className="rounded-lg p-4 hover:scale-105 transition-all duration-300 text-center font-semibold shadow-lg backdrop-blur-sm border border-white/10"
                 style={{ 
-                  backgroundColor: tech.color,
-                  color: tech.textColor
+                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                  color: tech.color
                 }}
               >
                 {tech.name}
@@ -227,7 +242,8 @@ const WebDevelopment = () => {
         </div>
       </section>
 
-      <Footer />
+        <Footer />
+      </div>
     </div>
   );
 };
