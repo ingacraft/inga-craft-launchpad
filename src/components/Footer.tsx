@@ -33,12 +33,23 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold mb-4">Contato</h3>
             <ul className="space-y-2 text-muted-foreground">
-              <li>ingacraftadm@gmail.com</li>
+              <li>contato@ingacraft.com</li>
               <li>(11) 9999-9999</li>
-              <li>Maringá - PR</li>
+              <li>São Paulo, SP</li>
             </ul>
             
-           
+            {/* Social Links */}
+            <div className="flex space-x-4 mt-4">
+              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                <Github className="w-5 h-5" />
+              </a>
+              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                <Linkedin className="w-5 h-5" />
+              </a>
+              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                <Twitter className="w-5 h-5" />
+              </a>
+            </div>
           </div>
         </div>
 

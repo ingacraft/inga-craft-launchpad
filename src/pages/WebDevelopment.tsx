@@ -7,19 +7,19 @@ import { Check, Star, Code2, Database, Globe, GitBranch } from "lucide-react";
 
 const WebDevelopment = () => {
   const technologies = [
-    { name: "HTML5", color: "rgba(227, 79, 38, 0.7)", textColor: "white" },
-    { name: "CSS3", color: "rgba(21, 114, 182, 0.7)", textColor: "white" },
-    { name: "JavaScript", color: "rgba(247, 221, 29, 0.7)", textColor: "black" },
-    { name: "React", color: "rgba(97, 218, 251, 0.7)", textColor: "black" },
-    { name: "Next.js", color: "rgba(0, 0, 0, 0.7)", textColor: "white" },
-    { name: "TailwindCSS", color: "rgba(56, 178, 172, 0.7)", textColor: "white" },
-    { name: "Bootstrap", color: "rgba(121, 82, 179, 0.7)", textColor: "white" },
-    { name: "Node.js", color: "rgba(51, 153, 51, 0.7)", textColor: "white" },
-    { name: "Express", color: "rgba(0, 0, 0, 0.7)", textColor: "white" },
-    { name: "MySQL", color: "rgba(68, 121, 161, 0.7)", textColor: "white" },
-    { name: "MongoDB", color: "rgba(71, 162, 72, 0.7)", textColor: "white" },
-    { name: "Git", color: "rgba(240, 80, 50, 0.7)", textColor: "white" },
-    { name: "GitHub", color: "rgba(24, 23, 23, 0.7)", textColor: "white" }
+    { name: "HTML5", color: "#E34F26", textColor: "white" },
+    { name: "CSS3", color: "#1572B6", textColor: "white" },
+    { name: "JavaScript", color: "#F7DF1E", textColor: "black" },
+    { name: "React", color: "#61DAFB", textColor: "black" },
+    { name: "Next.js", color: "#000000", textColor: "white" },
+    { name: "TailwindCSS", color: "#38B2AC", textColor: "white" },
+    { name: "Bootstrap", color: "#7952B3", textColor: "white" },
+    { name: "Node.js", color: "#339933", textColor: "white" },
+    { name: "Express", color: "#000000", textColor: "white" },
+    { name: "MySQL", color: "#4479A1", textColor: "white" },
+    { name: "MongoDB", color: "#47A248", textColor: "white" },
+    { name: "Git", color: "#F05032", textColor: "white" },
+    { name: "GitHub", color: "#181717", textColor: "white" }
   ];
 
   const plans = [
@@ -99,38 +99,19 @@ const WebDevelopment = () => {
       <Navigation />
       
       {/* Hero Section */}
-<section
-  className="relative py-20 px-6 mt-20 bg-cover bg-center"
-  style={{
-    backgroundImage:
-      "url('https://images.unsplash.com/photo-1581092334445-1d08b6c7d7a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')",
-  }}
->
-  {/* Overlay */}
-  <div className="absolute inset-0 bg-black/60"></div>
-
-  {/* Conteúdo */}
-  <div className="relative max-w-4xl mx-auto text-center text-white">
-    <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in">
-      Desenvolvimento Web
-    </h1>
-    <p
-      className="text-xl md:text-2xl text-gray-200 mb-8 animate-fade-in"
-      style={{ animationDelay: "0.2s" }}
-    >
-      Construímos sites modernos, rápidos, responsivos e pensados para gerar
-      resultados.
-    </p>
-    <Button
-      size="lg"
-      className="gradient-primary text-white font-semibold px-8 py-3 animate-fade-in"
-      style={{ animationDelay: "0.4s" }}
-    >
-      Solicitar Orçamento
-    </Button>
-  </div>
-</section>
-
+      <section className="gradient-hero py-20 px-6 mt-20">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in">
+            Desenvolvimento Web
+          </h1>
+          <p className="text-xl md:text-2xl text-muted-foreground mb-8 animate-fade-in" style={{ animationDelay: "0.2s" }}>
+            Construímos sites modernos, rápidos, responsivos e pensados para gerar resultados.
+          </p>
+          <Button size="lg" className="gradient-primary text-white font-semibold px-8 py-3 animate-fade-in" style={{ animationDelay: "0.4s" }}>
+            Solicitar Orçamento
+          </Button>
+        </div>
+      </section>
 
       {/* Technologies Section */}
       <section className="py-20 px-6">
