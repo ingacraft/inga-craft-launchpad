@@ -108,7 +108,7 @@ const WebDevelopment = () => {
   }}
 >
   {/* Overlay */}
- 
+  <div className="absolute inset-0 bg-black/60 z-0"></div>
 
   {/* Conteúdo */}
   <div className="relative z-10 max-w-4xl mx-auto text-center text-white">
@@ -131,6 +131,8 @@ const WebDevelopment = () => {
     </Button>
   </div>
 </section>
+
+
 
 
 
