@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Check, Star, Code2, Database, Globe, GitBranch } from "lucide-react";
-import techWorkspaceBg from "@/assets/tech-workspace-bg.jpg";
+import digitalTechBg from "@/assets/digital-tech-bg.jpg";
 
 const WebDevelopment = () => {
   const technologies = [
@@ -103,7 +103,7 @@ const WebDevelopment = () => {
       <section 
         className="gradient-hero py-20 px-6 mt-20 relative"
         style={{
-          backgroundImage: `url(${techWorkspaceBg})`,
+          backgroundImage: `url(${digitalTechBg})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
@@ -130,7 +130,7 @@ const WebDevelopment = () => {
       <section 
         className="py-20 px-6 relative"
         style={{
-          backgroundImage: `url(${techWorkspaceBg})`,
+          backgroundImage: `url(${digitalTechBg})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
