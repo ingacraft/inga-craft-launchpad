@@ -3,7 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Check, Star, Code2, Database, Globe, GitBranch } from "lucide-react";
+import { Check, Star } from "lucide-react";
 
 const WebDevelopment = () => {
   const technologies = [
@@ -99,73 +99,66 @@ const WebDevelopment = () => {
       <Navigation />
       
       {/* Hero Section */}
-{/* Hero Section */}
-<section
-  className="relative py-20 px-6 mt-20 bg-cover bg-center"
-  style={{
-    backgroundImage:
-      "url('https://images.unsplash.com/photo-1581091012184-5c9af604238d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')",
-  }}
->
-  {/* Overlay */}
-  <div className="absolute inset-0 bg-black/60 z-0"></div>
+      <section
+        className="relative py-20 px-6 mt-20 bg-cover bg-center"
+        style={{
+          backgroundImage:
+            "url('https://images.unsplash.com/photo-1581090700227-4c4c78cd6df9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')",
+        }}
+      >
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/70 z-0"></div>
 
-  {/* Conteúdo */}
-  <div className="relative z-10 max-w-4xl mx-auto text-center text-white">
-    <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in">
-      Desenvolvimento Web
-    </h1>
-    <p
-      className="text-xl md:text-2xl text-gray-200 mb-8 animate-fade-in"
-      style={{ animationDelay: "0.2s" }}
-    >
-      Construímos sites modernos, rápidos, responsivos e pensados para gerar
-      resultados.
-    </p>
-    <Button
-      size="lg"
-      className="gradient-primary text-white font-semibold px-8 py-3 animate-fade-in"
-      style={{ animationDelay: "0.4s" }}
-    >
-      Solicitar Orçamento
-    </Button>
-  </div>
-</section>
-
-
-
+        {/* Conteúdo */}
+        <div className="relative z-10 max-w-4xl mx-auto text-center text-white">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in">
+            Desenvolvimento Web
+          </h1>
+          <p
+            className="text-xl md:text-2xl text-gray-200 mb-8 animate-fade-in"
+            style={{ animationDelay: "0.2s" }}
+          >
+            Construímos sites modernos, rápidos, responsivos e pensados para gerar
+            resultados.
+          </p>
+          <Button
+            size="lg"
+            className="gradient-primary text-white font-semibold px-8 py-3 animate-fade-in"
+            style={{ animationDelay: "0.4s" }}
+          >
+            Solicitar Orçamento
+          </Button>
+        </div>
+      </section>
 
       {/* Technologies Section */}
-         <section className="py-20 px-6 relative bg-gradient-to-br from-gray-900 via-gray-800 to-black">
-      <div className="max-w-6xl mx-auto text-center mb-12">
-        <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-          Tecnologias que Utilizamos
-        </h2>
-        <p className="text-lg text-gray-300">
-          Construímos soluções modernas usando as principais ferramentas do
-          mercado.
-        </p>
-      </div>
+      <section className="py-20 px-6 relative bg-gradient-to-br from-gray-900 via-gray-800 to-black">
+        <div className="max-w-6xl mx-auto text-center mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            Tecnologias que Utilizamos
+          </h2>
+          <p className="text-lg text-gray-300">
+            Construímos soluções modernas usando as principais ferramentas do
+            mercado.
+          </p>
+        </div>
 
-      {/* Grid das tecnologias */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
-        {technologies.map((tech) => (
-          <div
-            key={tech.name}
-            className="px-6 py-4 rounded-2xl shadow-lg backdrop-blur-md border border-white/10 flex items-center justify-center font-semibold text-lg"
-            style={{
-              backgroundColor: tech.color,
-              color: tech.textColor,
-            }}
-          >
-            {tech.name}
-          </div>
-        ))}
-      </div>
-    </section>
-  
-
-
+        {/* Grid das tecnologias */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+          {technologies.map((tech) => (
+            <div
+              key={tech.name}
+              className="px-6 py-4 rounded-2xl shadow-lg backdrop-blur-md border border-white/10 flex items-center justify-center font-semibold text-lg"
+              style={{
+                backgroundColor: tech.color, // cor com transparência
+                color: tech.textColor,
+              }}
+            >
+              {tech.name}
+            </div>
+          ))}
+        </div>
+      </section>
 
       {/* Pricing Plans Section */}
       <section className="py-20 px-6 bg-card/50">
@@ -178,7 +171,7 @@ const WebDevelopment = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {plans.map((plan, index) => (
+            {plans.map((plan) => (
               <Card 
                 key={plan.name} 
                 className={`relative glass-card hover:scale-105 transition-all duration-300 ${
@@ -234,7 +227,7 @@ const WebDevelopment = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project, index) => (
+            {projects.map((project) => (
               <Card key={project.name} className="glass-card hover:scale-105 transition-all duration-300 overflow-hidden group">
                 <div className="relative overflow-hidden">
                   <img 
