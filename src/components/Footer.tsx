@@ -33,9 +33,9 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold mb-4">Contato</h3>
             <ul className="space-y-2 text-muted-foreground">
-              <li>contato@ingacraft.com</li>
+              <li>ingacraftadm@gmail.com</li>
               <li>(11) 9999-9999</li>
-              <li>São Paulo, SP</li>
+              <li>Maringá - PR</li>
             </ul>
             
             {/* Social Links */}
@@ -55,7 +55,7 @@ const Footer = () => {
 
         {/* Copyright */}
         <div className="border-t border-white/10 pt-8 text-center text-muted-foreground">
-          <p>&copy; 2024 IngaCraft. Todos os direitos reservados.</p>
+          <p>&copy; 2025 IngaCraft. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>

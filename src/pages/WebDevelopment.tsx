@@ -30,10 +30,12 @@ const WebDevelopment = () => {
       popular: false,
       features: [
         "Site institucional simples (até 3 páginas)",
-        "Design responsivo",
+        "Layout responsivo (desktop + mobile)",
         "Integração com redes sociais",
         "SEO básico",
-        "Suporte por 30 dias"
+        "Prazo de entrega rápido",
+        "Hospedagem e domínio configurados",
+        "Indicado para: profissionais liberais, pequenos negócios e landing pages"
       ]
     },
     {
@@ -43,9 +45,10 @@ const WebDevelopment = () => {
       features: [
         "Site institucional completo (até 8 páginas)",
         "Integrações simples (formulário, chat, newsletter)",
-        "Design responsivo e otimizado",
+        "Layout moderno e otimizado para performance",
         "SEO otimizado",
-        "Suporte por 60 dias"
+        "Hospedagem e domínio configurados",
+        "Indicado para: empresas em crescimento e negócios que precisam de presença digital mais sólida"
       ]
     },
     {
@@ -57,7 +60,22 @@ const WebDevelopment = () => {
         "Integrações avançadas (pagamentos, APIs, automações)",
         "Painel administrativo personalizado",
         "SEO avançado e performance otimizada",
-        "Suporte por 90 dias"
+        "Hospedagem dedicada e escaláve",
+        "Indicado para: empresas de médio e grande porte, startups e negócios digitais"
+      ]
+    },
+
+     {
+      name: "Manutenção + Hospedagem",
+      price: "a partir de R$80 a R$200 /mês",
+      popular: false,
+      features: [
+        "Hospedagem otimizada e segura",
+        "Backups a cada manutenção e uma vez na semana",
+        "Atualizações de sistema e plugins",
+        "Suporte técnico e correções emergenciais",
+        "Hospedagem dedicada e escaláve",
+        "Indicado para: manter o site sempre online, seguro e atualizado"
       ]
     }
   ];
@@ -168,7 +186,7 @@ const WebDevelopment = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-4 gap-8">
             {plans.map((plan, index) => (
               <Card 
                 key={plan.name} 
