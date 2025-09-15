@@ -130,15 +130,9 @@ const WebDevelopment = () => {
       <section 
         className="py-20 px-6 relative"
         style={{
-          backgroundImage: `url(${digitalTechBg})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
+          background: 'linear-gradient(180deg, hsl(230, 73%, 15%), hsl(220, 27%, 8%))'
         }}
       >
-        {/* Overlay for opacity control */}
-        <div className="absolute inset-0 bg-background/40 z-0"></div>
-        <div className="relative z-10">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Tecnologias Utilizadas</h2>
@@ -160,7 +154,6 @@ const WebDevelopment = () => {
                 {tech.name}
               </div>
             ))}
-          </div>
           </div>
         </div>
       </section>
