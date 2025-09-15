@@ -101,7 +101,7 @@ const WebDevelopment = () => {
       {/* Hero Section */}
 {/* Hero Section */}
 <section
-  className="relative py-20 px-6 mt-20 bg-cover bg-center"
+  className="relative z-10 py-20 px-6 mt-20 bg-cover bg-center"
   style={{
     backgroundImage:
       "url('https://images.unsplash.com/photo-1581091012184-5c9af604238d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')",
