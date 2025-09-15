@@ -14,7 +14,7 @@ const WebDevelopment = () => {
     { name: "React", color: "#61DAFB", textColor: "black" },
     { name: "Next.js", color: "#000000", textColor: "white" },
     { name: "TailwindCSS", color: "#38B2AC", textColor: "white" },
-    { name: "typeScript", color: "#0ab5e9ff", textColor: "white" },
+    { name: "TypeScript", color: "#0ab5e9ff", textColor: "white" },
     { name: "Node.js", color: "#339933", textColor: "white" },
     { name: "Express", color: "#000000", textColor: "white" },
     { name: "MySQL", color: "#4479A1", textColor: "white" },
