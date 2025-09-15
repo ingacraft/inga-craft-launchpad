@@ -101,14 +101,14 @@ const WebDevelopment = () => {
       {/* Hero Section */}
 {/* Hero Section */}
 <section
-  className="relative z-10 py-20 px-6 mt-20 bg-cover bg-center"
+  className="relative py-20 px-6 mt-20 bg-cover bg-center"
   style={{
     backgroundImage:
       "url('https://images.unsplash.com/photo-1581091012184-5c9af604238d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')",
   }}
 >
   {/* Overlay */}
-  <div className="absolute inset-0 /60 z-0"></div>
+  <div className="absolute inset-0 bg-black/60 z-0"></div>
 
   {/* Conteúdo */}
   <div className="relative z-10 max-w-4xl mx-auto text-center text-white">
@@ -131,7 +131,6 @@ const WebDevelopment = () => {
     </Button>
   </div>
 </section>
-
 
 
 
