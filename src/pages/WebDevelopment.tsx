@@ -7,19 +7,19 @@ import { Check, Star, Code2, Database, Globe, GitBranch } from "lucide-react";
 
 const WebDevelopment = () => {
   const technologies = [
-    { name: "HTML5", color: "rgba(227, 79, 38, 0.3)", textColor: "white" },
-    { name: "CSS3", color: "rgba(21, 114, 182, 0.3)", textColor: "white" },
-    { name: "JavaScript", color: "rgba(247, 221, 29, 0.3)", textColor: "black" },
-    { name: "React", color: "rgba(97, 218, 251, 0.3)", textColor: "black" },
-    { name: "Next.js", color: "rgba(0, 0, 0, 0.3)", textColor: "white" },
-    { name: "TailwindCSS", color: "rgba(56, 178, 172, 0.3)", textColor: "white" },
-    { name: "Bootstrap", color: "rgba(121, 82, 179, 0.3)", textColor: "white" },
-    { name: "Node.js", color: "rgba(51, 153, 51, 0.3)", textColor: "white" },
-    { name: "Express", color: "rgba(0, 0, 0, 0.3)", textColor: "white" },
-    { name: "MySQL", color: "rgba(68, 121, 161, 0.3)", textColor: "white" },
-    { name: "MongoDB", color: "rgba(71, 162, 72, 0.3)", textColor: "white" },
-    { name: "Git", color: "rgba(240, 80, 50, 0.3)", textColor: "white" },
-    { name: "GitHub", color: "rgba(24, 23, 23, 0.3)", textColor: "white" }
+    { name: "HTML5", color: "rgba(227, 79, 38, 0.4)", textColor: "white" },
+    { name: "CSS3", color: "rgba(21, 114, 182, 0.4)", textColor: "white" },
+    { name: "JavaScript", color: "rgba(247, 221, 29, 0.4)", textColor: "black" },
+    { name: "React", color: "rgba(97, 218, 251, 0.4)", textColor: "black" },
+    { name: "Next.js", color: "rgba(0, 0, 0, 0.4)", textColor: "white" },
+    { name: "TailwindCSS", color: "rgba(56, 178, 172, 0.4)", textColor: "white" },
+    { name: "Bootstrap", color: "rgba(121, 82, 179, 0.4)", textColor: "white" },
+    { name: "Node.js", color: "rgba(51, 153, 51, 0.4)", textColor: "white" },
+    { name: "Express", color: "rgba(0, 0, 0, 0.4)", textColor: "white" },
+    { name: "MySQL", color: "rgba(68, 121, 161, 0.4)", textColor: "white" },
+    { name: "MongoDB", color: "rgba(71, 162, 72, 0.4)", textColor: "white" },
+    { name: "Git", color: "rgba(240, 80, 50, 0.4)", textColor: "white" },
+    { name: "GitHub", color: "rgba(24, 23, 23, 0.4)", textColor: "white" },
   ];
 
   const plans = [
@@ -136,31 +136,36 @@ const WebDevelopment = () => {
 
 
       {/* Technologies Section */}
-      <section className="py-20 px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Tecnologias Utilizadas</h2>
-            <p className="text-xl text-muted-foreground">
-              Trabalhamos com as mais modernas tecnologias do mercado
-            </p>
-          </div>
+         <section className="py-20 px-6 relative bg-gradient-to-br from-gray-900 via-gray-800 to-black">
+      <div className="max-w-6xl mx-auto text-center mb-12">
+        <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          Tecnologias que Utilizamos
+        </h2>
+        <p className="text-lg text-gray-300">
+          Construímos soluções modernas usando as principais ferramentas do
+          mercado.
+        </p>
+      </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-            {technologies.map((tech, index) => (
-              <div 
-                key={tech.name} 
-                className="rounded-lg p-4 hover:scale-105 transition-all duration-300 text-center font-semibold shadow-lg"
-                style={{ 
-                  backgroundColor: tech.color,
-                  color: tech.textColor
-                }}
-              >
-                {tech.name}
-              </div>
-            ))}
+      {/* Grid das tecnologias */}
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+        {technologies.map((tech) => (
+          <div
+            key={tech.name}
+            className="px-6 py-4 rounded-2xl shadow-lg backdrop-blur-md border border-white/10 flex items-center justify-center font-semibold text-lg"
+            style={{
+              backgroundColor: tech.color,
+              color: tech.textColor,
+            }}
+          >
+            {tech.name}
           </div>
-        </div>
-      </section>
+        ))}
+      </div>
+    </section>
+  
+
+
 
       {/* Pricing Plans Section */}
       <section className="py-20 px-6 bg-card/50">
