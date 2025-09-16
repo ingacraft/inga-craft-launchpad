@@ -82,6 +82,13 @@ const Services = () => {
                         <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                       </Link>
                     </Button>
+                  ) : service.title === "Setups Personalizados" ? (
+                    <Button variant="outline" className="group w-full" asChild>
+                      <Link to="/setups-personalizados">
+                        Saiba Mais
+                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                      </Link>
+                    </Button>
                   ) : (
                     <Button variant="outline" className="group w-full">
                       Saiba Mais
