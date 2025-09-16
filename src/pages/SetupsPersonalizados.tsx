@@ -12,6 +12,7 @@ import setupStreamer from "@/assets/setup-streamer.jpg";
 import officePremium from "@/assets/office-premium.jpg";
 import gamingCompact from "@/assets/gaming-compact.jpg";
 import devStation from "@/assets/dev-station.jpg";
+import cpuGamer from "@/assets/cpu-gamer.jpg";
 
 const SetupsPersonalizados = () => {
   const benefits = [
@@ -74,17 +75,19 @@ const SetupsPersonalizados = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="gradient-hero py-32 px-6 relative overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20" />
-        </div>
+      <section className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${cpuGamer})` }}
+        />
+        <div className="absolute inset-0 bg-black/60" />
         
-        <div className="max-w-7xl mx-auto text-center relative z-10">
+        <div className="max-w-4xl mx-auto text-center relative z-10">
           <Badge className="mb-6" variant="secondary">
             Setups Personalizados
           </Badge>
           
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 animate-fade-in">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 animate-fade-in text-white">
             Monte seu{" "}
             <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
               Setup dos Sonhos
@@ -92,9 +95,8 @@ const SetupsPersonalizados = () => {
             com a IngaCraft
           </h1>
           
-          <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto animate-fade-in">
-            Criamos setups únicos e personalizados para gamers, creators, developers e profissionais. 
-            Do planejamento à entrega, cuidamos de cada detalhe para que você tenha a experiência perfeita.
+          <p className="text-lg md:text-xl text-gray-200 mb-8 max-w-3xl mx-auto animate-fade-in">
+            Oferecemos setups personalizados, criados sob medida para o seu estilo e desempenho.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
