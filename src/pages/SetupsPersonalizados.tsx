@@ -5,6 +5,14 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Monitor, Settings, Award, HeadphonesIcon, CheckCircle, MessageCircle, Lightbulb, Wrench, Package, Truck } from "lucide-react";
 
+// Import setup images
+import setupGamerPro from "@/assets/setup-gamer-pro.jpg";
+import workstationCreative from "@/assets/workstation-creative.jpg";
+import setupStreamer from "@/assets/setup-streamer.jpg";
+import officePremium from "@/assets/office-premium.jpg";
+import gamingCompact from "@/assets/gaming-compact.jpg";
+import devStation from "@/assets/dev-station.jpg";
+
 const SetupsPersonalizados = () => {
   const benefits = [
     {
@@ -30,12 +38,12 @@ const SetupsPersonalizados = () => {
   ];
 
   const portfolioItems = [
-    { id: 1, title: "Setup Gamer Pro", description: "RTX 4090 + i9-13900K + RGB" },
-    { id: 2, title: "Workstation Creative", description: "Edição de vídeo 4K + Render 3D" },
-    { id: 3, title: "Setup Streamer", description: "Dual PC + Captura + Audio Pro" },
-    { id: 4, title: "Office Premium", description: "Produtividade + Multi-monitor" },
-    { id: 5, title: "Gaming Compact", description: "Mini-ITX + Performance máxima" },
-    { id: 6, title: "Dev Station", description: "Múltiplos ambientes + Docker" }
+    { id: 1, title: "Setup Gamer Pro", description: "RTX 4090 + i9-13900K + RGB", image: setupGamerPro },
+    { id: 2, title: "Workstation Creative", description: "Edição de vídeo 4K + Render 3D", image: workstationCreative },
+    { id: 3, title: "Setup Streamer", description: "Dual PC + Captura + Audio Pro", image: setupStreamer },
+    { id: 4, title: "Office Premium", description: "Produtividade + Multi-monitor", image: officePremium },
+    { id: 5, title: "Gaming Compact", description: "Mini-ITX + Performance máxima", image: gamingCompact },
+    { id: 6, title: "Dev Station", description: "Múltiplos ambientes + Docker", image: devStation }
   ];
 
   const processSteps = [
@@ -149,14 +157,20 @@ const SetupsPersonalizados = () => {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {portfolioItems.map((item) => (
-              <Card key={item.id} className="glass-card group cursor-pointer hover:scale-105 transition-smooth overflow-hidden">
-                <div className="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                  <Monitor className="w-16 h-16 text-primary/60" />
+              <Card key={item.id} className="glass-card group cursor-pointer hover:scale-105 transition-smooth overflow-hidden relative">
+                <div className="aspect-video relative overflow-hidden">
+                  <img 
+                    src={item.image} 
+                    alt={item.title}
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                    <div className="p-6 text-white">
+                      <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+                      <p className="text-gray-200 text-sm">{item.description}</p>
+                    </div>
+                  </div>
                 </div>
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                  <p className="text-muted-foreground">{item.description}</p>
-                </CardContent>
               </Card>
             ))}
           </div>
