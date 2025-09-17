@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <section className="relative min-h-screen gradient-hero flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
-      <div className="absolute inset-0 opacity-25">
+      <div className="absolute inset-0 opacity-30">
         <img 
           src={heroImage} 
           alt="Modern tech workspace with multiple monitors and development setup"
@@ -16,13 +16,13 @@ const Hero = () => {
       </div>
       
       {/* Floating Icons */}
-      <div className="absolute top-20 left-10 animate-float opacity-30">
+      <div className="absolute top-20 left-10 animate-float opacity-40">
         <Code size={64} className="text-accent" />
       </div>
-      <div className="absolute top-32 right-16 animate-float opacity-30" style={{ animationDelay: "1s" }}>
+      <div className="absolute top-32 right-16 animate-float opacity-40" style={{ animationDelay: "1s" }}>
         <Monitor size={48} className="text-primary" />
       </div>
-      <div className="absolute bottom-20 left-20 animate-float opacity-30" style={{ animationDelay: "2s" }}>
+      <div className="absolute bottom-20 left-20 animate-float opacity-40" style={{ animationDelay: "2s" }}>
         <GraduationCap size={56} className="text-accent" />
       </div>
 
