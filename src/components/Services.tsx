@@ -90,9 +90,11 @@ const Services = () => {
                       </Link>
                     </Button>
                   ) : (
-                    <Button variant="outline" className="group w-full">
-                      Saiba Mais
-                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    <Button variant="outline" className="group w-full" asChild>
+                      <Link to="/cursos/venda">
+                        Saiba Mais
+                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                      </Link>
                     </Button>
                   )}
                 </CardContent>
