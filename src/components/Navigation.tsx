@@ -1,15 +1,19 @@
 import { Button } from "@/components/ui/button";
 import { Code2, Menu, X } from "lucide-react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const location = useLocation();
+  
+  // Se estamos na página principal, usar âncoras locais; caso contrário, redirecionar para a página principal
+  const isHome = location.pathname === '/';
+  
   const navLinks = [
-    { href: "#servicos", label: "Serviços" },
-    { href: "#sobre", label: "Sobre" },
-    { href: "#contato", label: "Contato" },
+    { href: isHome ? "#servicos" : "/#servicos", label: "Serviços" },
+    { href: isHome ? "#sobre" : "/#sobre", label: "Sobre" },
+    { href: isHome ? "#contato" : "/#contato", label: "Contato" },
   ];
 
   return (
