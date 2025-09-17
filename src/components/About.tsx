@@ -1,13 +1,29 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Users, Trophy, Zap, Heart } from "lucide-react";
+import { Lightbulb, Award, GraduationCap, Handshake } from "lucide-react";
 
 const About = () => {
-  const stats = [
-    { icon: Users, value: "500+", label: "Clientes Satisfeitos" },
-    { icon: Trophy, value: "50+", label: "Projetos Entregues" },
-    { icon: Zap, value: "98%", label: "Taxa de Satisfação" },
-    { icon: Heart, value: "24/7", label: "Suporte Dedicado" }
+  const values = [
+    { 
+      icon: Lightbulb, 
+      title: "Inovação", 
+      description: "Soluções criativas e atuais para cada desafio." 
+    },
+    { 
+      icon: Award, 
+      title: "Qualidade", 
+      description: "Projetos desenvolvidos com foco em performance e experiência." 
+    },
+    { 
+      icon: GraduationCap, 
+      title: "Educação", 
+      description: "Compartilhamos conhecimento e capacitamos pessoas através da tecnologia." 
+    },
+    { 
+      icon: Handshake, 
+      title: "Parceria", 
+      description: "Construímos relações duradouras com clientes e parceiros." 
+    }
   ];
 
   const technologies = [
@@ -54,21 +70,21 @@ const About = () => {
             </Button>
           </div>
 
-          {/* Stats */}
+          {/* Values */}
           <div className="grid grid-cols-2 gap-6 animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            {stats.map((stat, index) => {
-              const Icon = stat.icon;
+            {values.map((value, index) => {
+              const Icon = value.icon;
               return (
                 <div 
-                  key={stat.label} 
+                  key={value.title} 
                   className="glass-card p-6 text-center hover:scale-105 transition-smooth"
                   style={{ animationDelay: `${(index + 1) * 0.1}s` }}
                 >
                   <div className="gradient-secondary w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Icon className="w-6 h-6 text-white" />
                   </div>
-                  <div className="text-2xl font-bold text-primary mb-2">{stat.value}</div>
-                  <div className="text-sm text-muted-foreground">{stat.label}</div>
+                  <div className="text-xl font-bold text-primary mb-2">{value.title}</div>
+                  <div className="text-sm text-muted-foreground">{value.description}</div>
                 </div>
               );
             })}
