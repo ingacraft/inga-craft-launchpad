@@ -121,7 +121,7 @@ const WebDevelopment = () => {
       
       {/* Hero Section */}
       <section 
-        className="gradient-hero py-100 px-6 mt-20 relative"
+        className="min-h-screen flex items-center justify-center px-6 mt-20 relative"
         style={{
           backgroundImage: `url(${digitalTechBg})`,
           backgroundSize: 'cover',
