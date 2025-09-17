@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <section className="relative min-h-screen gradient-hero flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
-      <div className="absolute inset-0 opacity-20">
+      <div className="absolute inset-0 opacity-25">
         <img 
           src={heroImage} 
           alt="Modern tech workspace with multiple monitors and development setup"
