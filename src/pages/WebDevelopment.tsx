@@ -121,7 +121,7 @@ const WebDevelopment = () => {
       
       {/* Hero Section */}
       <section 
-        className="min-h-screen flex items-center justify-center px-6 mt-20 relative"
+        className="relative h-[80vh] flex items-center justify-center px-6 overflow-hidden"
         style={{
           backgroundImage: `url(${digitalTechBg})`,
           backgroundSize: 'cover',
