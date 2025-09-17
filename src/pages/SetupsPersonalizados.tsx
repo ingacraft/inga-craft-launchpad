@@ -92,7 +92,7 @@ const SetupsPersonalizados = () => {
             <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
               Setup dos Sonhos
             </span>{" "}
-            com a IngaCraft
+            com a <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">IngaCraft</span>
           </h1>
           
           <p className="text-lg md:text-xl text-gray-200 mb-8 max-w-3xl mx-auto animate-fade-in">
