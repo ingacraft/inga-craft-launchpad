@@ -28,7 +28,7 @@ const About = () => {
 
   const technologies = [
     "React", "Next.js", "TypeScript", "Node.js", "Python", 
-    "Docker", "AWS", "PostgreSQL", "MongoDB", "Tailwind CSS"
+    "Docker", "AWS", "PostgreSQL", "MongoDB", "Tailwind CSS", "WordPress", "NuvemShop"
   ];
 
   return (
@@ -42,16 +42,19 @@ const About = () => {
             </h2>
             
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              Somos uma empresa especializada em soluções tecnológicas completas. Nossa missão é 
-              transformar ideias em realidade digital, oferecendo desenvolvimento web de alta qualidade, 
-              setups personalizados para máxima performance e educação tecnológica de excelência.
+              Na IngaCraft, somos especialistas em soluções tecnológicas completas. 
+              Nossa missão é transformar ideias em realidade digital, oferecendo desenvolvimento web de alta performance, 
+              setups personalizados sob medida e educação tecnológica de excelência.
             </p>
 
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              Iniciamos nossos trabalhos em janeiro de 2026, mas nossa equipe já tem anos de 
-              experiência no mercado, combinando expertise técnica com criatividade para entregar 
-              soluções que realmente fazem a diferença no seu negócio ou carreira.
+              Iniciamos nossos trabalhos em janeiro de 2026, mas nossa equipe já tem anos de experiência no mercado, 
+              combinando expertise técnica com criatividade para entregar soluções que realmente fazem a diferença no seu negócio ou carreira.
             </p>
+
+             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+              Na IngaCraft, acreditamos que a tecnologia é mais do que uma ferramenta — é um caminho para construir o futuro. 🌐✨
+             </p>
 
             {/* Technologies */}
             <div className="mb-8">
