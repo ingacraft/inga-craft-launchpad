@@ -144,7 +144,7 @@ const VendaCursos = () => {
             </div>
             
             <Button variant="hero" size="lg" className="text-xl px-8 py-4">
-              Quero garantir minha vaga!
+              Dúvidas? Entre em contato conosco aqui!
             </Button>
           </div>
         </div>
