@@ -28,7 +28,7 @@ const WebDevelopment = () => {
   const plans = [
     {
       name: "Básico",
-      price: "R$ 1.500 - R$ 2.500",
+      price: "R$ 1.000 - R$ 2.500",
       popular: false,
       features: [
         "Site institucional simples (até 3 páginas)",
@@ -42,7 +42,7 @@ const WebDevelopment = () => {
     },
     {
       name: "Intermediário",
-      price: "R$ 3.000 - R$ 5.000",
+      price: "R$ 2.500 - R$ 5.000",
       popular: true,
       features: [
         "Site institucional completo (até 8 páginas)",
@@ -55,7 +55,7 @@ const WebDevelopment = () => {
     },
     {
       name: "Avançado",
-      price: "a partir de R$ 6.000",
+      price: "a partir de R$ 5.000",
       popular: false,
       features: [
         "E-commerce completo ou site corporativo robusto",
