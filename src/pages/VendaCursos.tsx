@@ -12,13 +12,13 @@ const VendaCursos = () => {
     {
       title: "Desenvolvimento Front-End",
       image: programmingCourse,
-      description: "Aprenda Git, GitHub, HTML, CSS, JavaScript, Deploy e boas práticas para criar sites modernos e responsivos.",
+      description: "Domine as principais ferramentas da web: Git e GitHub para controlar versões e trabalhar em equipe, HTML, CSS e JavaScript para desenvolver sites dinâmicos e responsivos, além de Deploy e boas práticas para publicar projetos completos na internet. Com esse aprendizado, você será capaz de criar sites modernos, funcionais e prontos para o mundo real.",
       price: "R$ 497,00"
     },
     {
       title: "Montagem e Manutenção de Computadores",
       image: pcBuildingCourse,
-      description: "Do zero à prática: monte, otimize e faça manutenção em computadores com confiança. Monte PCs gamers sofisticados e de alto desempenho!",
+      description: "Transforme seu conhecimento em prática: domine a montagem, otimização e manutenção de computadores e seja capaz de construir PCs gamers poderosos e profissionais de alto desempenho, sempre com confiança e precisão.",
       price: "R$ 397,00"
     }
   ];
