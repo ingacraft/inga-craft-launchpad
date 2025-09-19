@@ -192,38 +192,54 @@ const WebDevelopment = () => {
             {plans.map((plan, index) => (
               <Card 
                 key={plan.name} 
-                className={`relative glass-card hover:scale-105 transition-all duration-300 ${
-                  plan.popular ? 'ring-2 ring-primary shadow-glow' : ''
+                className={`group relative overflow-hidden glass-card hover:scale-105 transition-all duration-500 ${
+                  plan.popular 
+                    ? 'ring-2 ring-primary shadow-glow border-primary/20' 
+                    : 'hover:shadow-xl hover:border-primary/10'
                 }`}
               >
+                {/* Background gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <Badge className="gradient-primary text-white px-4 py-1">
-                      <Star className="w-4 h-4 mr-1" />
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
+                    <Badge className="gradient-primary text-white px-4 py-2 shadow-lg animate-pulse">
+                      <Star className="w-4 h-4 mr-1 fill-current" />
                       Mais Popular
                     </Badge>
                   </div>
                 )}
                 
-                <CardHeader className="text-center pb-4">
-                  <CardTitle className="text-2xl font-bold">{plan.name}</CardTitle>
-                  <div className="text-3xl font-bold text-primary mt-2">
+                {/* Decorative corner element */}
+                <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                
+                <CardHeader className="text-center pb-4 relative z-10">
+                  <CardTitle className="text-2xl font-bold group-hover:text-primary transition-colors duration-300">
+                    {plan.name}
+                  </CardTitle>
+                  <div className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mt-2 group-hover:scale-110 transition-transform duration-300">
                     {plan.price}
                   </div>
                 </CardHeader>
                 
-                <CardContent>
+                <CardContent className="relative z-10">
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start">
-                        <Check className="w-5 h-5 text-accent mr-3 mt-0.5 flex-shrink-0" />
-                        <span className="text-sm">{feature}</span>
+                      <li key={idx} className="flex items-start group/item">
+                        <Check className="w-5 h-5 text-accent mr-3 mt-0.5 flex-shrink-0 group-hover:scale-110 transition-transform duration-300" />
+                        <span className="text-sm group-hover/item:text-foreground transition-colors duration-300">
+                          {feature}
+                        </span>
                       </li>
                     ))}
                   </ul>
                   
                   <Button 
-                    className={`w-full ${plan.popular ? 'gradient-primary text-white' : 'variant-outline'}`}
+                    className={`w-full transition-all duration-300 ${
+                      plan.popular 
+                        ? 'gradient-primary text-white shadow-lg hover:shadow-xl hover:scale-105' 
+                        : 'border-2 hover:bg-primary hover:text-white hover:border-primary hover:shadow-lg'
+                    }`}
                   >
                     Solicitar Orçamento
                   </Button>
@@ -246,18 +262,38 @@ const WebDevelopment = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
-              <Card key={project.name} className="glass-card hover:scale-105 transition-all duration-300 overflow-hidden group">
+              <Card key={project.name} className="group glass-card hover:scale-105 transition-all duration-500 overflow-hidden relative border-0 shadow-lg hover:shadow-2xl">
+                {/* Decorative border animation */}
+                <div className="absolute inset-0 bg-gradient-to-r from-primary via-accent to-primary p-[2px] rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  <div className="w-full h-full bg-background rounded-lg" />
+                </div>
+                
                 <div className="relative overflow-hidden">
                   <img 
                     src={project.image} 
                     alt={project.name}
-                    className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+                    className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  
+                  {/* Overlay content */}
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <div className="text-center text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                      <div className="w-12 h-12 mx-auto mb-2 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
+                        <Globe className="w-6 h-6" />
+                      </div>
+                      <p className="text-sm font-medium">Ver Projeto</p>
+                    </div>
+                  </div>
                 </div>
-                <CardContent className="pt-6">
-                  <h3 className="font-semibold text-lg mb-2">{project.name}</h3>
-                  <p className="text-muted-foreground text-sm">{project.description}</p>
+                
+                <CardContent className="pt-6 relative z-10">
+                  <h3 className="font-semibold text-lg mb-2 group-hover:text-primary transition-colors duration-300">
+                    {project.name}
+                  </h3>
+                  <p className="text-muted-foreground text-sm group-hover:text-foreground transition-colors duration-300">
+                    {project.description}
+                  </p>
                 </CardContent>
               </Card>
             ))}

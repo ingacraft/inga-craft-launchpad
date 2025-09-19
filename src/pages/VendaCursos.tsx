@@ -2,6 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { CheckCircle } from "lucide-react";
 import techEducationHero from "@/assets/tech-education-hero.jpg";
 import programmingCourse from "@/assets/programming-course.jpg";
 import pcBuildingCourse from "@/assets/pc-building-course.jpg";
@@ -62,28 +63,69 @@ const VendaCursos = () => {
 
           <div className="grid md:grid-cols-2 gap-8 mb-16">
             {courses.map((course, index) => (
-              <Card key={index} className="glass-card hover-scale transition-smooth overflow-hidden">
-                <div className="aspect-video overflow-hidden">
+              <Card key={index} className="group glass-card hover-scale transition-all duration-500 overflow-hidden relative border-0 shadow-xl hover:shadow-2xl">
+                {/* Animated border gradient */}
+                <div className="absolute inset-0 bg-gradient-to-r from-primary via-accent to-primary p-[2px] rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  <div className="w-full h-full bg-background rounded-lg" />
+                </div>
+                
+                {/* Price badge floating */}
+                <div className="absolute top-4 right-4 z-20 bg-gradient-to-r from-primary to-accent text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg transform -translate-y-1 group-hover:translate-y-0 transition-transform duration-300">
+                  {course.price}
+                </div>
+                
+                <div className="aspect-video overflow-hidden relative">
                   <img 
                     src={course.image} 
                     alt={course.title}
-                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
+                  {/* Dark overlay on hover */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  
+                  {/* Floating play button */}
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center transform scale-75 group-hover:scale-100 transition-transform duration-300">
+                      <div className="w-0 h-0 border-l-[12px] border-l-white border-t-[8px] border-t-transparent border-b-[8px] border-b-transparent ml-1" />
+                    </div>
+                  </div>
                 </div>
-                <CardHeader>
-                  <CardTitle className="text-2xl gradient-text-secondary">
+                
+                <CardHeader className="relative z-10">
+                  <CardTitle className="text-2xl gradient-text-secondary group-hover:scale-105 transition-transform duration-300">
                     {course.title}
                   </CardTitle>
-                  <CardDescription className="text-lg">
+                  <CardDescription className="text-lg group-hover:text-foreground transition-colors duration-300">
                     {course.description}
                   </CardDescription>
                 </CardHeader>
-                <CardContent className="space-y-4">
-                  <div className="text-3xl font-bold gradient-text-primary">
-                    {course.price}
+                
+                <CardContent className="space-y-6 relative z-10">
+                  {/* Features highlight */}
+                  <div className="grid grid-cols-2 gap-2 text-xs text-muted-foreground">
+                    <div className="flex items-center gap-1">
+                      <CheckCircle className="w-3 h-3 text-accent" />
+                      <span>Certificado</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <CheckCircle className="w-3 h-3 text-accent" />
+                      <span>Suporte</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <CheckCircle className="w-3 h-3 text-accent" />
+                      <span>Prático</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <CheckCircle className="w-3 h-3 text-accent" />
+                      <span>Atualizado</span>
+                    </div>
                   </div>
-                  <Button variant="tech" size="lg" className="w-full">
-                    Comprar agora
+                  
+                  <Button variant="tech" size="lg" className="w-full relative overflow-hidden group/btn">
+                    <span className="relative z-10 group-hover/btn:text-white transition-colors duration-300">
+                      Comprar agora
+                    </span>
+                    <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300" />
                   </Button>
                 </CardContent>
               </Card>
