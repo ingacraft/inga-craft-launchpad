@@ -13,6 +13,7 @@ const Navigation = () => {
   const navLinks = [
     { href: isHome ? "#servicos" : "/#servicos", label: "Serviços" },
     { href: isHome ? "#sobre" : "/#sobre", label: "Sobre" },
+    { href: "/portfolio", label: "Portfólio" },
     { href: isHome ? "#contato" : "/#contato", label: "Contato" },
   ];
 
