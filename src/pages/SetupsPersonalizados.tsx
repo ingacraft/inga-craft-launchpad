@@ -77,7 +77,7 @@ const SetupsPersonalizados = () => {
       {/* Hero Section */}
       <section className="relative h-[80vh] flex items-center justify-center px-6 overflow-hidden">
         <div 
-          className="absolute inset-0 bg-contain bg-center bg-no-repeat"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${cpuGamer})` }}
         />
         <div className="absolute inset-0 bg-black/60" />
