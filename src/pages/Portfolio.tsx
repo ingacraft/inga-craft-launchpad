@@ -65,8 +65,8 @@ const Portfolio = () => {
     { image: setupGamerPro, title: "Setup Gamer Pro", category: "Hardware" },
     { image: programmingCourse, title: "Curso de Programação", category: "Educação" },
     { image: devStation, title: "Workstation Dev", category: "Hardware" },
-    { image: gamingCompact, title: "PC Gaming", category: "Hardware" },
-    { image: workstationCreative, title: "Setup Criativo", category: "Hardware" }
+    { image: gamingCompact, title: "CPU Gamer", category: "Hardware" },
+    { image: workstationCreative, title: "Cpu Gamer", category: "Hardware" }
   ];
 
   const handleWhatsAppClick = () => {

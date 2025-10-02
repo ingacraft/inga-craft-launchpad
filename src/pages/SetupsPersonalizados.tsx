@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Monitor, Settings, Award, HeadphonesIcon, CheckCircle, MessageCircle, Lightbulb, Wrench, Package, Truck } from "lucide-react";
