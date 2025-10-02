@@ -83,9 +83,7 @@ const SetupsPersonalizados = () => {
         <div className="absolute inset-0 bg-black/60" />
         
         <div className="max-w-4xl mx-auto text-center relative z-10">
-          <Badge className="mb-6" variant="secondary">
-            Setups Personalizados
-          </Badge>
+          
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 animate-fade-in text-white">
             Monte seu{" "}
