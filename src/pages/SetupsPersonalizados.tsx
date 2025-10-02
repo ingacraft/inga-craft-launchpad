@@ -5,10 +5,10 @@ import Footer from "@/components/Footer";
 import { Monitor, Settings, Award, HeadphonesIcon, CheckCircle, MessageCircle, Lightbulb, Wrench, Package, Truck } from "lucide-react";
 
 // Import setup images
-import setupGamerPro from "@/assets/setup-gamer-pro.jpg";
+import setupGamerPro from "@/assets/guipc.jpg";
 import workstationCreative from "@/assets/cpujapa.jpg";
 import setupStreamer from "@/assets/setup-streamer.jpg";
-import officePremium from "@/assets/office-premium.jpg";
+import officePremium from "@/assets/guipcc.jpg";
 import gamingCompact from "@/assets/cpujapaa.jpg";
 import devStation from "@/assets/dev-station.jpg";
 import cpuGamer from "@/assets/setup16.jpg";
