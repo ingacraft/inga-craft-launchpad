@@ -7,10 +7,10 @@ import { Monitor, Settings, Award, HeadphonesIcon, CheckCircle, MessageCircle, L
 
 // Import setup images
 import setupGamerPro from "@/assets/setup-gamer-pro.jpg";
-import workstationCreative from "@/assets/workstation-creative.jpg";
+import workstationCreative from "@/assets/cpujapa.jpg";
 import setupStreamer from "@/assets/setup-streamer.jpg";
 import officePremium from "@/assets/office-premium.jpg";
-import gamingCompact from "@/assets/gaming-compact.jpg";
+import gamingCompact from "@/assets/cpujapaa.jpg";
 import devStation from "@/assets/dev-station.jpg";
 import cpuGamer from "@/assets/setup16.jpg";
 

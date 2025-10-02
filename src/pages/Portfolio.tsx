@@ -8,8 +8,8 @@ import devStation from "@/assets/dev-station.jpg";
 import setupGamerPro from "@/assets/setup-gamer-pro.jpg";
 import programmingCourse from "@/assets/programming-course.jpg";
 import codeBackground from "@/assets/code-background.jpg";
-import gamingCompact from "@/assets/gaming-compact.jpg";
-import workstationCreative from "@/assets/workstation-creative.jpg";
+import gamingCompact from "@/assets/cpujapa.jpg";
+import workstationCreative from "@/assets/cpujapa.jpg";
 
 const Portfolio = () => {
   const services = [
