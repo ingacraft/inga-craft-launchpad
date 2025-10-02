@@ -103,36 +103,143 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* Services Section - Desenvolvimento Web */}
       <section className="py-24 px-6 bg-gradient-to-b from-background to-background/50">
         <div className="container mx-auto max-w-7xl">
-          <div className="grid md:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <Card 
-                key={index} 
-                className="group glass-card hover-scale transition-all duration-500 border-0 shadow-xl hover:shadow-2xl relative overflow-hidden"
-              >
-                {/* Animated gradient border */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} p-[2px] rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500`}>
-                  <div className="w-full h-full bg-background rounded-lg" />
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Content */}
+            <div className="space-y-6">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 p-4 shadow-lg">
+                  <Code className="w-full h-full text-white" />
                 </div>
-                
-                <CardHeader className="relative z-10 text-center pb-4">
-                  <div className={`w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br ${service.gradient} p-4 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                    <service.icon className="w-full h-full text-white" />
-                  </div>
-                  <CardTitle className="text-2xl gradient-text-secondary">
-                    {service.title}
-                  </CardTitle>
-                </CardHeader>
-                
-                <CardContent className="relative z-10">
-                  <CardDescription className="text-base leading-relaxed text-center">
-                    {service.description}
-                  </CardDescription>
-                </CardContent>
-              </Card>
-            ))}
+                <h2 className="text-4xl font-bold gradient-text-primary">Desenvolvimento Web</h2>
+              </div>
+              <div className="text-lg text-muted-foreground leading-relaxed space-y-4">
+                <p>
+                  Transformamos suas ideias em experiências digitais memoráveis. Nossa equipe especializada cria sites modernos, rápidos e totalmente responsivos, garantindo que seu projeto se destaque no ambiente digital.
+                </p>
+                <p>
+                  Utilizamos as tecnologias mais atuais do mercado, incluindo React, TypeScript e Tailwind CSS, para desenvolver interfaces elegantes e funcionais. Cada linha de código é escrita seguindo as melhores práticas da indústria.
+                </p>
+                <p>
+                  Do conceito inicial ao deploy final, cuidamos de cada etapa do processo: design responsivo, otimização de performance, SEO, segurança e integração com APIs. Seu site estará pronto para escalar e crescer junto com seu negócio.
+                </p>
+                <p>
+                  Oferecemos suporte contínuo, manutenção e atualizações, garantindo que sua presença online esteja sempre alinhada com as últimas tendências e necessidades do mercado.
+                </p>
+              </div>
+            </div>
+
+            {/* Gallery 2x2 */}
+            <div className="grid grid-cols-2 gap-4">
+              <div className="aspect-square rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                <img src={codeBackground} alt="Código de programação" className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
+              </div>
+              <div className="aspect-square rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                <img src={devStation} alt="Estação de desenvolvimento" className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
+              </div>
+              <div className="aspect-square rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                <img src={programmingCourse} alt="Desenvolvimento web" className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
+              </div>
+              <div className="aspect-square rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                <img src={workstationCreative} alt="Workspace criativo" className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section - Setups Personalizados */}
+      <section className="py-24 px-6">
+        <div className="container mx-auto max-w-7xl">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Gallery 2x2 - Left side */}
+            <div className="grid grid-cols-2 gap-4 order-2 lg:order-1">
+              <div className="aspect-square rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                <img src={setupGamerPro} alt="Setup Gamer Profissional" className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
+              </div>
+              <div className="aspect-square rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                <img src={gamingCompact} alt="PC Gaming Compacto" className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
+              </div>
+              <div className="aspect-square rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                <img src={heroTechSetup} alt="Setup tecnológico" className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
+              </div>
+              <div className="aspect-square rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                <img src={devStation} alt="Workstation premium" className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
+              </div>
+            </div>
+
+            {/* Content - Right side */}
+            <div className="space-y-6 order-1 lg:order-2">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 p-4 shadow-lg">
+                  <Cpu className="w-full h-full text-white" />
+                </div>
+                <h2 className="text-4xl font-bold gradient-text-secondary">Setups Personalizados</h2>
+              </div>
+              <div className="text-lg text-muted-foreground leading-relaxed space-y-4">
+                <p>
+                  Montamos computadores sob medida para atender todas as suas necessidades, desde uso básico até estações de trabalho de alto desempenho e PCs gamers potentes. Cada componente é cuidadosamente selecionado para garantir máxima eficiência.
+                </p>
+                <p>
+                  Nossa expertise abrange desde a escolha dos processadores mais adequados, placas de vídeo de última geração, sistemas de refrigeração eficientes, até configurações RGB personalizadas que dão vida ao seu setup dos sonhos.
+                </p>
+                <p>
+                  Oferecemos consultoria completa para otimização de hardware existente, upgrades estratégicos e manutenção preventiva. Avaliamos seu uso e orçamento para recomendar as melhores soluções custo-benefício do mercado.
+                </p>
+                <p>
+                  Realizamos testes rigorosos de estabilidade, ajustes finos de BIOS, instalação de sistema operacional otimizado e garantimos que seu equipamento esteja entregando o máximo de performance. Suporte técnico completo incluído.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section - Cursos */}
+      <section className="py-24 px-6 bg-gradient-to-b from-background/50 to-background">
+        <div className="container mx-auto max-w-7xl">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Content */}
+            <div className="space-y-6">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-orange-500 to-red-500 p-4 shadow-lg">
+                  <GraduationCap className="w-full h-full text-white" />
+                </div>
+                <h2 className="text-4xl font-bold gradient-text-primary">Cursos de Tecnologia</h2>
+              </div>
+              <div className="text-lg text-muted-foreground leading-relaxed space-y-4">
+                <p>
+                  Aprenda tecnologia de forma prática e objetiva! Nossos cursos são desenvolvidos para quem quer realmente dominar as ferramentas e linguagens mais demandadas pelo mercado de trabalho atual.
+                </p>
+                <p>
+                  Do básico ao avançado, cobrimos tudo que você precisa: versionamento de código com Git e GitHub, desenvolvimento web com HTML5, CSS3 e JavaScript moderno, frameworks populares, técnicas de deploy profissional e muito mais.
+                </p>
+                <p>
+                  Além da programação, oferecemos cursos especializados em montagem e manutenção de computadores, diagnóstico de problemas, instalação de componentes e otimização de sistemas. Aprenda com quem trabalha diariamente com hardware.
+                </p>
+                <p>
+                  Metodologia hands-on com projetos reais, exercícios práticos e acompanhamento personalizado. Ganhe confiança para entrar no mercado de tecnologia ou aprimorar suas habilidades profissionais com certificação ao final do curso.
+                </p>
+              </div>
+            </div>
+
+            {/* Gallery 2x2 */}
+            <div className="grid grid-cols-2 gap-4">
+              <div className="aspect-square rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                <img src={programmingCourse} alt="Curso de programação" className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
+              </div>
+              <div className="aspect-square rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                <img src={codeBackground} alt="Aprendizado de código" className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
+              </div>
+              <div className="aspect-square rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                <img src={devStation} alt="Ambiente de aprendizado" className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
+              </div>
+              <div className="aspect-square rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                <img src={workstationCreative} alt="Curso hands-on" className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
+              </div>
+            </div>
           </div>
         </div>
       </section>
