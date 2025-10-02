@@ -12,7 +12,7 @@ import setupStreamer from "@/assets/setup-streamer.jpg";
 import officePremium from "@/assets/office-premium.jpg";
 import gamingCompact from "@/assets/gaming-compact.jpg";
 import devStation from "@/assets/dev-station.jpg";
-import cpuGamer from "@/assets/cpu-gamer.jpg";
+import cpuGamer from "@/assets/setup16.jpg";
 
 const SetupsPersonalizados = () => {
   const benefits = [
