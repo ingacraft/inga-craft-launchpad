@@ -188,38 +188,6 @@ const WebDevelopment = () => {
       </section>
 
       {/* Pricing Plans Section */}
-      <section 
-        className="py-20 px-6 relative"
-        style={{
-          background: 'linear-gradient(180deg, hsl(230, 73%, 15%), hsl(216, 29%, 7%))'
-        }}
-      >
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Tecnologias Utilizadas</h2>
-            <p className="text-xl text-muted-foreground">
-              Trabalhamos com as mais modernas tecnologias do mercado
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-            {technologies.map((tech, index) => (
-              <div 
-                key={tech.name} 
-                className="rounded-lg p-4 hover:scale-105 transition-all duration-300 text-center font-semibold shadow-lg backdrop-blur-sm border border-white/10"
-                style={{ 
-                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                  color: tech.color
-                }}
-              >
-                {tech.name}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Plans Section */}
       <section className="py-20 px-6 gradient-card">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
