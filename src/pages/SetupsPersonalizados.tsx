@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Monitor, Settings, Award, HeadphonesIcon, CheckCircle, MessageCircle, Lightbulb, Wrench, Package, Truck } from "lucide-react";
+import { Monitor, Settings, Award, HeadphonesIcon, CheckCircle, MessageCircle, Lightbulb, Wrench, Package, Truck, Briefcase, Gamepad2, Palette } from "lucide-react";
 
 // Import setup images
 import setupGamerPro from "@/assets/guipc.jpg";
@@ -109,55 +109,115 @@ const SetupsPersonalizados = () => {
       </section>
 
       {/* Why Upgrade Section */}
-      <section className="py-20 px-6 bg-muted/30">
-        <div className="max-w-5xl mx-auto">
-          <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
-            <p className="text-xl font-semibold text-foreground">
-              Seu computador não deve ser um obstáculo — ele deve ser um aliado. Quando você melhora seu PC ou 
-              investe em um setup de alto desempenho, você ganha muito mais do que velocidade: você conquista 
-              produtividade, qualidade de vida e resultados melhores.
-            </p>
-            
-            <div className="space-y-4">
-              <p>
-                🔹 <strong>Para quem trabalha:</strong> um computador lento custa tempo e dinheiro. Cada travada, 
-                cada espera, é produtividade perdida. Com um setup otimizado, você executa tarefas mais rápido, 
-                edita vídeos com fluidez, roda softwares pesados sem dor de cabeça e aumenta a eficiência no seu dia a dia.
-              </p>
-              
-              <p>
-                🔹 <strong>Para quem joga:</strong> um bom setup é a diferença entre jogar no "modo sobrevivência" 
-                ou ter uma experiência imersiva e competitiva. Mais FPS, gráficos no máximo, resposta instantânea e 
-                aquela vantagem extra nas partidas.
-              </p>
-              
-              <p>
-                🔹 <strong>Para quem cria:</strong> designers, programadores, arquitetos e criadores de conteúdo sabem: 
-                potência é liberdade criativa. Um computador forte abre portas para projetos maiores, softwares avançados 
-                e entregas profissionais sem limitações.
-              </p>
-            </div>
-            
-            <p className="text-xl font-semibold text-foreground">
-              👉 Melhorar seu PC não é gasto, é investimento em performance, produtividade e diversão. Enquanto um 
-              computador comum te limita, um setup de alto desempenho expande suas possibilidades.
-            </p>
-            
-            <p className="text-lg font-semibold text-foreground">
-              A pergunta não é se você deve melhorar, mas quando. E quanto antes, mais rápido você vai sentir a diferença.
+      <section className="py-24 px-6 gradient-card">
+        <div className="max-w-7xl mx-auto">
+          {/* Header */}
+          <div className="text-center mb-16 max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">
+              Seu computador deve ser seu{" "}
+              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                maior aliado
+              </span>
+            </h2>
+            <p className="text-xl text-muted-foreground leading-relaxed">
+              Quando você melhora seu PC ou investe em um setup de alto desempenho, você ganha muito mais do que velocidade: 
+              você conquista <strong className="text-foreground">produtividade, qualidade de vida e resultados melhores</strong>.
             </p>
           </div>
-          
-          <div className="text-center mt-8">
-            <Button 
-              variant="hero" 
-              size="lg" 
-              onClick={() => window.open('https://wa.me/5544999999999', '_blank')}
-              className="hover-scale"
-            >
-              <MessageCircle className="w-5 h-5 mr-2" />
-              Entre em Contato
-            </Button>
+
+          {/* Benefits Cards */}
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
+            {/* Para quem trabalha */}
+            <Card className="group glass-card hover:scale-105 transition-all duration-500 relative overflow-hidden border-0 shadow-lg hover:shadow-2xl">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              
+              <CardContent className="p-8 relative z-10">
+                <div className="mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-all duration-500 mb-4">
+                    <Briefcase className="w-8 h-8 text-primary" />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors duration-300">
+                    Para quem trabalha
+                  </h3>
+                </div>
+                <p className="text-muted-foreground leading-relaxed group-hover:text-foreground transition-colors duration-300">
+                  Um computador lento custa <strong>tempo e dinheiro</strong>. Cada travada, cada espera, é produtividade perdida. 
+                  Com um setup otimizado, você executa tarefas mais rápido, edita vídeos com fluidez, roda softwares pesados sem dor 
+                  de cabeça e aumenta a eficiência no seu dia a dia.
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* Para quem joga */}
+            <Card className="group glass-card hover:scale-105 transition-all duration-500 relative overflow-hidden border-0 shadow-lg hover:shadow-2xl">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              
+              <CardContent className="p-8 relative z-10">
+                <div className="mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-all duration-500 mb-4">
+                    <Gamepad2 className="w-8 h-8 text-primary" />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors duration-300">
+                    Para quem joga
+                  </h3>
+                </div>
+                <p className="text-muted-foreground leading-relaxed group-hover:text-foreground transition-colors duration-300">
+                  Um bom setup é a diferença entre jogar no <strong>"modo sobrevivência"</strong> ou ter uma experiência imersiva 
+                  e competitiva. Mais FPS, gráficos no máximo, resposta instantânea e aquela vantagem extra nas partidas.
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* Para quem cria */}
+            <Card className="group glass-card hover:scale-105 transition-all duration-500 relative overflow-hidden border-0 shadow-lg hover:shadow-2xl">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              
+              <CardContent className="p-8 relative z-10">
+                <div className="mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-all duration-500 mb-4">
+                    <Palette className="w-8 h-8 text-primary" />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors duration-300">
+                    Para quem cria
+                  </h3>
+                </div>
+                <p className="text-muted-foreground leading-relaxed group-hover:text-foreground transition-colors duration-300">
+                  Designers, programadores, arquitetos e criadores de conteúdo sabem: <strong>potência é liberdade criativa</strong>. 
+                  Um computador forte abre portas para projetos maiores, softwares avançados e entregas profissionais sem limitações.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Bottom CTA Section */}
+          <div className="glass-card p-8 md:p-12 text-center max-w-4xl mx-auto">
+            <div className="space-y-6">
+              <p className="text-xl md:text-2xl font-bold text-foreground">
+                💡 Melhorar seu PC não é gasto, é <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">investimento</span> em performance, 
+                produtividade e diversão.
+              </p>
+              
+              <p className="text-lg text-muted-foreground">
+                Enquanto um computador comum te limita, um setup de alto desempenho <strong className="text-foreground">expande suas possibilidades</strong>.
+              </p>
+              
+              <div className="pt-4">
+                <p className="text-xl font-semibold text-foreground mb-6">
+                  A pergunta não é se você deve melhorar, mas <span className="text-primary">quando</span>. 
+                  E quanto antes, mais rápido você vai sentir a diferença.
+                </p>
+                
+                <Button 
+                  variant="hero" 
+                  size="lg" 
+                  onClick={() => window.open('https://wa.me/5544999999999', '_blank')}
+                  className="hover-scale"
+                >
+                  <MessageCircle className="w-5 h-5 mr-2" />
+                  Entre em Contato
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
