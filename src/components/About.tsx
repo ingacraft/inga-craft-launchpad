@@ -68,9 +68,6 @@ const About = () => {
               </div>
             </div>
 
-            <Button variant="hero" size="lg">
-              Conhecer Nossa Equipe
-            </Button>
           </div>
 
           {/* Values */}

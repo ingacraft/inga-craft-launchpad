@@ -60,38 +60,54 @@ const Contact = () => {
           {/* Contact Form */}
           <div className="lg:col-span-2 animate-fade-in" style={{ animationDelay: "0.4s" }}>
             <Card className="glass-card p-8">
-              <CardContent className="space-y-6 p-0">
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium mb-2">Nome</label>
-                    <Input placeholder="Seu nome completo" className="bg-background/50" />
+              <form 
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  const formData = new FormData(e.currentTarget);
+                  const name = formData.get('name');
+                  const email = formData.get('email');
+                  const subject = formData.get('subject');
+                  const message = formData.get('message');
+                  
+                  const mailtoLink = `mailto:ingacraftadm@gmail.com?subject=${encodeURIComponent(subject as string)}&body=${encodeURIComponent(`Nome: ${name}\nEmail: ${email}\n\nMensagem:\n${message}`)}`;
+                  window.location.href = mailtoLink;
+                }}
+              >
+                <CardContent className="space-y-6 p-0">
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-sm font-medium mb-2">Nome</label>
+                      <Input name="name" placeholder="Seu nome completo" className="bg-background/50" required />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium mb-2">E-mail</label>
+                      <Input name="email" type="email" placeholder="seu@email.com" className="bg-background/50" required />
+                    </div>
                   </div>
+                  
                   <div>
-                    <label className="block text-sm font-medium mb-2">E-mail</label>
-                    <Input type="email" placeholder="seu@email.com" className="bg-background/50" />
+                    <label className="block text-sm font-medium mb-2">Assunto</label>
+                    <Input name="subject" placeholder="Como podemos ajudar você?" className="bg-background/50" required />
                   </div>
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium mb-2">Assunto</label>
-                  <Input placeholder="Como podemos ajudar você?" className="bg-background/50" />
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium mb-2">Mensagem</label>
-                  <Textarea 
-                    placeholder="Conte-nos mais sobre seu projeto ou necessidade..."
-                    rows={5}
-                    className="bg-background/50"
-                  />
-                </div>
-                
-                <Button variant="hero" size="lg" className="w-full group">
-                  <Send className="w-5 h-5" />
-                  Enviar Mensagem
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </Button>
-              </CardContent>
+                  
+                  <div>
+                    <label className="block text-sm font-medium mb-2">Mensagem</label>
+                    <Textarea 
+                      name="message"
+                      placeholder="Conte-nos mais sobre seu projeto ou necessidade..."
+                      rows={5}
+                      className="bg-background/50"
+                      required
+                    />
+                  </div>
+                  
+                  <Button type="submit" variant="hero" size="lg" className="w-full group">
+                    <Send className="w-5 h-5" />
+                    Enviar Mensagem
+                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </CardContent>
+              </form>
             </Card>
           </div>
         </div>

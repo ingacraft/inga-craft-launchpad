@@ -108,7 +108,61 @@ const SetupsPersonalizados = () => {
         </div>
       </section>
 
-      {/* Benefits Section */}
+      {/* Why Upgrade Section */}
+      <section className="py-20 px-6 bg-muted/30">
+        <div className="max-w-5xl mx-auto">
+          <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
+            <p className="text-xl font-semibold text-foreground">
+              Seu computador não deve ser um obstáculo — ele deve ser um aliado. Quando você melhora seu PC ou 
+              investe em um setup de alto desempenho, você ganha muito mais do que velocidade: você conquista 
+              produtividade, qualidade de vida e resultados melhores.
+            </p>
+            
+            <div className="space-y-4">
+              <p>
+                🔹 <strong>Para quem trabalha:</strong> um computador lento custa tempo e dinheiro. Cada travada, 
+                cada espera, é produtividade perdida. Com um setup otimizado, você executa tarefas mais rápido, 
+                edita vídeos com fluidez, roda softwares pesados sem dor de cabeça e aumenta a eficiência no seu dia a dia.
+              </p>
+              
+              <p>
+                🔹 <strong>Para quem joga:</strong> um bom setup é a diferença entre jogar no "modo sobrevivência" 
+                ou ter uma experiência imersiva e competitiva. Mais FPS, gráficos no máximo, resposta instantânea e 
+                aquela vantagem extra nas partidas.
+              </p>
+              
+              <p>
+                🔹 <strong>Para quem cria:</strong> designers, programadores, arquitetos e criadores de conteúdo sabem: 
+                potência é liberdade criativa. Um computador forte abre portas para projetos maiores, softwares avançados 
+                e entregas profissionais sem limitações.
+              </p>
+            </div>
+            
+            <p className="text-xl font-semibold text-foreground">
+              👉 Melhorar seu PC não é gasto, é investimento em performance, produtividade e diversão. Enquanto um 
+              computador comum te limita, um setup de alto desempenho expande suas possibilidades.
+            </p>
+            
+            <p className="text-lg font-semibold text-foreground">
+              A pergunta não é se você deve melhorar, mas quando. E quanto antes, mais rápido você vai sentir a diferença.
+            </p>
+          </div>
+          
+          <div className="text-center mt-8">
+            <Button 
+              variant="hero" 
+              size="lg" 
+              onClick={() => window.open('https://wa.me/5544999999999', '_blank')}
+              className="hover-scale"
+            >
+              <MessageCircle className="w-5 h-5 mr-2" />
+              Entre em Contato
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Portfolio Gallery */}
       <section className="py-24 px-6" id="beneficios">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -156,7 +210,7 @@ const SetupsPersonalizados = () => {
       </section>
 
       {/* Portfolio Gallery */}
-      <section className="py-24 px-6 bg-muted/50" id="portfolio">
+      <section className="py-24 px-6 gradient-card" id="portfolio">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -178,7 +232,7 @@ const SetupsPersonalizados = () => {
                   <div className="w-full h-full bg-background rounded-lg" />
                 </div>
                 
-                <div className="aspect-video relative overflow-hidden">
+                <div className="aspect-video relative overflow-hidden h-72">
                   <img 
                     src={item.image} 
                     alt={item.title}
@@ -205,6 +259,49 @@ const SetupsPersonalizados = () => {
                   {/* Corner accent */}
                   <div className="absolute top-4 right-4 w-2 h-2 bg-accent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse" />
                 </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-24 px-6" id="beneficios">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Por que escolher a{" "}
+              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                IngaCraft
+              </span>
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              Mais do que montar computadores, criamos experiências únicas que elevam sua produtividade e diversão
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => (
+              <Card key={index} className="group glass-card hover:scale-105 transition-all duration-500 relative overflow-hidden border-0 shadow-lg hover:shadow-2xl">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute top-0 right-0 w-12 h-12 bg-gradient-to-bl from-accent/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                
+                <CardContent className="p-8 text-center relative z-10">
+                  <div className="mb-6 flex justify-center">
+                    <div className="relative">
+                      <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-all duration-500 group-hover:shadow-lg">
+                        {benefit.icon}
+                      </div>
+                      <div className="absolute inset-0 rounded-full border-2 border-primary/30 scale-0 group-hover:scale-150 opacity-100 group-hover:opacity-0 transition-all duration-700" />
+                    </div>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-4 group-hover:text-primary transition-colors duration-300">
+                    {benefit.title}
+                  </h3>
+                  <p className="text-muted-foreground group-hover:text-foreground transition-colors duration-300">
+                    {benefit.description}
+                  </p>
+                </CardContent>
               </Card>
             ))}
           </div>

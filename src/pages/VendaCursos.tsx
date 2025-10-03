@@ -74,7 +74,7 @@ const VendaCursos = () => {
                   {course.price}
                 </div>
                 
-                <div className="aspect-video overflow-hidden relative">
+                <div className="aspect-video overflow-hidden relative h-72">
                   <img 
                     src={course.image} 
                     alt={course.title}
@@ -146,6 +146,139 @@ const VendaCursos = () => {
             <Button variant="hero" size="lg" className="text-xl px-8 py-4">
               Dúvidas? Entre em contato conosco aqui!
             </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Take These Courses Section */}
+      <section className="py-20 px-6 gradient-card">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              Por que fazer{" "}
+              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                esses cursos?
+              </span>
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Invista em conhecimento que vai transformar sua carreira e abrir novas oportunidades
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12">
+            {/* Front-End Column */}
+            <Card className="glass-card p-8 hover:scale-105 transition-all duration-500">
+              <CardHeader>
+                <CardTitle className="text-3xl mb-4">
+                  <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                    Curso Front-End
+                  </span>
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4 text-muted-foreground leading-relaxed">
+                <p>
+                  O mundo digital cresce todos os dias — e quem domina Front-End tem nas mãos uma das profissões 
+                  mais promissoras da atualidade. Aprender a construir sites e interfaces modernas não é só adquirir 
+                  um conhecimento técnico: é abrir portas para oportunidades de trabalho, liberdade financeira e 
+                  crescimento pessoal.
+                </p>
+                
+                <p>
+                  Com nosso curso de Front-End, você vai aprender do zero ao avançado a criar páginas profissionais, 
+                  responsivas e bonitas, utilizando as principais tecnologias do mercado: HTML, CSS e JavaScript. 
+                  Além disso, vai entender boas práticas, ferramentas modernas e como se destacar no mercado de 
+                  desenvolvimento web.
+                </p>
+                
+                <div className="bg-background/50 p-6 rounded-lg space-y-3">
+                  <h4 className="text-xl font-semibold text-foreground mb-4">📌 Por que fazer esse curso?</h4>
+                  <ul className="space-y-2">
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-accent mr-2 mt-0.5 flex-shrink-0" />
+                      <span><strong>Alta demanda:</strong> empresas buscam constantemente desenvolvedores Front-End.</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-accent mr-2 mt-0.5 flex-shrink-0" />
+                      <span><strong>Flexibilidade:</strong> trabalhe de casa, como freelancer ou em grandes companhias.</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-accent mr-2 mt-0.5 flex-shrink-0" />
+                      <span><strong>Criatividade:</strong> dê vida a suas ideias criando interfaces únicas.</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-accent mr-2 mt-0.5 flex-shrink-0" />
+                      <span><strong>Futuro garantido:</strong> o digital só cresce, e você pode crescer junto com ele.</span>
+                    </li>
+                  </ul>
+                </div>
+                
+                <p className="text-lg font-semibold text-foreground">
+                  👉 Se você quer entrar no universo da programação, começar uma carreira sólida e transformar sua 
+                  paixão por tecnologia em profissão, este é o primeiro passo.
+                </p>
+                
+                <p className="text-base italic text-foreground">
+                  💡 Não fique só navegando na internet — aprenda a construí-la.
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* Montagem e Manutenção Column */}
+            <Card className="glass-card p-8 hover:scale-105 transition-all duration-500">
+              <CardHeader>
+                <CardTitle className="text-3xl mb-4">
+                  <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                    Curso de Montagem e Manutenção
+                  </span>
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4 text-muted-foreground leading-relaxed">
+                <p>
+                  Hoje em dia, quase tudo depende de computadores. E quem sabe montar, otimizar e consertar máquinas 
+                  tem sempre trabalho garantido.
+                </p>
+                
+                <p>
+                  Nosso curso de Montagem e Manutenção de Computadores ensina você, passo a passo, a dominar desde 
+                  os conceitos básicos até técnicas avançadas para montar, configurar e reparar PCs de alto desempenho.
+                </p>
+                
+                <div className="bg-background/50 p-6 rounded-lg space-y-3">
+                  <h4 className="text-xl font-semibold text-foreground mb-4">📌 O que você vai conquistar:</h4>
+                  <ul className="space-y-2">
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-accent mr-2 mt-0.5 flex-shrink-0" />
+                      <span>Entender cada componente e como escolher as melhores peças.</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-accent mr-2 mt-0.5 flex-shrink-0" />
+                      <span>Montar computadores do zero, para trabalho, jogos ou uso profissional.</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-accent mr-2 mt-0.5 flex-shrink-0" />
+                      <span>Diagnosticar e resolver problemas de forma prática e rápida.</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-accent mr-2 mt-0.5 flex-shrink-0" />
+                      <span>Aprender upgrades e otimizações que aumentam a performance.</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-accent mr-2 mt-0.5 flex-shrink-0" />
+                      <span>Possibilidade de atuar no mercado ou até abrir seu próprio negócio.</span>
+                    </li>
+                  </ul>
+                </div>
+                
+                <p className="text-base italic text-foreground">
+                  💡 Esse curso é perfeito para quem busca independência, economia e uma nova fonte de renda. 
+                  Afinal, um computador bem montado e mantido dura mais, rende mais e dá menos dor de cabeça.
+                </p>
+                
+                <p className="text-lg font-semibold text-foreground">
+                  👉 Invista em conhecimento que se paga sozinho: monte, mantenha e lucre com computadores.
+                </p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>

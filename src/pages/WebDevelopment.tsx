@@ -146,7 +146,48 @@ const WebDevelopment = () => {
         </div>
       </section>
 
-      {/* Technologies Section */}
+      {/* Why You Need a Professional Website Section */}
+      <section className="py-20 px-6 bg-muted/30">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center">
+            Por que você precisa de um{" "}
+            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              site profissional?
+            </span>
+          </h2>
+          
+          <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
+            <p>
+              No mundo atual, quem não está presente na internet simplesmente não existe para boa parte dos clientes. 
+              Um site profissional é muito mais do que uma página bonita — é o seu cartão de visitas digital, 
+              funcionando 24 horas por dia, 7 dias por semana.
+            </p>
+            
+            <p>
+              Com um site, você transmite credibilidade, confiança e profissionalismo, mostrando que leva o seu 
+              trabalho a sério. Além disso, você conquista autoridade no seu nicho, atrai novos clientes e se 
+              destaca da concorrência que ainda depende apenas das redes sociais.
+            </p>
+            
+            <p>
+              Imagine um espaço 100% seu, onde você apresenta seus serviços, mostra depoimentos de clientes, 
+              publica conteúdos relevantes e ainda facilita o contato direto por formulário, e-mail ou WhatsApp.
+            </p>
+            
+            <p>
+              Ter um site é investir na sua imagem, reputação e crescimento. Enquanto você trabalha, o seu site 
+              está trabalhando por você, gerando oportunidades e fortalecendo sua marca.
+            </p>
+            
+            <p className="text-xl font-semibold text-foreground">
+              Profissionais de sucesso têm uma coisa em comum: eles estão online e acessíveis. 
+              E você, vai ficar para trás ou vai dar o próximo passo?
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Plans Section */}
       <section 
         className="py-20 px-6 relative"
         style={{
@@ -179,7 +220,7 @@ const WebDevelopment = () => {
       </section>
 
       {/* Pricing Plans Section */}
-      <section className="py-20 px-6 bg-card/50">
+      <section className="py-20 px-6 gradient-card">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Planos e Preços</h2>
@@ -272,7 +313,7 @@ const WebDevelopment = () => {
                   <img 
                     src={project.image} 
                     alt={project.name}
-                    className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   
@@ -296,6 +337,38 @@ const WebDevelopment = () => {
                   </p>
                 </CardContent>
               </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Technologies Section */}
+      <section 
+        className="py-20 px-6 relative"
+        style={{
+          background: 'linear-gradient(180deg, hsl(230, 73%, 15%), hsl(216, 29%, 7%))'
+        }}
+      >
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">Tecnologias Utilizadas</h2>
+            <p className="text-xl text-muted-foreground">
+              Trabalhamos com as mais modernas tecnologias do mercado
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+            {technologies.map((tech, index) => (
+              <div 
+                key={tech.name} 
+                className="rounded-lg p-4 hover:scale-105 transition-all duration-300 text-center font-semibold shadow-lg backdrop-blur-sm border border-white/10"
+                style={{ 
+                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                  color: tech.color
+                }}
+              >
+                {tech.name}
+              </div>
             ))}
           </div>
         </div>

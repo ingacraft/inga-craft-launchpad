@@ -16,35 +16,35 @@ const SocialMedia = () => {
     {
       name: "Instagram",
       icon: Instagram,
-      url: "https://instagram.com",
+      url: "https://www.instagram.com/ingacraft/",
       colorClass: "instagram-gradient",
       hoverClass: "hover:scale-110 hover:shadow-instagram"
     },
     {
       name: "Facebook", 
       icon: Facebook,
-      url: "https://facebook.com",
+      url: "https://www.facebook.com/profile.php?id=61572777965370",
       colorClass: "facebook-blue",
       hoverClass: "hover:scale-110 hover:shadow-facebook"
     },
     {
       name: "LinkedIn",
       icon: Linkedin, 
-      url: "https://linkedin.com",
+      url: "https://www.linkedin.com/company/ingacraft/",
       colorClass: "linkedin-blue",
       hoverClass: "hover:scale-110 hover:shadow-linkedin"
     },
     {
       name: "TikTok",
       icon: TikTokIcon,
-      url: "https://tiktok.com", 
+      url: "https://www.tiktok.com/@ingacraft", 
       colorClass: "tiktok-gradient",
       hoverClass: "hover:scale-110 hover:shadow-tiktok"
     },
     {
       name: "YouTube",
       icon: Youtube,
-      url: "https://youtube.com",
+      url: "https://www.youtube.com/@ingacraft",
       colorClass: "youtube-red", 
       hoverClass: "hover:scale-110 hover:shadow-youtube"
     }
