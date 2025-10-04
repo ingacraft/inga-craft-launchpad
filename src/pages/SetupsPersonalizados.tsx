@@ -268,7 +268,7 @@ const SetupsPersonalizados = () => {
                       {/* View button */}
                       <div className="flex items-center gap-2 text-accent mt-3 group-hover:text-white transition-colors duration-300">
                         <Monitor className="w-4 h-4" />
-                        <span className="text-sm font-medium">Ver Detalhes</span>
+                        <span className="text-sm font-medium">CPU GAMER</span>
                       </div>
                     </div>
                   </div>
