@@ -249,11 +249,11 @@ const SetupsPersonalizados = () => {
                   <div className="w-full h-full bg-background rounded-lg" />
                 </div>
                 
-                <div className="aspect-video relative overflow-hidden h-80">
+                <div className="relative w-full h-[400px] overflow-hidden rounded-lg">
                   <img 
                     src={item.image} 
                     alt={item.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110"
                   />
                   
                   {/* Enhanced overlay with better positioning */}
