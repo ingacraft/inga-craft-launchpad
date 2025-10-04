@@ -3,7 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Check, Star, Code2, Database, Globe, GitBranch } from "lucide-react";
+import { Check, Star, Code2, Database, Globe, GitBranch, Shield, Users, TrendingUp, Clock } from "lucide-react";
 import digitalTechBg from "@/assets/digital-tech-bg.jpg";
 
 const WebDevelopment = () => {
@@ -148,42 +148,104 @@ const WebDevelopment = () => {
 
       {/* Why You Need a Professional Website Section */}
       <section className="py-20 px-6 bg-muted/30">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-center">
             Por que você precisa de um{" "}
             <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
               site profissional?
             </span>
           </h2>
           
-          <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
-            <p>
-              No mundo atual, quem não está presente na internet simplesmente não existe para boa parte dos clientes. 
-              Um site profissional é muito mais do que uma página bonita — é o seu cartão de visitas digital, 
-              funcionando 24 horas por dia, 7 dias por semana.
-            </p>
-            
-            <p>
-              Com um site, você transmite credibilidade, confiança e profissionalismo, mostrando que leva o seu 
-              trabalho a sério. Além disso, você conquista autoridade no seu nicho, atrai novos clientes e se 
-              destaca da concorrência que ainda depende apenas das redes sociais.
-            </p>
-            
-            <p>
-              Imagine um espaço 100% seu, onde você apresenta seus serviços, mostra depoimentos de clientes, 
-              publica conteúdos relevantes e ainda facilita o contato direto por formulário, e-mail ou WhatsApp.
-            </p>
-            
-            <p>
-              Ter um site é investir na sua imagem, reputação e crescimento. Enquanto você trabalha, o seu site 
-              está trabalhando por você, gerando oportunidades e fortalecendo sua marca.
-            </p>
-            
-            <p className="text-xl font-semibold text-foreground">
-              Profissionais de sucesso têm uma coisa em comum: eles estão online e acessíveis. 
-              E você, vai ficar para trás ou vai dar o próximo passo?
-            </p>
+          <p className="text-xl text-muted-foreground text-center mb-12 max-w-3xl mx-auto">
+            No mundo atual, quem não está presente na internet simplesmente não existe para boa parte dos clientes.
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <Card className="group glass-card hover:scale-105 transition-all duration-500 border-0 shadow-lg hover:shadow-2xl overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <CardHeader className="relative z-10">
+                <div className="w-14 h-14 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500">
+                  <Shield className="w-7 h-7 text-white" />
+                </div>
+                <CardTitle className="text-2xl group-hover:text-primary transition-colors duration-300">
+                  Credibilidade e Confiança
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="relative z-10">
+                <p className="text-muted-foreground group-hover:text-foreground transition-colors duration-300">
+                  Um site profissional é o seu cartão de visitas digital, funcionando 24/7. 
+                  Você transmite credibilidade, confiança e profissionalismo, mostrando que leva o seu trabalho a sério.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="group glass-card hover:scale-105 transition-all duration-500 border-0 shadow-lg hover:shadow-2xl overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <CardHeader className="relative z-10">
+                <div className="w-14 h-14 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500">
+                  <TrendingUp className="w-7 h-7 text-white" />
+                </div>
+                <CardTitle className="text-2xl group-hover:text-primary transition-colors duration-300">
+                  Autoridade no Seu Nicho
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="relative z-10">
+                <p className="text-muted-foreground group-hover:text-foreground transition-colors duration-300">
+                  Você conquista autoridade, atrai novos clientes e se destaca da concorrência 
+                  que ainda depende apenas das redes sociais.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="group glass-card hover:scale-105 transition-all duration-500 border-0 shadow-lg hover:shadow-2xl overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <CardHeader className="relative z-10">
+                <div className="w-14 h-14 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500">
+                  <Users className="w-7 h-7 text-white" />
+                </div>
+                <CardTitle className="text-2xl group-hover:text-primary transition-colors duration-300">
+                  Seu Espaço 100% Seu
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="relative z-10">
+                <p className="text-muted-foreground group-hover:text-foreground transition-colors duration-300">
+                  Apresente seus serviços, mostre depoimentos de clientes, publique conteúdos relevantes e 
+                  facilite o contato direto por formulário, e-mail ou WhatsApp.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="group glass-card hover:scale-105 transition-all duration-500 border-0 shadow-lg hover:shadow-2xl overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <CardHeader className="relative z-10">
+                <div className="w-14 h-14 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500">
+                  <Clock className="w-7 h-7 text-white" />
+                </div>
+                <CardTitle className="text-2xl group-hover:text-primary transition-colors duration-300">
+                  Trabalhando por Você
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="relative z-10">
+                <p className="text-muted-foreground group-hover:text-foreground transition-colors duration-300">
+                  Ter um site é investir na sua imagem, reputação e crescimento. Enquanto você trabalha, 
+                  o seu site está trabalhando por você, gerando oportunidades e fortalecendo sua marca.
+                </p>
+              </CardContent>
+            </Card>
           </div>
+
+          <Card className="glass-card border-primary/20 shadow-glow">
+            <CardContent className="pt-8 text-center">
+              <p className="text-xl md:text-2xl font-semibold mb-2">
+                <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                  Profissionais de sucesso têm uma coisa em comum: eles estão online e acessíveis.
+                </span>
+              </p>
+              <p className="text-lg text-muted-foreground">
+                E você, vai ficar para trás ou vai dar o próximo passo?
+              </p>
+            </CardContent>
+          </Card>
         </div>
       </section>
 
