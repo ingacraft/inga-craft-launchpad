@@ -9,21 +9,21 @@ const Services = () => {
       icon: Code2,
       title: "Desenvolvimento Web",
       description: "Criamos sites e aplicações web modernas, responsivas e otimizadas para performance. Utilizamos as mais recentes tecnologias para garantir experiências excepcionais.",
-      features: ["React & Next.js", "Design Responsivo", "SEO Otimizado", "Performance Máxima"],
+      features: ["⚛️ React & Next.js", "📱 Design Responsivo", "🔍 SEO Otimizado", "⚡ Performance Máxima", "☁️ Integração com APIs", "🛠️ Manutenção e Suporte", "🖥️ UI/UX Design", "🔒 Segurança Avançada", "📊 Painéis Administrativos", "🚀 Hospedagem e Deploy Automatizado"],
       gradient: "gradient-primary"
     },
     {
       icon: Monitor,
       title: "Setups Personalizados",
       description: "Montamos workstations completas para desenvolvimento, gaming e criação de conteúdo. Cada setup é personalizado para suas necessidades específicas.",
-      features: ["Hardware Selecionado", "Configuração Completa", "Suporte Técnico", "Garantia Estendida"],
+      features: ["💻 Hardware Selecionado", "⚙️ Configuração Completa", "🛠️ Suporte Técnico Dedicado", "🛡️ Garantia Estendida", "🎮 Setups para Gamers", "🎨 Estação de Criação", "👨‍💻 Workstations para Devs", "🖱️ Periféricos Premium", "🌈 Design Personalizado", "🚀 Upgrade Futuro Facilitado"],
       gradient: "gradient-secondary"
     },
     {
       icon: GraduationCap,
       title: "Cursos de Tecnologia",
       description: "Capacitamos profissionais com cursos práticos e atualizados. Do básico ao avançado, aprenda as tecnologias mais demandadas pelo mercado.",
-      features: ["Instrutores Especializados", "Projetos Reais", "Certificação", "Comunidade Ativa"],
+      features: ["👨‍🏫 Instrutores Especializados", "💻 Projetos Reais", "📜 Certificação" , "🌐 Comunidade Ativa", "📈 Trilhas de Aprendizado", "🔄 Conteúdo Atualizado", "🤝 Mentorias e Suporte Individual", "🧑‍💻 Laboratórios Virtuais", "🚀 Preparação para o Mercado"],
       gradient: "gradient-primary"
     }
   ];
