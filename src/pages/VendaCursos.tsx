@@ -268,23 +268,8 @@ const VendaCursos = () => {
           </div>
         </div>
       </section>
-      <section>
-        {/* Motivational Section */}
-          <div className="text-center space-y-8 mb-16">
-            <div className="space-y-6">
-              <blockquote className="text-2xl md:text-3xl font-semibold text-foreground italic">
-                "A tecnologia não espera. Comece hoje a construir sua carreira."
-              </blockquote>
-              <blockquote className="text-xl md:text-2xl text-muted-foreground italic">
-                "Da sala de aula para o mercado: prática, suporte e aprendizado direto ao ponto."
-              </blockquote>
-            </div>
-            
-            <Button variant="hero" size="lg" className="text-xl px-8 py-4">
-              Dúvidas? Entre em contato conosco aqui!
-            </Button>
-          </div>
-      </section>
+      
+       
 
       <Footer />
     </div>

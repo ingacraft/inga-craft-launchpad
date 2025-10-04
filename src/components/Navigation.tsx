@@ -85,7 +85,7 @@ const Navigation = () => {
           {/* CTA Button */}
           <div className="hidden md:block">
             <Button variant="hero">
-              Começar Projeto
+              Tirar Dúvidas no WhatsApp
             </Button>
           </div>
 
@@ -135,7 +135,7 @@ const Navigation = () => {
                 </a>
               ))}
               <Button variant="hero" className="mt-4">
-                Começar Projeto
+                🚀 Conversar Agora
               </Button>
             </div>
           </div>
