@@ -241,9 +241,9 @@ const SetupsPersonalizados = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 lg:grid-cols-2 gap-8">
             {portfolioItems.map((item) => (
-              <Card key={item.id} className="group glass-card cursor-pointer hover:scale-105 transition-all duration-500 relative border-0 shadow-lg hover:shadow-2xl">
+              <Card key={item.id} className="group glass-card cursor-pointer hover:scale-101 transition-all duration-500 relative border-0 shadow-lg hover:shadow-2xl">
                 {/* Animated border */}
                 <div className="absolute inset-0 bg-gradient-to-r from-primary via-accent to-primary p-[1px] rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                   <div className="w-full h-full bg-background rounded-lg" />
