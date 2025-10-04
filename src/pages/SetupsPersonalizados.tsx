@@ -40,12 +40,12 @@ const SetupsPersonalizados = () => {
   ];
 
   const portfolioItems = [
-    { id: 1, title: "Setup Gamer Pro", description: "RTX 4090 + i9-13900K + RGB", image: setupGamerPro },
-    { id: 2, title: "Workstation Creative", description: "Edição de vídeo 4K + Render 3D", image: workstationCreative },
-    { id: 3, title: "Setup Streamer", description: "Dual PC + Captura + Audio Pro", image: setupStreamer },
-    { id: 4, title: "Office Premium", description: "Produtividade + Multi-monitor", image: officePremium },
-    { id: 5, title: "Gaming Compact", description: "Mini-ITX + Performance máxima", image: gamingCompact },
-    { id: 6, title: "Dev Station", description: "Múltiplos ambientes + Docker", image: devStation }
+    { id: 1, title: "", description: "", image: setupGamerPro },
+    { id: 2, title: "", description: "", image: workstationCreative },
+    { id: 3, title: "", description: "", image: setupStreamer },
+    { id: 4, title: "", description: "", image: officePremium },
+    { id: 5, title: "", description: "", image: gamingCompact },
+    { id: 6, title: "", description: "", image: devStation }
   ];
 
   const processSteps = [
