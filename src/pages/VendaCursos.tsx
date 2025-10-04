@@ -1,11 +1,13 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle } from "lucide-react";
 import techEducationHero from "@/assets/tech-education-hero.jpg";
 import programmingCourse from "@/assets/programming-course.jpg";
 import pcBuildingCourse from "@/assets/pc-building-course.jpg";
+import { siteConfig, getWhatsAppLink } from "@/config/site";
 
 const VendaCursos = () => {
   const courses = [
@@ -24,7 +26,7 @@ const VendaCursos = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen pt-20">
       <Navigation />
       
       {/* Hero Section */}
@@ -272,6 +274,7 @@ const VendaCursos = () => {
        
 
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 };

@@ -8,6 +8,7 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
+    /* Core Colors */
     --background: 220 27% 6%;
     --foreground: 210 40% 98%;
 
@@ -17,21 +18,32 @@ All colors MUST be HSL.
     --popover: 220 27% 8%;
     --popover-foreground: 210 40% 98%;
 
+    /* Brand Colors - Professional Blue */
     --primary: 230 73% 60%;
     --primary-foreground: 210 40% 98%;
+    --primary-hover: 230 73% 55%;
 
+    /* Secondary - Elegant Gray */
     --secondary: 217 19% 27%;
     --secondary-foreground: 210 40% 98%;
 
+    /* Muted Colors */
     --muted: 217 19% 27%;
     --muted-foreground: 215 20.2% 65.1%;
 
+    /* Accent - Fresh Green */
     --accent: 142 76% 36%;
     --accent-foreground: 210 40% 98%;
+    --accent-hover: 142 76% 32%;
 
+    /* Status Colors */
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
+    --success: 142 76% 36%;
+    --warning: 45 93% 47%;
+    --info: 230 73% 60%;
 
+    /* UI Elements */
     --border: 217 19% 27%;
     --input: 217 19% 27%;
     --ring: 230 73% 60%;
@@ -129,6 +141,16 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+  }
+  
+  code, pre {
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
   }
   
   /* Custom Utilities */

@@ -2,7 +2,9 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import { Monitor, Settings, Award, HeadphonesIcon, CheckCircle, MessageCircle, Lightbulb, Wrench, Package, Truck, Briefcase, Gamepad2, Palette } from "lucide-react";
+import { siteConfig, getWhatsAppLink } from "@/config/site";
 
 // Import setup images
 import setupGamerPro from "@/assets/guipc.jpg";
@@ -70,7 +72,7 @@ const SetupsPersonalizados = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen pt-20">
       <Navigation />
       
       {/* Hero Section */}
@@ -377,6 +379,7 @@ const SetupsPersonalizados = () => {
       </section>
 
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 };

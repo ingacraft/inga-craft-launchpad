@@ -5,10 +5,11 @@ import About from "@/components/About";
 import Contact from "@/components/Contact";
 import SocialMedia from "@/components/SocialMedia";
 import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen pt-20">
       <Navigation />
       <Hero />
       <Services />
@@ -16,6 +17,7 @@ const Index = () => {
       <Contact />
       <SocialMedia />
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 };

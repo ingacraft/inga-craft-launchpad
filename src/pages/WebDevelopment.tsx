@@ -3,8 +3,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import { Check, Star, Code2, Database, Globe, GitBranch, Shield, Users, TrendingUp, Clock } from "lucide-react";
 import digitalTechBg from "@/assets/digital-tech-bg.jpg";
+import { siteConfig, getWhatsAppLink } from "@/config/site";
 
 const WebDevelopment = () => {
   const technologies = [
@@ -116,7 +118,7 @@ const WebDevelopment = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background pt-20">
       <Navigation />
       
       {/* Hero Section */}
@@ -405,6 +407,7 @@ const WebDevelopment = () => {
       </section>
 
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 };

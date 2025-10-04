@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Code, Cpu, GraduationCap, Zap, Shield, Wrench, Target } from "lucide-react";
@@ -74,7 +75,7 @@ const Portfolio = () => {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen pt-20">
       <Navigation />
       
       {/* Hero Section */}
@@ -333,6 +334,7 @@ const Portfolio = () => {
       </section>
 
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 };
