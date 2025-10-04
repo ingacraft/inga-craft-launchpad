@@ -30,14 +30,14 @@ const SocialMedia = () => {
     {
       name: "LinkedIn",
       icon: Linkedin, 
-      url: "https://www.linkedin.com/company/ingacraft/",
+      url: "https://www.linkedin.com/in/inga-craft-01a870388/",
       colorClass: "linkedin-blue",
       hoverClass: "hover:scale-110 hover:shadow-linkedin"
     },
     {
       name: "TikTok",
       icon: TikTokIcon,
-      url: "https://www.tiktok.com/@ingacraft", 
+      url: "https://www.tiktok.com/@ingacrafttec", 
       colorClass: "tiktok-gradient",
       hoverClass: "hover:scale-110 hover:shadow-tiktok"
     },
