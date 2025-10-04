@@ -6,7 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Code, Cpu, GraduationCap, Zap, Shield, Wrench, Target } from "lucide-react";
 import heroTechSetup from "@/assets/hero-tech-setup.jpg";
 import devStation from "@/assets/dev-station.jpg";
-import setupGamerPro from "@/assets/guipc.jpg";
+import setupGamerPro from "@/assets/IMG-20251004-WA0097.jpg";
 import programmingCourse from "@/assets/programming-course.jpg";
 import codeBackground from "@/assets/code-background.jpg";
 import gamingCompact from "@/assets/cpujapa.jpg";

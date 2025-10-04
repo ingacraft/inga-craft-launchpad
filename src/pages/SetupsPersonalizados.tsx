@@ -7,12 +7,12 @@ import { Monitor, Settings, Award, HeadphonesIcon, CheckCircle, MessageCircle, L
 import { siteConfig, getWhatsAppLink } from "@/config/site";
 
 // Import setup images
-import setupGamerPro from "@/assets/guipc.jpg";
+import setupGamerPro from "@/assets/IMG-20251004-WA0097.jpg";
 import workstationCreative from "@/assets/cpujapa.jpg";
-import setupStreamer from "@/assets/setup-streamer.jpg";
-import officePremium from "@/assets/guipcc.jpg";
+import setupStreamer from "@/assets/IMG-20251004-WA0099.jpg";
+import officePremium from "@/assets/IMG-20251004-WA0098.jpg";
 import gamingCompact from "@/assets/cpujapaa.jpg";
-import devStation from "@/assets/dev-station.jpg";
+import devStation from "@/assets/IMG-20251004-WA0099.jpg";
 import cpuGamer from "@/assets/setup16.jpg";
 
 const SetupsPersonalizados = () => {
