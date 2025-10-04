@@ -16,7 +16,7 @@ const SocialMedia = () => {
     {
       name: "Instagram",
       icon: Instagram,
-      url: "https://www.instagram.com/ingacraft/",
+      url: "https://www.instagram.com/ingacrafttec/",
       colorClass: "instagram-gradient",
       hoverClass: "hover:scale-110 hover:shadow-instagram"
     },
