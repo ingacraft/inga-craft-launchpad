@@ -80,7 +80,7 @@ const Portfolio = () => {
       {/* Hero Section */}
       <section className="relative h-[90vh] flex items-center justify-center px-6 overflow-hidden">
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40"
           style={{ backgroundImage: `url(${heroTechSetup})` }}
         />
         <div className="absolute inset-0 gradient-dark opacity-70" />

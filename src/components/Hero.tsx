@@ -48,7 +48,7 @@ const Hero = () => {
             Começar Projeto
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </Button>
-          <Button variant="glass" size="lg">
+          <Button variant="glass" size="lg" onClick={() => window.location.href = '/portfolio'}>
             Ver Portfólio
           </Button>
         </div>

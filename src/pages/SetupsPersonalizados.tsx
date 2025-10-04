@@ -101,7 +101,7 @@ const SetupsPersonalizados = () => {
               <MessageCircle className="w-5 h-5 mr-2" />
               Peça seu Orçamento
             </Button>
-            <Button variant="glass" size="lg" className="hover-scale">
+            <Button variant="glass" size="lg" className="hover-scale" onClick={() => window.location.href = '/portfolio'}>
               Ver Portfólio
             </Button>
           </div>
