@@ -249,7 +249,7 @@ const SetupsPersonalizados = () => {
                   <div className="w-full h-full bg-background rounded-lg" />
                 </div>
                 
-                <div className="relative w-full h-[400px] overflow-hidden rounded-lg">
+                <div className="aspect-video relative overflow-hidden h-72">
                   <img 
                     src={item.image} 
                     alt={item.title}
