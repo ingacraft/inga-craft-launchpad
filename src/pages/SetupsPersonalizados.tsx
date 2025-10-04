@@ -12,7 +12,7 @@ import workstationCreative from "@/assets/cpujapa.jpg";
 import setupStreamer from "@/assets/IMG-20251004-WA0099.jpg";
 import officePremium from "@/assets/IMG-20251004-WA0098.jpg";
 import gamingCompact from "@/assets/cpujapaa.jpg";
-import devStation from "@/assets/IMG-20251004-WA0099.jpg";
+import devStation from "@/assets/IMG-20251004-WA0096.jpg";
 import cpuGamer from "@/assets/setup16.jpg";
 
 const SetupsPersonalizados = () => {
