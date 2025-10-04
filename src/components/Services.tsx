@@ -23,7 +23,7 @@ const Services = () => {
       icon: GraduationCap,
       title: "Cursos de Tecnologia",
       description: "Capacitamos profissionais com cursos práticos e atualizados. Do básico ao avançado, aprenda as tecnologias mais demandadas pelo mercado.",
-      features: [" Instrutores Especializados", " Projetos Reais", " Certificação" , " Comunidade Ativa", " Trilhas de Aprendizado", " Conteúdo Atualizado", " Mentorias e Suporte Individual", "🧑 Laboratórios Virtuais", " Preparação para o Mercado"],
+      features: [" Instrutores Especializados", " Projetos Reais", " Certificação" , " Comunidade Ativa", " Trilhas de Aprendizado", " Conteúdo Atualizado", " Mentorias e Suporte Individual", " Laboratórios Virtuais", " Preparação para o Mercado"],
       gradient: "gradient-primary"
     }
   ];
