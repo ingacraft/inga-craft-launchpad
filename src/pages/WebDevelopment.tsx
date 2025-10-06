@@ -144,7 +144,7 @@ const WebDevelopment = () => {
       </section>
 
       {/* Why You Need a Professional Website Section */}
-      <section className="py-32 px-6 bg-muted/30">
+      <section className="py-32 px-6 bg-background/30">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-center">
             Por que você precisa de um{" "}
