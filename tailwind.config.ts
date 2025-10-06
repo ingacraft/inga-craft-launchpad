@@ -101,6 +101,16 @@ export default {
           "50%": {
             transform: "translateY(-10px)"
           }
+        },
+        "pulse-slow": {
+          "0%, 100%": {
+            opacity: "1",
+            filter: "drop-shadow(0 0 30px rgba(251, 146, 60, 0.5))"
+          },
+          "50%": {
+            opacity: "0.85",
+            filter: "drop-shadow(0 0 50px rgba(251, 146, 60, 0.8))"
+          }
         }
       },
       animation: {
@@ -108,6 +118,7 @@ export default {
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in": "fade-in 0.6s ease-out",
         "float": "float 3s ease-in-out infinite",
+        "pulse-slow": "pulse-slow 3s ease-in-out infinite",
       },
     },
   },

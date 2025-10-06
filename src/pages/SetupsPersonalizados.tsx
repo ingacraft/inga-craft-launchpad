@@ -78,7 +78,7 @@ const SetupsPersonalizados = () => {
       {/* Hero Section */}
       <section className="relative h-[85vh] flex items-center justify-center px-6 overflow-hidden">
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-60"
           style={{ backgroundImage: `url(${cpuGamer})` }}
         />
         <div className="absolute inset-0 gradient-hero opacity-50" />
@@ -243,38 +243,13 @@ const SetupsPersonalizados = () => {
           
           <div className="grid md:grid-cols-3 lg:grid-cols-2 gap-8">
             {portfolioItems.map((item) => (
-              <Card key={item.id} className="group glass-card cursor-pointer hover:scale-101 transition-all duration-500 relative border-0 shadow-lg hover:shadow-2xl">
-                {/* Animated border */}
-                <div className="absolute inset-0 bg-gradient-to-r from-primary via-accent to-primary p-[1px] rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  <div className="w-full h-full bg-background rounded-lg" />
-                </div>
-                
-                <div className="relative overflow-hidden h-80 bg-black/50 flex items-center justify-center">
+              <Card key={item.id} className="glass-card transition-all duration-300 relative border-0 shadow-lg">
+                <div className="relative overflow-hidden h-80 bg-black/50 flex items-center justify-center p-4">
                   <img 
                     src={item.image} 
                     alt={item.title}
-                    className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+                    className="w-full h-full object-contain"
                   />
-                  
-                  {/* Enhanced overlay with better positioning */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  
-                  {/* Content overlay */}
-                  <div className="absolute inset-0 flex flex-col justify-end p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 opacity-0 group-hover:opacity-100">
-                    <div className="space-y-2">
-                      <h3 className="text-xl font-bold">{item.title}</h3>
-                      <p className="text-gray-200 text-sm">{item.description}</p>
-                      
-                      {/* View button */}
-                      <div className="flex items-center gap-2 text-accent mt-3 group-hover:text-white transition-colors duration-300">
-                        <Monitor className="w-4 h-4" />
-                        <span className="text-sm font-medium">CPU GAMER</span>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  {/* Corner accent */}
-                  <div className="absolute top-4 right-4 w-2 h-2 bg-accent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse" />
                 </div>
               </Card>
             ))}

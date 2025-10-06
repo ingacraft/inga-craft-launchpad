@@ -7,14 +7,14 @@ const Hero = () => {
   return (
     <section className="relative min-h-screen gradient-hero flex items-center justify-center overflow-hidden pt-20">
       {/* Background Image with Overlay */}
-      <div className="absolute inset-0 opacity-60">
+      <div className="absolute inset-0 opacity-70">
         <img 
           src={heroImage} 
           alt="Modern tech workspace with multiple monitors and development setup showcasing IngaCraft professional environment"
           className="w-full h-full object-cover"
           loading="eager"
         />
-        <div className="absolute inset-0 gradient-hero opacity-80"></div>
+        <div className="absolute inset-0 gradient-hero opacity-60"></div>
       </div>
       
       {/* Floating Icons */}
@@ -30,8 +30,8 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 animate-fade-in">
-          <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
+        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6 animate-fade-in">
+          <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(251,146,60,0.5)] animate-pulse-slow">
             {siteConfig.name}
           </span>
         </h1>
