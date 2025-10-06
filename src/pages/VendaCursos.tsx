@@ -30,12 +30,12 @@ const VendaCursos = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative h-[80vh] flex items-center justify-center px-6 overflow-hidden">
+      <section className="relative h-[85vh] flex items-center justify-center px-6 overflow-hidden">
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
           style={{ backgroundImage: `url(${techEducationHero})` }}
         />
-        <div className="absolute inset-0 gradient-dark opacity-60" />
+        <div className="absolute inset-0 gradient-hero opacity-50" />
         
         <div className="relative z-10 text-center max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in text-white">
@@ -52,7 +52,7 @@ const VendaCursos = () => {
       </section>
 
       {/* Courses Section */}
-      <section className="py-20 px-6">
+      <section className="py-32 px-6">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text-primary">
@@ -139,7 +139,7 @@ const VendaCursos = () => {
       </section>
 
       {/* Why Take These Courses Section */}
-      <section className="py-20 px-6 gradient-card">
+      <section className="py-32 px-6 gradient-card">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">

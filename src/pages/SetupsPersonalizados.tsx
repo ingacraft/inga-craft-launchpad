@@ -76,12 +76,12 @@ const SetupsPersonalizados = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative h-[80vh] flex items-center justify-center px-6 overflow-hidden">
+      <section className="relative h-[85vh] flex items-center justify-center px-6 overflow-hidden">
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
           style={{ backgroundImage: `url(${cpuGamer})` }}
         />
-        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 gradient-hero opacity-50" />
         
         <div className="max-w-4xl mx-auto text-center relative z-10">
           
@@ -111,7 +111,7 @@ const SetupsPersonalizados = () => {
       </section>
 
       {/* Why Upgrade Section */}
-      <section className="py-24 px-6 gradient-card">
+      <section className="py-32 px-6 gradient-card">
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16 max-w-4xl mx-auto">
@@ -227,7 +227,7 @@ const SetupsPersonalizados = () => {
       
 
       {/* Portfolio Gallery */}
-      <section className="py-24 px-6 gradient-card" id="portfolio">
+      <section className="py-32 px-6 gradient-card" id="portfolio">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -249,11 +249,11 @@ const SetupsPersonalizados = () => {
                   <div className="w-full h-full bg-background rounded-lg" />
                 </div>
                 
-                <div className="aspect-video relative overflow-hidden h-72">
+                <div className="relative overflow-hidden h-80 bg-black/50 flex items-center justify-center">
                   <img 
                     src={item.image} 
                     alt={item.title}
-                    className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110"
+                    className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
                   />
                   
                   {/* Enhanced overlay with better positioning */}
@@ -283,7 +283,7 @@ const SetupsPersonalizados = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-24 px-6" id="beneficios">
+      <section className="py-32 px-6" id="beneficios">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -326,7 +326,7 @@ const SetupsPersonalizados = () => {
       </section>
 
       {/* Process Steps */}
-      <section className="py-24 px-6" id="processo">
+      <section className="py-32 px-6" id="processo">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">

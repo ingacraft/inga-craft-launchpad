@@ -122,17 +122,12 @@ const WebDevelopment = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section 
-        className="relative h-[80vh] flex items-center justify-center px-6 overflow-hidden"
-        style={{
-          backgroundImage: `url(${digitalTechBg})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
-        }}
-      >
-        {/* Overlay for opacity control */}
-        <div className="absolute inset-0 bg-background/40 z-0"></div>
+      <section className="relative h-[85vh] flex items-center justify-center px-6 overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
+          style={{ backgroundImage: `url(${digitalTechBg})` }}
+        />
+        <div className="absolute inset-0 gradient-hero opacity-50" />
         <div className="relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in">
@@ -149,7 +144,7 @@ const WebDevelopment = () => {
       </section>
 
       {/* Why You Need a Professional Website Section */}
-      <section className="py-20 px-6 bg-muted/30">
+      <section className="py-32 px-6 bg-muted/30">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-center">
             Por que você precisa de um{" "}
@@ -252,7 +247,7 @@ const WebDevelopment = () => {
       </section>
 
       {/* Pricing Plans Section */}
-      <section className="py-20 px-6 gradient-card">
+      <section className="py-32 px-6 gradient-card">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Planos e Preços</h2>
@@ -324,7 +319,7 @@ const WebDevelopment = () => {
       </section>
 
       {/* Projects Section */}
-      <section className="py-20 px-6">
+      <section className="py-32 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Projetos</h2>

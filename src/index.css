@@ -8,61 +8,61 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Core Colors */
-    --background: 220 27% 6%;
-    --foreground: 210 40% 98%;
+    /* Core Colors - Pure Black Background */
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
 
-    --card: 220 27% 8%;
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 5%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 220 27% 8%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 100%;
 
-    /* Brand Colors - Professional Blue */
-    --primary: 230 73% 60%;
-    --primary-foreground: 210 40% 98%;
-    --primary-hover: 230 73% 55%;
+    /* Brand Colors - Orange & Purple */
+    --primary: 25 95% 53%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 25 95% 48%;
 
-    /* Secondary - Elegant Gray */
-    --secondary: 217 19% 27%;
-    --secondary-foreground: 210 40% 98%;
+    /* Secondary - Purple */
+    --secondary: 270 70% 50%;
+    --secondary-foreground: 0 0% 100%;
 
     /* Muted Colors */
-    --muted: 217 19% 27%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 70%;
 
-    /* Accent - Fresh Green */
-    --accent: 142 76% 36%;
-    --accent-foreground: 210 40% 98%;
-    --accent-hover: 142 76% 32%;
+    /* Accent - Orange */
+    --accent: 25 95% 53%;
+    --accent-foreground: 0 0% 100%;
+    --accent-hover: 25 95% 48%;
 
     /* Status Colors */
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
     --success: 142 76% 36%;
     --warning: 45 93% 47%;
-    --info: 230 73% 60%;
+    --info: 270 70% 50%;
 
     /* UI Elements */
-    --border: 217 19% 27%;
-    --input: 217 19% 27%;
-    --ring: 230 73% 60%;
+    --border: 0 0% 15%;
+    --input: 0 0% 10%;
+    --ring: 25 95% 53%;
 
     --radius: 0.75rem;
 
-    /* Tech Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(230, 73%, 60%), hsl(270, 70%, 50%));
-    --gradient-secondary: linear-gradient(135deg, hsl(142, 76%, 36%), hsl(174, 100%, 29%));
-    --gradient-hero: linear-gradient(135deg, hsl(220, 27%, 6%), hsl(230, 73%, 15%));
-    --gradient-card: linear-gradient(135deg, hsl(220, 27%, 8%), hsl(220, 27%, 12%));
+    /* Tech Gradients - Orange & Purple */
+    --gradient-primary: linear-gradient(135deg, hsl(25, 95%, 53%), hsl(270, 70%, 50%));
+    --gradient-secondary: linear-gradient(135deg, hsl(270, 70%, 50%), hsl(25, 95%, 53%));
+    --gradient-hero: linear-gradient(135deg, hsl(0, 0%, 0%), hsl(270, 70%, 15%));
+    --gradient-card: linear-gradient(135deg, hsl(0, 0%, 3%), hsl(0, 0%, 8%));
     
     /* Glassmorphism */
-    --glass-bg: hsla(220, 27%, 8%, 0.8);
-    --glass-border: hsla(210, 40%, 98%, 0.1);
+    --glass-bg: hsla(0, 0%, 5%, 0.8);
+    --glass-border: hsla(0, 0%, 100%, 0.1);
     
     /* Shadows */
-    --shadow-glow: 0 0 40px hsla(230, 73%, 60%, 0.3);
-    --shadow-card: 0 10px 40px hsla(220, 27%, 6%, 0.3);
+    --shadow-glow: 0 0 40px hsla(25, 95%, 53%, 0.3);
+    --shadow-card: 0 10px 40px hsla(0, 0%, 0%, 0.5);
     
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -198,7 +198,7 @@ All colors MUST be HSL.
     content: '';
     position: absolute;
     inset: -2px;
-    background: conic-gradient(from 0deg, hsl(217 91% 60%), hsl(217 91% 60%), transparent, transparent, transparent, transparent, hsl(217 91% 60%));
+    background: conic-gradient(from 0deg, hsl(25 95% 53%), hsl(25 95% 53%), transparent, transparent, transparent, transparent, hsl(25 95% 53%));
     border-radius: inherit;
     animation: rotate 10s linear infinite;
     z-index: -1;
@@ -222,7 +222,7 @@ All colors MUST be HSL.
     content: '';
     position: absolute;
     inset: -2px;
-    background: conic-gradient(from 0deg, hsl(142 76% 36%), hsl(142 76% 36%), transparent, transparent, transparent, transparent, hsl(142 76% 36%));
+    background: conic-gradient(from 0deg, hsl(270 70% 50%), hsl(270 70% 50%), transparent, transparent, transparent, transparent, hsl(270 70% 50%));
     border-radius: inherit;
     animation: rotate 10s linear infinite;
     z-index: -1;
@@ -246,7 +246,7 @@ All colors MUST be HSL.
     content: '';
     position: absolute;
     inset: -2px;
-    background: conic-gradient(from 0deg, hsl(262 83% 58%), hsl(262 83% 58%), transparent, transparent, transparent, transparent, hsl(262 83% 58%));
+    background: conic-gradient(from 0deg, hsl(270 70% 50%), hsl(270 70% 50%), transparent, transparent, transparent, transparent, hsl(270 70% 50%));
     border-radius: inherit;
     animation: rotate 10s linear infinite;
     z-index: -1;

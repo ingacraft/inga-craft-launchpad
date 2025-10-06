@@ -79,12 +79,12 @@ const Portfolio = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative h-[90vh] flex items-center justify-center px-6 overflow-hidden">
+      <section className="relative h-[85vh] flex items-center justify-center px-6 overflow-hidden">
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
           style={{ backgroundImage: `url(${heroTechSetup})` }}
         />
-        <div className="absolute inset-0 gradient-dark opacity-70" />
+        <div className="absolute inset-0 gradient-hero opacity-50" />
         
         <div className="relative z-10 text-center max-w-5xl mx-auto animate-fade-in">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white">
@@ -105,7 +105,7 @@ const Portfolio = () => {
       </section>
 
       {/* Services Section - Desenvolvimento Web */}
-      <section className="py-24 px-6 bg-gradient-to-b from-background to-background/50">
+      <section className="py-32 px-6 bg-gradient-to-b from-background to-background/50">
         <div className="container mx-auto max-w-7xl">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Content */}
