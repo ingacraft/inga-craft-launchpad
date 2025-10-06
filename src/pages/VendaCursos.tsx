@@ -139,7 +139,7 @@ const VendaCursos = () => {
       </section>
 
       {/* Why Take These Courses Section */}
-      <section className="py-32 px-6 gradient-card">
+      <section className="py-32 px-6 bg-background">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
