@@ -39,8 +39,8 @@ const VendaCursos = () => {
         
         <div className="relative z-10 text-center max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in text-white">
-            Invista no seu<span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent"> Futuro </span>com os Cursos da 
-             <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">IngaCraft</span>
+            Invista no seu<span className="gradient-text-primary"> Futuro </span>com os Cursos da 
+             <span className="gradient-text-primary">IngaCraft</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-purple-200 animate-fade-in">
             Aprenda de forma prática e conquiste novas oportunidades na área de tecnologia.
@@ -158,7 +158,7 @@ const VendaCursos = () => {
             <Card className="glass-card p-8 hover:scale-105 transition-all duration-500">
               <CardHeader>
                 <CardTitle className="text-3xl mb-4">
-                  <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                  <span className="gradient-text-primary">
                     Curso Front-End
                   </span>
                 </CardTitle>
@@ -215,7 +215,7 @@ const VendaCursos = () => {
             <Card className="glass-card p-8 hover:scale-105 transition-all duration-500">
               <CardHeader>
                 <CardTitle className="text-3xl mb-4">
-                  <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                  <span className="gradient-text-primary">
                     Curso de Montagem e Manutenção
                   </span>
                 </CardTitle>
