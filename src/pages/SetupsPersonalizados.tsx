@@ -113,7 +113,7 @@ const SetupsPersonalizados = () => {
       </section>
 
       {/* Why Upgrade Section */}
-      <section className="py-32 px-6 gradient-card">
+      <section className="py-32 px-6 bg-background">
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16 max-w-4xl mx-auto">
