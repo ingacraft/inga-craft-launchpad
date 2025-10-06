@@ -247,7 +247,7 @@ const WebDevelopment = () => {
       </section>
 
       {/* Pricing Plans Section */}
-      <section className="py-32 px-6 gradient-card">
+      <section className="py-32 px-6 bg-background">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Planos e Preços</h2>
