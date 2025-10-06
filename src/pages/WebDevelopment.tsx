@@ -373,7 +373,7 @@ const WebDevelopment = () => {
       <section 
         className="py-20 px-6 relative"
         style={{
-          background: 'linear-gradient(180deg, hsla(0, 0%, 0%, 1.00),hsl(230, 73%, 15%))'
+          background: 'linear-gradient(180deg, hsla(0, 0%, 0%, 1.00),hsla(271, 87%, 20%, 1.00))'
         }}
       >
         <div className="max-w-7xl mx-auto">
