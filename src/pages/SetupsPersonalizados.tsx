@@ -88,10 +88,12 @@ const SetupsPersonalizados = () => {
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 animate-fade-in text-white">
             Monte seu{" "}
-            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            <span className="gradient-text-primary">
               Setup dos Sonhos
-            </span>{" "}
-            com a <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">IngaCraft</span>
+            </span>
+            {" "}
+
+            com a  <span className="gradient-text-primary">IngaCraft</span>
           </h1>
           
           <p className="text-lg md:text-xl text-gray-200 mb-8 max-w-3xl mx-auto animate-fade-in">
@@ -232,7 +234,7 @@ const SetupsPersonalizados = () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Galeria de{" "}
-              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+               <span className="gradient-text-primary">
                 Setups
               </span>
             </h2>
