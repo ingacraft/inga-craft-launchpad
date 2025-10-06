@@ -9,23 +9,7 @@ import digitalTechBg from "@/assets/digital-tech-bg.jpg";
 import { siteConfig, getWhatsAppLink } from "@/config/site";
 
 const WebDevelopment = () => {
-  const technologies = [
-    { name: "HTML5", color: "#E34F26", textColor: "white" },
-    { name: "CSS3", color: "#1572B6", textColor: "white" },
-    { name: "JavaScript", color: "#F7DF1E", textColor: "black" },
-    { name: "React", color: "#61DAFB", textColor: "black" },
-    { name: "Next.js", color: "#000000", textColor: "white" },
-    { name: "TailwindCSS", color: "#38B2AC", textColor: "white" },
-    { name: "TypeScript", color: "#0ab5e9ff", textColor: "white" },
-    { name: "Node.js", color: "#339933", textColor: "white" },
-    { name: "Express", color: "#000000", textColor: "white" },
-    { name: "MySQL", color: "#4479A1", textColor: "white" },
-    { name: "MongoDB", color: "#47A248", textColor: "white" },
-    { name: "Git", color: "#F05032", textColor: "white" },
-    { name: "GitHub", color: "#181717", textColor: "white" },
-    { name: "WordPress", color: "#1d7edaff", textColor: "white" },
-    { name: "NuvemShop", color: "#085ba0ff", textColor: "white" },
-  ];
+  
 
   const plans = [
     {
@@ -369,38 +353,7 @@ const WebDevelopment = () => {
         </div>
       </section>
 
-      {/* Technologies Section */}
-      <section 
-        className="py-20 px-6 relative"
-        style={{
-          background: 'linear-gradient(180deg, hsla(0, 0%, 0%, 1.00),hsla(0, 0%, 0%, 1.00))'
-        }}
-      >
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Tecnologias Utilizadas</h2>
-            <p className="text-xl text-muted-foreground">
-              Trabalhamos com as mais modernas tecnologias do mercado
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-            {technologies.map((tech, index) => (
-              <div 
-                key={tech.name} 
-                className="rounded-lg p-4 hover:scale-105 transition-all duration-300 text-center font-semibold shadow-lg backdrop-blur-sm border border-white/10"
-                style={{ 
-                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                  color: tech.color
-                }}
-              >
-                {tech.name}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
+      
       <Footer />
       <WhatsAppButton />
     </div>
