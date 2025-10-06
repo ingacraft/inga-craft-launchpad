@@ -230,34 +230,37 @@ const SetupsPersonalizados = () => {
 
       {/* Portfolio Gallery */}
       <section className="py-32 px-6 gradient-card" id="portfolio">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Galeria de{" "}
-               <span className="gradient-text-primary">
-                Setups
-              </span>
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Confira alguns dos projetos únicos que já entregamos para nossos clientes
-            </p>
+  <div className="max-w-7xl mx-auto">
+    <div className="text-center mb-16">
+      <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        Galeria de{" "}
+        <span className="gradient-text-primary">
+          Setups
+        </span>
+      </h2>
+      <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+        Confira alguns dos projetos únicos que já entregamos para nossos clientes
+      </p>
+    </div>
+
+    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+      {portfolioItems.map((item) => (
+        <Card
+          key={item.id}
+          className="glass-card transition-all duration-300 relative border-0 shadow-lg overflow-hidden"
+        >
+          <div className="relative h-[400px] w-full flex items-center justify-center bg-black">
+            <img
+              src={item.image}
+              alt={item.title}
+              className="w-full h-full object-cover"
+            />
           </div>
-          
-          <div className="grid md:grid-cols-3 lg:grid-cols-2 gap-8">
-            {portfolioItems.map((item) => (
-              <Card key={item.id} className="glass-card transition-all duration-300 relative border-0 shadow-lg">
-                <div className="relative overflow-hidden h-80 bg-black/50 flex items-center justify-center p-4">
-                  <img 
-                    src={item.image} 
-                    alt={item.title}
-                    className="w-full h-full object-contain"
-                  />
-                </div>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
+        </Card>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* Benefits Section */}
       <section className="py-32 px-6" id="beneficios">
