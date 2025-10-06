@@ -31,7 +31,7 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
         <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6 animate-fade-in">
-          <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(251,146,60,0.5)] animate-pulse-slow">
+          <span className="gradient-text-primary bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(251,146,60,0.5)] animate-pulse-slow">
             {siteConfig.name}
           </span>
         </h1>
