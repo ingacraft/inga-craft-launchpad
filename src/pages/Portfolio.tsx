@@ -5,12 +5,18 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Code, Cpu, GraduationCap, Zap, Shield, Wrench, Target } from "lucide-react";
 import heroTechSetup from "@/assets/hero-tech-setup.jpg";
-import devStation from "@/assets/dev-station.jpg";
-import setupGamerPro from "@/assets/IMG-20251004-WA0097.jpg";
-import programmingCourse from "@/assets/programming-course.jpg";
-import codeBackground from "@/assets/code-background.jpg";
-import gamingCompact from "@/assets/cpujapa.jpg";
-import workstationCreative from "@/assets/cpujapa.jpg";
+import modernWebsite1 from "@/assets/modern-website-1.jpg";
+import modernWebsite2 from "@/assets/modern-website-2.jpg";
+import modernWebsite3 from "@/assets/modern-website-3.jpg";
+import modernWebsite4 from "@/assets/modern-website-4.jpg";
+import gamingSetup1 from "@/assets/gaming-setup-1.jpg";
+import gamingSetup2 from "@/assets/gaming-setup-2.jpg";
+import gamingSetup3 from "@/assets/gaming-setup-3.jpg";
+import gamingSetup4 from "@/assets/gaming-setup-4.jpg";
+import codingCourse1 from "@/assets/coding-course-1.jpg";
+import codingCourse2 from "@/assets/coding-course-2.jpg";
+import codingCourse3 from "@/assets/coding-course-3.jpg";
+import codingCourse4 from "@/assets/coding-course-4.jpg";
 
 const Portfolio = () => {
   const services = [
@@ -61,21 +67,13 @@ const Portfolio = () => {
     }
   ];
 
-  const gallery = [
-    { image: codeBackground, title: "Desenvolvimento Web", category: "Web" },
-    { image: setupGamerPro, title: "Setup Gamer Pro", category: "Hardware" },
-    { image: programmingCourse, title: "Curso de Programação", category: "Educação" },
-    { image: devStation, title: "Workstation Dev", category: "Hardware" },
-    { image: gamingCompact, title: "CPU Gamer", category: "Hardware" },
-    { image: workstationCreative, title: "Cpu Gamer", category: "Hardware" }
-  ];
 
   const handleWhatsAppClick = () => {
     window.open("https://wa.me/5551999999999", "_blank");
   };
 
   return (
-    <div className="min-h-screen pt-20">
+    <div className="min-h-screen pt-20 bg-gradient-to-b from-background via-purple-950/20 to-background">
       <Navigation />
       
       {/* Hero Section */}
@@ -135,16 +133,16 @@ const Portfolio = () => {
             {/* Gallery 2x2 */}
             <div className="grid grid-cols-2 gap-4">
               <div className="aspect-square rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
-                <img src={codeBackground} alt="Código de programação" className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
+                <img src={modernWebsite1} alt="Website moderno e responsivo" className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
               </div>
               <div className="aspect-square rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
-                <img src={devStation} alt="Estação de desenvolvimento" className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
+                <img src={modernWebsite2} alt="Desenvolvimento web profissional" className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
               </div>
               <div className="aspect-square rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
-                <img src={programmingCourse} alt="Desenvolvimento web" className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
+                <img src={modernWebsite3} alt="Landing page moderna" className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
               </div>
               <div className="aspect-square rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
-                <img src={workstationCreative} alt="Workspace criativo" className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
+                <img src={modernWebsite4} alt="Interface web elegante" className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
               </div>
             </div>
           </div>
@@ -158,16 +156,16 @@ const Portfolio = () => {
             {/* Gallery 2x2 - Left side */}
             <div className="grid grid-cols-2 gap-4 order-2 lg:order-1">
               <div className="aspect-square rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
-                <img src={setupGamerPro} alt="Setup Gamer Profissional" className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
+                <img src={gamingSetup1} alt="Setup Gamer RGB completo" className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
               </div>
               <div className="aspect-square rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
-                <img src={gamingCompact} alt="PC Gaming Compacto" className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
+                <img src={gamingSetup2} alt="PC Gaming de alto desempenho" className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
               </div>
               <div className="aspect-square rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
-                <img src={heroTechSetup} alt="Setup tecnológico" className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
+                <img src={gamingSetup3} alt="Setup profissional com periféricos" className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
               </div>
               <div className="aspect-square rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
-                <img src={devStation} alt="Workstation premium" className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
+                <img src={gamingSetup4} alt="Workstation gamer premium" className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
               </div>
             </div>
 
@@ -229,16 +227,16 @@ const Portfolio = () => {
             {/* Gallery 2x2 */}
             <div className="grid grid-cols-2 gap-4">
               <div className="aspect-square rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
-                <img src={programmingCourse} alt="Curso de programação" className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
+                <img src={codingCourse1} alt="Programação e código" className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
               </div>
               <div className="aspect-square rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
-                <img src={codeBackground} alt="Aprendizado de código" className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
+                <img src={codingCourse2} alt="Aula online de tecnologia" className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
               </div>
               <div className="aspect-square rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
-                <img src={devStation} alt="Ambiente de aprendizado" className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
+                <img src={codingCourse3} alt="Aprendizado prático de programação" className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
               </div>
               <div className="aspect-square rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
-                <img src={workstationCreative} alt="Curso hands-on" className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
+                <img src={codingCourse4} alt="Curso hands-on de código" className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
               </div>
             </div>
           </div>
@@ -266,45 +264,6 @@ const Portfolio = () => {
                 <benefit.icon className={`w-16 h-16 mx-auto mb-4 ${benefit.color} group-hover:scale-110 transition-transform duration-300`} />
                 <h3 className="text-xl font-bold mb-2">{benefit.title}</h3>
                 <p className="text-muted-foreground">{benefit.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Gallery Section */}
-      <section className="py-24 px-6 bg-gradient-to-b from-background/50 to-background">
-        <div className="container mx-auto max-w-7xl">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 gradient-text-secondary">
-              Nossos Projetos
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Confira alguns exemplos de projetos e soluções que já realizamos em desenvolvimento, setups e treinamentos.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {gallery.map((item, index) => (
-              <div 
-                key={index}
-                className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 aspect-video"
-              >
-                <img 
-                  src={item.image} 
-                  alt={item.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                
-                <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                  <span className="inline-block px-3 py-1 bg-primary/90 text-white text-xs rounded-full mb-2">
-                    {item.category}
-                  </span>
-                  <h3 className="text-xl font-bold text-white">
-                    {item.title}
-                  </h3>
-                </div>
               </div>
             ))}
           </div>
