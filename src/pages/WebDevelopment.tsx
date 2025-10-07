@@ -5,7 +5,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { Check, Star, Code2, Database, Globe, GitBranch, Shield, Users, TrendingUp, Clock } from "lucide-react";
-import codeBackground from "@/assets/code-background.jpg";
+import websiteOnScreen from "@/assets/website-on-screen.jpg";
 import { siteConfig, getWhatsAppLink } from "@/config/site";
 
 const WebDevelopment = () => {
@@ -109,7 +109,7 @@ const WebDevelopment = () => {
       <section className="relative h-[85vh] flex items-center justify-center px-6 overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-70"
-          style={{ backgroundImage: `url(${codeBackground})` }}
+          style={{ backgroundImage: `url(${websiteOnScreen})` }}
         />
         <div className="absolute inset-0 gradient-hero opacity-60" />
         <div className="relative z-10">
