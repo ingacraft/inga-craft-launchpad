@@ -5,7 +5,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { Check, Star, Code2, Database, Globe, GitBranch, Shield, Users, TrendingUp, Clock } from "lucide-react";
-import digitalTechBg from "@/assets/digital-tech-bg.jpg";
+import codeBackground from "@/assets/code-background.jpg";
 import { siteConfig, getWhatsAppLink } from "@/config/site";
 
 const WebDevelopment = () => {
@@ -108,10 +108,10 @@ const WebDevelopment = () => {
       {/* Hero Section */}
       <section className="relative h-[85vh] flex items-center justify-center px-6 overflow-hidden">
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-60"
-          style={{ backgroundImage: `url(${digitalTechBg})` }}
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-70"
+          style={{ backgroundImage: `url(${codeBackground})` }}
         />
-        <div className="absolute inset-0 gradient-hero opacity-50" />
+        <div className="absolute inset-0 gradient-hero opacity-60" />
         <div className="relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in">

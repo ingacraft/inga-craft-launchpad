@@ -5,6 +5,12 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { Monitor, Settings, Award, HeadphonesIcon, CheckCircle, MessageCircle, Lightbulb, Wrench, Package, Truck, Briefcase, Gamepad2, Palette } from "lucide-react";
 import { siteConfig, getWhatsAppLink } from "@/config/site";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 // Import setup images
 import setupGamerPro from "@/assets/IMG-20251004-WA0097.jpg";
@@ -230,37 +236,50 @@ const SetupsPersonalizados = () => {
 
       {/* Portfolio Gallery */}
       <section className="py-32 px-6 bg-background" id="portfolio">
-  <div className="max-w-7xl mx-auto">
-    <div className="text-center mb-16">
-      <h2 className="text-3xl md:text-4xl font-bold mb-4">
-        Galeria de{" "}
-        <span className="gradient-text-primary">
-          Setups
-        </span>
-      </h2>
-      <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-        Confira alguns dos projetos únicos que já entregamos para nossos clientes
-      </p>
-    </div>
-
-    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
-      {portfolioItems.map((item) => (
-        <Card
-          key={item.id}
-          className="glass-card transition-all duration-300 relative border-0 shadow-lg overflow-hidden"
-        >
-          <div className="relative h-[400px] w-full flex items-center justify-center bg-black">
-            <img
-              src={item.image}
-              alt={item.title}
-              className="w-full h-full object-cover"
-            />
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Galeria de{" "}
+              <span className="gradient-text-primary">
+                Setups
+              </span>
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              Confira alguns dos projetos únicos que já entregamos para nossos clientes
+            </p>
           </div>
-        </Card>
-      ))}
-    </div>
-  </div>
-</section>
+
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            plugins={[
+              Autoplay({
+                delay: 3000,
+                stopOnInteraction: false,
+              }),
+            ]}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-4">
+              {portfolioItems.map((item) => (
+                <CarouselItem key={item.id} className="pl-4 md:basis-1/2 lg:basis-1/3">
+                  <Card className="glass-card transition-all duration-300 relative border-0 shadow-lg overflow-hidden">
+                    <div className="relative h-[500px] w-full flex items-center justify-center bg-black/50">
+                      <img
+                        src={item.image}
+                        alt={item.title || "Setup personalizado"}
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
+                  </Card>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
+        </div>
+      </section>
 
       {/* Benefits Section */}
       <section className="py-32 px-6" id="beneficios">
