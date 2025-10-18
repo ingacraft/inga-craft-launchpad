@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Code2, Monitor, GraduationCap, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import FadeInUpWrapper from "@/components/FadeInUpWrapper";
 
 const Services = () => {
   const services = [
@@ -31,14 +32,14 @@ const Services = () => {
   return (
     <section className="py-32 px-6 bg-background" id="servicos">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 animate-fade-in">
+        <FadeInUpWrapper className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Nossos Serviços
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: "0.2s" }}>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Soluções completas para levar sua presença digital, setup tecnológico e conhecimento ao próximo nível!!!
           </p>
-        </div>
+        </FadeInUpWrapper>
 
         <div className="grid md:grid-cols-3 gap-8">
           {services.map((service, index) => {
@@ -49,11 +50,10 @@ const Services = () => {
               'rotating-border-purple'
             ];
             return (
-              <Card 
-                key={service.title} 
-                className={`glass-card hover:scale-105 transition-all duration-300 animate-fade-in group cursor-pointer ${borderClasses[index]}`}
-                style={{ animationDelay: `${(index + 1) * 0.2}s` }}
-              >
+              <FadeInUpWrapper key={service.title} delay={index * 0.2}>
+                <Card 
+                  className={`glass-card hover:scale-105 transition-all duration-300 group cursor-pointer ${borderClasses[index]}`}
+                >
                 <CardHeader className="text-center pb-4">
                   <div className={`w-16 h-16 mx-auto rounded-full ${service.gradient} flex items-center justify-center mb-4 shadow-glow`}>
                     <Icon className="w-8 h-8 text-white" />
@@ -99,6 +99,7 @@ const Services = () => {
                   )}
                 </CardContent>
               </Card>
+              </FadeInUpWrapper>
             );
           })}
         </div>

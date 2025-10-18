@@ -4,6 +4,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Code, Cpu, GraduationCap, Zap, Shield, Wrench, Target } from "lucide-react";
+import FadeInUpWrapper from "@/components/FadeInUpWrapper";
 import heroTechSetup from "@/assets/hero-tech-setup.jpg";
 import modernWebsite1 from "@/assets/modern-website-1.jpg";
 import modernWebsite2 from "@/assets/modern-website-2.jpg";
@@ -84,7 +85,7 @@ const Portfolio = () => {
         />
         <div className="absolute inset-0 gradient-hero opacity-50" />
         
-        <div className="relative z-10 text-center max-w-5xl mx-auto animate-fade-in">
+        <FadeInUpWrapper className="relative z-10 text-center max-w-5xl mx-auto">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white">
             Transformamos Ideias em <span className="gradient-text-primary">Resultados</span>
           </h1>
@@ -99,7 +100,7 @@ const Portfolio = () => {
           >
             Fale Conosco no WhatsApp
           </Button>
-        </div>
+        </FadeInUpWrapper>
       </section>
 
       {/* Services Section - Desenvolvimento Web */}

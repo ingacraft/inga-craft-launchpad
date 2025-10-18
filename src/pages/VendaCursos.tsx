@@ -8,6 +8,7 @@ import techEducationHero from "@/assets/tech-education-hero.jpg";
 import programmingCourse from "@/assets/programming-course.jpg";
 import pcBuildingCourse from "@/assets/pc-building-course.jpg";
 import { siteConfig, getWhatsAppLink } from "@/config/site";
+import FadeInUpWrapper from "@/components/FadeInUpWrapper";
 
 const VendaCursos = () => {
   const courses = [
@@ -37,18 +38,18 @@ const VendaCursos = () => {
         />
         <div className="absolute inset-0 gradient-hero opacity-50" />
         
-        <div className="relative z-10 text-center max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in text-white">
+        <FadeInUpWrapper className="relative z-10 text-center max-w-4xl mx-auto">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white">
             Invista no seu<span className="gradient-text-primary"> Futuro </span>com os Cursos da 
              <span className="gradient-text-primary">IngaCraft</span>
           </h1>
-          <p className="text-xl md:text-2xl mb-8 text-purple-200 animate-fade-in">
+          <p className="text-xl md:text-2xl mb-8 text-purple-200">
             Aprenda de forma prática e conquiste novas oportunidades na área de tecnologia.
           </p>
-          <Button variant="hero" size="lg" className="animate-fade-in">
+          <Button variant="hero" size="lg">
             Começar Agora
           </Button>
-        </div>
+        </FadeInUpWrapper>
       </section>
 
       {/* Courses Section */}

@@ -3,23 +3,24 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin, Send, ArrowRight } from "lucide-react";
+import FadeInUpWrapper from "@/components/FadeInUpWrapper";
 
 const Contact = () => {
   return (
     <section className="py-32 px-6 bg-background" id="contato">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 animate-fade-in">
+        <FadeInUpWrapper className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Vamos Criar Algo <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Incrível</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: "0.2s" }}>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Entre em contato conosco e descubra como podemos transformar suas ideias em soluções digitais excepcionais
           </p>
-        </div>
+        </FadeInUpWrapper>
 
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Contact Info */}
-          <div className="lg:col-span-1 space-y-6 animate-fade-in" style={{ animationDelay: "0.3s" }}>
+          <FadeInUpWrapper delay={0.2} className="lg:col-span-1 space-y-6">
             <Card className="glass-card p-6 hover:scale-105 transition-smooth">
               <CardContent className="flex items-center space-x-4 p-0">
                 <div className="gradient-primary w-12 h-12 rounded-full flex items-center justify-center">
@@ -55,10 +56,10 @@ const Contact = () => {
                 </div>
               </CardContent>
             </Card>
-          </div>
+          </FadeInUpWrapper>
 
           {/* Contact Form */}
-          <div className="lg:col-span-2 animate-fade-in" style={{ animationDelay: "0.4s" }}>
+          <FadeInUpWrapper delay={0.4} className="lg:col-span-2">
             <Card className="glass-card p-8">
               <form 
                 onSubmit={(e) => {
@@ -109,7 +110,7 @@ const Contact = () => {
                 </CardContent>
               </form>
             </Card>
-          </div>
+          </FadeInUpWrapper>
         </div>
       </div>
     </section>

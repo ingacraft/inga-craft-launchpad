@@ -1,6 +1,7 @@
 
 import { Badge } from "@/components/ui/badge";
 import { Lightbulb, Award, GraduationCap, Handshake } from "lucide-react";
+import FadeInUpWrapper from "@/components/FadeInUpWrapper";
 
 const About = () => {
   const values = [
@@ -36,7 +37,7 @@ const About = () => {
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
-          <div className="animate-fade-in">
+          <FadeInUpWrapper>
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Sobre a <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">IngaCraft</span>
             </h2>
@@ -68,24 +69,22 @@ const About = () => {
               </div>
             </div>
 
-          </div>
+          </FadeInUpWrapper>
 
           {/* Values */}
-          <div className="grid grid-cols-2 gap-6 animate-fade-in" style={{ animationDelay: "0.2s" }}>
+          <div className="grid grid-cols-2 gap-6">
             {values.map((value, index) => {
               const Icon = value.icon;
               return (
-                <div 
-                  key={value.title} 
-                  className="glass-card p-6 text-center hover:scale-105 transition-smooth"
-                  style={{ animationDelay: `${(index + 1) * 0.1}s` }}
-                >
+                <FadeInUpWrapper key={value.title} delay={index * 0.15}>
+                  <div className="glass-card p-6 text-center hover:scale-105 transition-smooth">
                   <div className="gradient-secondary w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Icon className="w-6 h-6 text-white" />
                   </div>
                   <div className="text-xl font-bold text-primary mb-2">{value.title}</div>
                   <div className="text-sm text-muted-foreground">{value.description}</div>
-                </div>
+                  </div>
+                </FadeInUpWrapper>
               );
             })}
           </div>

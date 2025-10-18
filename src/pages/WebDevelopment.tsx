@@ -7,6 +7,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import { Check, Star, Code2, Database, Globe, GitBranch, Shield, Users, TrendingUp, Clock } from "lucide-react";
 import websiteOnScreen from "@/assets/website-on-screen.jpg";
 import { siteConfig, getWhatsAppLink } from "@/config/site";
+import FadeInUpWrapper from "@/components/FadeInUpWrapper";
 
 const WebDevelopment = () => {
   
@@ -112,54 +113,59 @@ const WebDevelopment = () => {
           style={{ backgroundImage: `url(${websiteOnScreen})` }}
         />
         <div className="absolute inset-0 gradient-hero opacity-60" />
-        <div className="relative z-10">
+        <FadeInUpWrapper className="relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">
             <span className="gradient-text-primary">Desenvolvimento Web</span>
           </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8 animate-fade-in" style={{ animationDelay: "0.2s" }}>
+          <p className="text-xl md:text-2xl text-muted-foreground mb-8">
             Construímos sites modernos, rápidos, responsivos e pensados para gerar resultados.
           </p>
-          <Button size="lg" className="gradient-primary text-white font-semibold px-8 py-3 animate-fade-in" style={{ animationDelay: "0.4s" }}>
+          <Button size="lg" className="gradient-primary text-white font-semibold px-8 py-3">
             Solicitar Orçamento
           </Button>
           </div>
-        </div>
+        </FadeInUpWrapper>
       </section>
 
       {/* Why You Need a Professional Website Section */}
       <section className="py-32 px-6 bg-background/30">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-center">
-            Por que você precisa de um{" "}
-            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              site profissional?
-            </span>
-          </h2>
-          
-          <p className="text-xl text-muted-foreground text-center mb-12 max-w-3xl mx-auto">
-            No mundo atual, quem não está presente na internet simplesmente não existe para boa parte dos clientes.
-          </p>
+          <FadeInUpWrapper className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Por que você precisa de um{" "}
+              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                site profissional?
+              </span>
+            </h2>
+            
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              No mundo atual, quem não está presente na internet simplesmente não existe para boa parte dos clientes.
+            </p>
+          </FadeInUpWrapper>
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <Card className="group glass-card hover:scale-105 transition-all duration-500 border-0 shadow-lg hover:shadow-2xl overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <CardHeader className="relative z-10">
-                <div className="w-14 h-14 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500">
-                  <Shield className="w-7 h-7 text-white" />
-                </div>
-                <CardTitle className="text-2xl group-hover:text-primary transition-colors duration-300">
-                  Credibilidade e Confiança
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="relative z-10">
-                <p className="text-muted-foreground group-hover:text-foreground transition-colors duration-300">
-                  Um site profissional é o seu cartão de visitas digital, funcionando 24/7. 
-                  Você transmite credibilidade, confiança e profissionalismo, mostrando que leva o seu trabalho a sério.
-                </p>
-              </CardContent>
-            </Card>
+            <FadeInUpWrapper delay={0.1}>
+              <Card className="group glass-card hover:scale-105 transition-all duration-500 border-0 shadow-lg hover:shadow-2xl overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <CardHeader className="relative z-10">
+                  <div className="w-14 h-14 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500">
+                    <Shield className="w-7 h-7 text-white" />
+                  </div>
+                  <CardTitle className="text-2xl group-hover:text-primary transition-colors duration-300">
+                    Credibilidade e Confiança
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="relative z-10">
+                  <p className="text-muted-foreground group-hover:text-foreground transition-colors duration-300">
+                    Um site profissional é o seu cartão de visitas digital, funcionando 24/7. 
+                    Você transmite credibilidade, confiança e profissionalismo, mostrando que leva o seu trabalho a sério.
+                  </p>
+                </CardContent>
+              </Card>
+            </FadeInUpWrapper>
 
+            <FadeInUpWrapper delay={0.2}>
             <Card className="group glass-card hover:scale-105 transition-all duration-500 border-0 shadow-lg hover:shadow-2xl overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <CardHeader className="relative z-10">
@@ -177,7 +183,9 @@ const WebDevelopment = () => {
                 </p>
               </CardContent>
             </Card>
+            </FadeInUpWrapper>
 
+            <FadeInUpWrapper delay={0.3}>
             <Card className="group glass-card hover:scale-105 transition-all duration-500 border-0 shadow-lg hover:shadow-2xl overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <CardHeader className="relative z-10">
@@ -195,7 +203,9 @@ const WebDevelopment = () => {
                 </p>
               </CardContent>
             </Card>
+            </FadeInUpWrapper>
 
+            <FadeInUpWrapper delay={0.4}>
             <Card className="group glass-card hover:scale-105 transition-all duration-500 border-0 shadow-lg hover:shadow-2xl overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <CardHeader className="relative z-10">
@@ -213,8 +223,10 @@ const WebDevelopment = () => {
                 </p>
               </CardContent>
             </Card>
+            </FadeInUpWrapper>
           </div>
 
+          <FadeInUpWrapper delay={0.5}>
           <Card className="glass-card border-primary/20 shadow-glow">
             <CardContent className="pt-8 text-center">
               <p className="text-xl md:text-2xl font-semibold mb-2">
@@ -227,6 +239,7 @@ const WebDevelopment = () => {
               </p>
             </CardContent>
           </Card>
+          </FadeInUpWrapper>
         </div>
       </section>
 

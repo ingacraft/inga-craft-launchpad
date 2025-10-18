@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Code, Monitor, GraduationCap } from "lucide-react";
 import heroImage from "@/assets/hero-tech-setup.jpg";
 import { siteConfig, getWhatsAppLink } from "@/config/site";
+import FadeInUpWrapper from "@/components/FadeInUpWrapper";
 
 const Hero = () => {
   return (
@@ -29,22 +30,22 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
-        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6 animate-fade-in">
+      <FadeInUpWrapper className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6">
           <span className="gradient-text-primary bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(251,146,60,0.5)] animate-pulse-slow">
             {siteConfig.name}
           </span>
         </h1>
         
-        <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-6 animate-fade-in" style={{ animationDelay: "0.2s" }}>
+        <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-6">
           Desenvolvimento Web • Setups Personalizados • Cursos de Tecnologia
         </p>
         
-        <p className="text-base sm:text-lg text-muted-foreground mb-10 max-w-3xl mx-auto animate-fade-in leading-relaxed" style={{ animationDelay: "0.4s" }}>
+        <p className="text-base sm:text-lg text-muted-foreground mb-10 max-w-3xl mx-auto leading-relaxed">
           {siteConfig.description}
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{ animationDelay: "0.6s" }}>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button 
             variant="hero" 
             size="lg" 
@@ -63,7 +64,7 @@ const Hero = () => {
             Ver Portfólio
           </Button>
         </div>
-      </div>
+      </FadeInUpWrapper>
 
       {/* Bottom Gradient */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent"></div>
