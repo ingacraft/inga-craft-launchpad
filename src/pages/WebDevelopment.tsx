@@ -115,7 +115,7 @@ const WebDevelopment = () => {
       {/* Hero Section */}
       <section className="relative h-[85vh] flex items-center justify-center px-6 overflow-hidden">
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed opacity-70"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-70"
           style={{ backgroundImage: `url(${websiteOnScreen})` }}
         />
         <div className="absolute inset-0 gradient-hero opacity-60" />
