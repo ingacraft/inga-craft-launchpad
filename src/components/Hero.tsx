@@ -37,7 +37,6 @@ const Hero = () => {
             src={logo} 
             alt="IngaCraft - Desenvolvimento Web, Software e Setups Personalizados"
             className="w-64 sm:w-80 md:w-96 lg:w-[28rem] h-auto animate-pulse-slow"
-            style={{ mixBlendMode: 'screen' }}
             loading="eager"
           />
         </div>
