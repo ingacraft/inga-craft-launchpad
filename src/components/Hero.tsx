@@ -42,7 +42,7 @@ const Hero = () => {
         </div>
         
         <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-6">
-          Desenvolvimento Web • Setups Personalizados • Cursos de Tecnologia
+          Desenvolvimento Web e software • Setups Personalizados • Cursos de Tecnologia
         </p>
         
         <p className="text-base sm:text-lg text-muted-foreground mb-10 max-w-3xl mx-auto leading-relaxed">
