@@ -13,7 +13,7 @@ const Hero = () => {
         <img 
           src={heroImage} 
           alt="Modern tech workspace with multiple monitors and development setup showcasing IngaCraft professional environment"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover fixed"
           loading="eager"
         />
         <div className="absolute inset-0 gradient-hero opacity-60"></div>
