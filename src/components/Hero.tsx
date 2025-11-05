@@ -9,11 +9,11 @@ const Hero = () => {
   return (
     <section className="relative min-h-screen gradient-hero flex items-center justify-center overflow-hidden pt-20">
       {/* Background Image with Overlay */}
-      <div className="absolute inset-0 opacity-70">
+      <div className="absolute inset-0 opacity-70 fixed">
         <img 
           src={heroImage} 
           alt="Modern tech workspace with multiple monitors and development setup showcasing IngaCraft professional environment"
-          className="w-full h-full object-cover bg-fixed"
+          className="w-full h-full object-cover "
           loading="eager"
         />
         <div className="absolute inset-0 gradient-hero opacity-60"></div>
