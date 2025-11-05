@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Code, Monitor, GraduationCap } from "lucide-react";
 import heroImage from "@/assets/hero-tech-setup.jpg";
+import logo from "@/assets/ingacraft-logo.png";
 import { siteConfig, getWhatsAppLink } from "@/config/site";
 import FadeInUpWrapper from "@/components/FadeInUpWrapper";
 
@@ -31,11 +32,15 @@ const Hero = () => {
 
       {/* Content */}
       <FadeInUpWrapper className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
-        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6">
-          <span className="gradient-text-primary bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(251,146,60,0.5)] animate-pulse-slow">
-            {siteConfig.name}
-          </span>
-        </h1>
+        <div className="mb-8 flex justify-center">
+          <img 
+            src={logo} 
+            alt="IngaCraft - Desenvolvimento Web, Software e Setups Personalizados"
+            className="w-64 sm:w-80 md:w-96 lg:w-[28rem] h-auto animate-pulse-slow"
+            style={{ mixBlendMode: 'screen' }}
+            loading="eager"
+          />
+        </div>
         
         <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-6">
           Desenvolvimento Web • Setups Personalizados • Cursos de Tecnologia
