@@ -9,16 +9,14 @@ const Hero = () => {
   return (
     <section className="relative min-h-screen gradient-hero flex items-center justify-center overflow-hidden pt-20">
       {/* Background Image with Overlay */}
-      <div className="absolute inset-0 opacity-70 fixed">
-        <img 
-          src={heroImage} 
-          alt="Modern tech workspace with multiple monitors and development setup showcasing IngaCraft professional environment"
-          className="w-full h-full object-cover "
-          loading="eager"
-        />
-        <div className="absolute inset-0 gradient-hero opacity-60"></div>
+      <div
+        className="fixed top-0 left-0 w-full h-full bg-center bg-cover -z-10"
+        style={{ backgroundImage: `url(${heroImage})` }}
+      >
+        {/* Gradiente sobreposto */}
+        <div className="absolute inset-0 gradient-hero opacity-70"></div>
       </div>
-      
+
       {/* Floating Icons */}
       <div className="absolute top-32 left-10 animate-float opacity-40 hidden lg:block">
         <Code size={64} className="text-accent" aria-hidden="true" />
@@ -33,35 +31,35 @@ const Hero = () => {
       {/* Content */}
       <FadeInUpWrapper className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
         <div className="mb-8 flex justify-center">
-          <img 
-            src={logo} 
+          <img
+            src={logo}
             alt="IngaCraft - Desenvolvimento Web, Software e Setups Personalizados"
             className="w-64 sm:w-80 md:w-96 lg:w-[28rem] h-auto animate-pulse-slow"
             loading="eager"
           />
         </div>
-        
+
         <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-6">
           Desenvolvimento Web e software • Setups Personalizados • Cursos de Tecnologia
         </p>
-        
+
         <p className="text-base sm:text-lg text-muted-foreground mb-10 max-w-3xl mx-auto leading-relaxed">
           {siteConfig.description}
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button 
-            variant="hero" 
-            size="lg" 
+          <Button
+            variant="hero"
+            size="lg"
             className="group hover:scale-105 transition-transform"
             onClick={() => window.open(getWhatsAppLink(), "_blank")}
           >
             Começar Projeto
             <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
           </Button>
-          <Button 
-            variant="glass" 
-            size="lg" 
+          <Button
+            variant="glass"
+            size="lg"
             className="hover:scale-105 transition-transform"
             onClick={() => window.location.href = siteConfig.routes.portfolio}
           >
