@@ -24,6 +24,7 @@ const WebDevelopment = () => {
         "SEO básico",
         "Prazo de entrega rápido",
         "Hospedagem e domínio configurados",
+        "Formulários de contato",
         "Indicado para: profissionais liberais, pequenos negócios e landing pages"
       ]
     },
@@ -36,6 +37,8 @@ const WebDevelopment = () => {
         "Integrações simples (formulário, chat, newsletter)",
         "Layout moderno e otimizado para performance",
         "SEO otimizado",
+        "Sistema de blog ou portfólio",
+        "Área administrativa básica",
         "Hospedagem e domínio configurados",
         "Indicado para: empresas em crescimento e negócios que precisam de presença digital mais sólida"
       ]
@@ -46,10 +49,13 @@ const WebDevelopment = () => {
       popular: false,
       features: [
         "E-commerce completo ou site corporativo robusto",
+        "Software personalizado (ERP, CRM, sistemas internos)",
         "Integrações avançadas (pagamentos, APIs, automações)",
-        "Painel administrativo personalizado",
+        "Painel administrativo completo e personalizado",
+        "Aplicativos mobile e desktop",
+        "Sistemas de gestão e controle",
         "SEO avançado e performance otimizada",
-        "Hospedagem dedicada e escaláve",
+        "Hospedagem dedicada e escalável",
         "Indicado para: empresas de médio e grande porte, startups e negócios digitais"
       ]
     },
@@ -116,10 +122,10 @@ const WebDevelopment = () => {
         <FadeInUpWrapper className="relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            <span className="gradient-text-primary">Desenvolvimento Web</span>
+            <span className="gradient-text-primary">Desenvolvimento Web e Software</span>
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-8">
-            Construímos sites modernos, rápidos, responsivos e pensados para gerar resultados.
+            Construímos sites, aplicações web e software sob medida. Soluções completas, modernas e escaláveis para transformar seu negócio digitalmente.
           </p>
           <Button size="lg" className="gradient-primary text-white font-semibold px-8 py-3">
             Solicitar Orçamento

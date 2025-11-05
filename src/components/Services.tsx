@@ -8,9 +8,9 @@ const Services = () => {
   const services = [
     {
       icon: Code2,
-      title: "Desenvolvimento Web",
-      description: "Criamos sites e aplicações web modernas, responsivas e otimizadas para performance. Utilizamos as mais recentes tecnologias para garantir experiências excepcionais.",
-      features: [" React & Next.js", " Design Responsivo", " SEO Otimizado", " Performance Máxima", " Integração com APIs", " Manutenção e Suporte", " UI/UX Design", "Segurança Avançada", " Painéis Administrativos", " Hospedagem e Deploy Automatizado"],
+      title: "Desenvolvimento Web e Software",
+      description: "Criamos sites, aplicações web e software sob medida para seu negócio. Do frontend ao backend, desenvolvemos soluções completas, modernas e escaláveis.",
+      features: [" React & Next.js", " Design Responsivo", " SEO Otimizado", " Performance Máxima", " Integração com APIs", " Manutenção e Suporte", " UI/UX Design", "Segurança Avançada", " Painéis Administrativos", " Hospedagem e Deploy Automatizado", " Sistemas Desktop e Mobile", " Automação de Processos", " Integração de Sistemas", " APIs RESTful e GraphQL"],
       gradient: "gradient-primary"
     },
     {
@@ -75,7 +75,7 @@ const Services = () => {
                     ))}
                   </ul>
                   
-                  {service.title === "Desenvolvimento Web" ? (
+                  {service.title === "Desenvolvimento Web e Software" ? (
                     <Button variant="outline" className="group w-full" asChild>
                       <Link to="/desenvolvimento-web">
                         Saiba Mais
