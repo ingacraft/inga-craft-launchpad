@@ -34,6 +34,11 @@ export const siteConfig = {
       route: "/desenvolvimento-web",
     },
     {
+      title: "Desenvolvimento de Software",
+      description: "Sistemas personalizados e soluções corporativas",
+      route: "/desenvolvimento-software",
+    },
+    {
       title: "Setups Personalizados",
       description: "PCs sob medida para suas necessidades",
       route: "/setups-personalizados",

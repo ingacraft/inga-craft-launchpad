@@ -8,17 +8,37 @@ const Services = () => {
   const services = [
     {
       icon: Code2,
-      title: "Desenvolvimento Web e Software",
-      description: "Criamos sites, aplicações web e software sob medida para seu negócio. Do frontend ao backend, desenvolvemos soluções completas, modernas e escaláveis.",
-      features: [" React & Next.js", " Design Responsivo", " SEO Otimizado", " Performance Máxima", " Integração com APIs", " Manutenção e Suporte", " UI/UX Design", "Segurança Avançada", " Painéis Administrativos", " Hospedagem e Deploy Automatizado", " Sistemas Desktop e Mobile", " Automação de Processos", " Integração de Sistemas", " APIs RESTful e GraphQL"],
-      gradient: "gradient-primary"
+      title: "Desenvolvimento Web",
+      description: "Criação de sites modernos, rápidos e totalmente responsivos.",
+      features: [
+        " Sites profissionais e responsivos",
+        " Otimização para SEO",
+        " Performance elevada e carregamento rápido",
+        " Design moderno e minimalista",
+        " Integração com APIs e sistemas externos",
+        " Painéis administrativos",
+        " Hospedagem e deploy otimizado",
+        " Suporte e manutenção"
+      ],
+      gradient: "gradient-primary",
+      route: "/desenvolvimento-web"
     },
     {
       icon: Monitor,
-      title: "Setups Personalizados",
-      description: "Montamos workstations completas para desenvolvimento, gaming e criação de conteúdo. Cada setup é personalizado para suas necessidades específicas.",
-      features: [" Hardware Selecionado", " Configuração Completa", " Suporte Técnico Dedicado", " Garantia Estendida", " Setups para Gamers", " Estação de Criação", " Workstations para Devs", " Periféricos Premium", " Design Personalizado", " Upgrade Futuro Facilitado"],
-      gradient: "gradient-secondary"
+      title: "Desenvolvimento de Software",
+      description: "Sistemas personalizados para empresas, automação e soluções corporativas.",
+      features: [
+        " Sistemas sob medida",
+        " Integração com bancos de dados",
+        " Automação de processos internos",
+        " Painéis administrativos avançados",
+        " Dashboards e relatórios",
+        " Aplicações desktop, web ou híbridas",
+        " Segurança e escalabilidade",
+        " Suporte contínuo"
+      ],
+      gradient: "gradient-secondary",
+      route: "/desenvolvimento-software"
     }
   ];
 
@@ -68,7 +88,7 @@ const Services = () => {
                   </ul>
                   
                   <Button variant="outline" className="group w-full" asChild>
-                    <Link to={service.title === "Desenvolvimento Web e Software" ? "/desenvolvimento-web" : "/setups-personalizados"}>
+                    <Link to={service.route}>
                       Saiba Mais
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </Link>
