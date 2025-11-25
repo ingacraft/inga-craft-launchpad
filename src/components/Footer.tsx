@@ -92,7 +92,15 @@ const Footer = () => {
                   to="/desenvolvimento-web"
                   className="text-muted-foreground hover:text-primary transition-colors text-sm block"
                 >
-                  Desenvolvimento
+                  Desenvolvimento Web
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/desenvolvimento-software"
+                  className="text-muted-foreground hover:text-primary transition-colors text-sm block"
+                >
+                  Desenvolvimento de Software
                 </Link>
               </li>
               <li>
