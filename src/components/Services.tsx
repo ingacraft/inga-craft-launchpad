@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Code2, Monitor, GraduationCap, ArrowRight } from "lucide-react";
+import { Code2, Monitor, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import FadeInUpWrapper from "@/components/FadeInUpWrapper";
 
@@ -19,13 +19,6 @@ const Services = () => {
       description: "Montamos workstations completas para desenvolvimento, gaming e criação de conteúdo. Cada setup é personalizado para suas necessidades específicas.",
       features: [" Hardware Selecionado", " Configuração Completa", " Suporte Técnico Dedicado", " Garantia Estendida", " Setups para Gamers", " Estação de Criação", " Workstations para Devs", " Periféricos Premium", " Design Personalizado", " Upgrade Futuro Facilitado"],
       gradient: "gradient-secondary"
-    },
-    {
-      icon: GraduationCap,
-      title: "Cursos de Tecnologia",
-      description: "Capacitamos profissionais com cursos práticos e atualizados. Do básico ao avançado, aprenda as tecnologias mais demandadas pelo mercado.",
-      features: [" Instrutores Especializados", " Projetos Reais", " Certificação" , " Comunidade Ativa", " Trilhas de Aprendizado", " Conteúdo Atualizado", " Mentorias e Suporte Individual", " Laboratórios Virtuais", " Preparação para o Mercado"],
-      gradient: "gradient-primary"
     }
   ];
 
@@ -41,13 +34,12 @@ const Services = () => {
           </p>
         </FadeInUpWrapper>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {services.map((service, index) => {
             const Icon = service.icon;
             const borderClasses = [
               'rotating-border-blue',
-              'rotating-border-green', 
-              'rotating-border-purple'
+              'rotating-border-green'
             ];
             return (
               <FadeInUpWrapper key={service.title} delay={index * 0.2}>
@@ -75,25 +67,12 @@ const Services = () => {
                     ))}
                   </ul>
                   
-                  {service.title === "Desenvolvimento Web e Software" ? (
-                    <Button variant="outline" className="group w-full" asChild>
-                      <Link to="/desenvolvimento-web">
-                        Saiba Mais
-                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                      </Link>
-                    </Button>
-                  ) : service.title === "Setups Personalizados" ? (
-                    <Button variant="outline" className="group w-full" asChild>
-                      <Link to="/setups-personalizados">
-                        Saiba Mais
-                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                      </Link>
-                    </Button>
-                  ) : (
-                    <Button variant="outline" className="group w-full" disabled>
-                      Em Breve
-                    </Button>
-                  )}
+                  <Button variant="outline" className="group w-full" asChild>
+                    <Link to={service.title === "Desenvolvimento Web e Software" ? "/desenvolvimento-web" : "/setups-personalizados"}>
+                      Saiba Mais
+                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    </Link>
+                  </Button>
                 </CardContent>
               </Card>
               </FadeInUpWrapper>

@@ -38,11 +38,6 @@ export const siteConfig = {
       description: "PCs sob medida para suas necessidades",
       route: "/setups-personalizados",
     },
-    {
-      title: "Cursos de Tecnologia",
-      description: "Aprenda do básico ao avançado",
-      route: "/cursos/venda",
-    },
   ],
   
   seo: {

@@ -87,22 +87,20 @@ const Footer = () => {
           <div className="space-y-6">
             <h3 className="font-bold text-lg text-foreground">Serviços</h3>
             <ul className="space-y-3">
-              {siteConfig.services.map((service) => (
-                <li key={service.title}>
-                  <Link
-                    to={service.route}
-                    className="text-muted-foreground hover:text-primary transition-colors text-sm block"
-                  >
-                    {service.title}
-                  </Link>
-                </li>
-              ))}
               <li>
                 <Link
-                  to={siteConfig.routes.portfolio}
+                  to="/desenvolvimento-web"
                   className="text-muted-foreground hover:text-primary transition-colors text-sm block"
                 >
-                  Portfólio
+                  Desenvolvimento
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/setups-personalizados"
+                  className="text-muted-foreground hover:text-primary transition-colors text-sm block"
+                >
+                  Montagem de PCs
                 </Link>
               </li>
             </ul>
@@ -135,14 +133,6 @@ const Footer = () => {
                 >
                   Entre em Contato
                 </a>
-              </li>
-              <li>
-                <Link
-                  to={siteConfig.routes.portfolio}
-                  className="text-muted-foreground hover:text-primary transition-colors text-sm block"
-                >
-                  Ver Projetos
-                </Link>
               </li>
             </ul>
           </div>
