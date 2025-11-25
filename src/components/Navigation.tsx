@@ -25,7 +25,6 @@ const Navigation = () => {
 
   const navLinks = [
     { href: isHome ? "#sobre" : "/#sobre", label: "Sobre" },
-    { href: siteConfig.routes.portfolio, label: "Portfólio" },
     { href: isHome ? "#contato" : "/#contato", label: "Contato" },
   ];
 
