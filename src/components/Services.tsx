@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Code2, Monitor, ArrowRight } from "lucide-react";
+import { Code2, Monitor, ArrowRight, Cpu } from "lucide-react";
 import { Link } from "react-router-dom";
 import FadeInUpWrapper from "@/components/FadeInUpWrapper";
 
@@ -39,6 +39,20 @@ const Services = () => {
       ],
       gradient: "gradient-secondary",
       route: "/desenvolvimento-software"
+    },
+    {
+      icon: Cpu,
+      title: "Setups Personalizados",
+      description: "Montagem de setups sob medida para performance, trabalho, jogos e criação de conteúdo.",
+      features: [
+        " PCs personalizados sob demanda",
+        " Setups para trabalho, games e programação",
+        " Consultoria técnica especializada",
+        " Componentes de alta performance",
+        " Organização e estética do setup"
+      ],
+      gradient: "gradient-primary",
+      route: "/setups-personalizados"
     }
   ];
 
@@ -54,12 +68,13 @@ const Services = () => {
           </p>
         </FadeInUpWrapper>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {services.map((service, index) => {
             const Icon = service.icon;
             const borderClasses = [
               'rotating-border-blue',
-              'rotating-border-green'
+              'rotating-border-green',
+              'rotating-border-blue'
             ];
             return (
               <FadeInUpWrapper key={service.title} delay={index * 0.2}>

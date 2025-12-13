@@ -8,16 +8,12 @@ import FadeInUpWrapper from "@/components/FadeInUpWrapper";
 const Hero = () => {
   return (
     <section className="relative min-h-screen gradient-hero flex items-center justify-center overflow-hidden pt-20">
-      {/* Background Image with Overlay */}
-      <div className="absolute inset-0 opacity-70">
-        <img 
-          src={heroImage} 
-          alt="Modern tech workspace with multiple monitors and development setup showcasing IngaCraft professional environment"
-          className="w-full h-full object-cover "
-          loading="eager"
-        />
-        <div className="absolute inset-0 gradient-hero opacity-60"></div>
-      </div>
+      {/* Background Image with Parallax Effect */}
+      <div 
+        className="absolute inset-0 opacity-70 bg-cover bg-center bg-no-repeat bg-fixed"
+        style={{ backgroundImage: `url(${heroImage})` }}
+      />
+      <div className="absolute inset-0 gradient-hero opacity-60"></div>
       
       {/* Floating Icons */}
       <div className="absolute top-32 left-10 animate-float opacity-40 hidden lg:block">
@@ -63,9 +59,9 @@ const Hero = () => {
             variant="glass" 
             size="lg" 
             className="hover:scale-105 transition-transform"
-            onClick={() => window.location.href = siteConfig.routes.portfolio}
+            onClick={() => document.getElementById('servicos')?.scrollIntoView({ behavior: 'smooth' })}
           >
-            Ver Portfólio
+            Conhecer Serviços
           </Button>
         </div>
       </FadeInUpWrapper>
