@@ -39,20 +39,20 @@ const About = () => {
           {/* Content */}
           <FadeInUpWrapper>
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Sobre a <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">IngaCraft</span>
+              Sobre a <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">IngáCraft</span>
             </h2>
             
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              Na IngaCraft, somos especialistas em soluções tecnológicas completas, focadas em transformar ideias em experiências digitais de alto impacto. Atuamos com desenvolvimento web e software de alta performance, além da montagem de PCs e setups personalizados sob medida, sempre alinhando tecnologia, estratégia e inovação.
+              Na IngáCraft, somos especialistas em soluções tecnológicas completas, focadas em transformar ideias em experiências digitais de alto impacto. Atuamos com desenvolvimento web e software de alta performance, além da montagem de PCs e setups personalizados sob medida, sempre alinhando tecnologia, estratégia e inovação.
             </p>
 
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
               Nossa equipe combina expertise técnica, criatividade e visão de mercado para entregar soluções eficientes, seguras e escaláveis, seja fortalecendo a presença digital de empresas, desenvolvendo sistemas sob medida ou criando setups otimizados para máxima performance.
             </p>
 
-             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              Na IngaCraft, acreditamos que a tecnologia vai além de ferramentas: ela é a base para inovação, crescimento e resultados reais. 🌐✨
-             </p>
+            <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+              Na IngáCraft, acreditamos que a tecnologia vai além de ferramentas: ela é a base para inovação, crescimento e resultados reais.
+            </p>
 
             {/* Technologies */}
             <div className="mb-8">

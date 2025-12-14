@@ -1,13 +1,13 @@
 // Configuração centralizada do site
 export const siteConfig = {
-  name: "IngaCraft",
+  name: "IngáCraft",
   description: "Desenvolvimento Web, Desenvolvimento de Software e Setups Personalizados. Transforme suas ideias em soluções digitais inovadoras.",
   
   contact: {
     email: "ingacraftadm@gmail.com",
     phone: "+5544999830226",
     phoneFormatted: "(44) 99983-0226",
-    whatsappMessage: "Olá! Gostaria de saber mais sobre os serviços da IngaCraft.",
+    whatsappMessage: "Olá! Gostaria de saber mais sobre os serviços da IngáCraft.",
     location: "Maringá - PR",
   },
   
@@ -46,9 +46,9 @@ export const siteConfig = {
   ],
   
   seo: {
-    title: "IngaCraft - Desenvolvimento Web, Setups e Cursos de Tecnologia",
-    description: "Transformamos ideias em soluções digitais inovadoras. Desenvolvimento web profissional, montagem de PCs personalizados e cursos práticos de tecnologia em Maringá-PR.",
-    keywords: "desenvolvimento web, criação de sites, setups personalizados, montagem de PC, cursos de tecnologia, programação, Maringá",
+    title: "IngáCraft - Desenvolvimento Web, Software e Setups Personalizados",
+    description: "Transformamos ideias em soluções digitais inovadoras. Desenvolvimento web profissional, software sob medida e montagem de PCs personalizados em Maringá-PR.",
+    keywords: "desenvolvimento web, criação de sites, desenvolvimento de software, setups personalizados, montagem de PC, programação, Maringá",
   },
 };
 

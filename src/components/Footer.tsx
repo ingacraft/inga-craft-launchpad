@@ -108,7 +108,7 @@ const Footer = () => {
                   to="/setups-personalizados"
                   className="text-muted-foreground hover:text-primary transition-colors text-sm block"
                 >
-                  Montagem de PCs
+                  Setups Personalizados
                 </Link>
               </li>
             </ul>
