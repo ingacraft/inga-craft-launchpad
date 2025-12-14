@@ -69,7 +69,7 @@ const WebDevelopment = () => {
         "Backups a cada manutenção e uma vez na semana",
         "Atualizações de sistema e plugins",
         "Suporte técnico e correções emergenciais",
-        "Hospedagem dedicada e escaláve",
+        "Hospedagem dedicada e escalável",
         "Indicado para: manter o site sempre online, seguro e atualizado"
       ]
     }

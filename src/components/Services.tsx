@@ -67,7 +67,7 @@ const Services = () => {
             Nossos Serviços
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Soluções completas para levar sua presença digital, setup tecnológico e conhecimento ao próximo nível!!!
+            Soluções completas para levar sua presença digital e setup tecnológico ao próximo nível.
           </p>
         </FadeInUpWrapper>
 
