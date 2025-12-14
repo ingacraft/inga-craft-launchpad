@@ -8,6 +8,7 @@ import NotFound from "./pages/NotFound";
 import WebDevelopment from "./pages/WebDevelopment";
 import SoftwareDevelopment from "./pages/SoftwareDevelopment";
 import SetupsPersonalizados from "./pages/SetupsPersonalizados";
+import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -17,6 +18,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/desenvolvimento-web" element={<WebDevelopment />} />
