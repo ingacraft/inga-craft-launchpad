@@ -316,14 +316,6 @@ const SoftwareDevelopment = () => {
                 >
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   
-                  {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
-                      <Badge className="gradient-primary text-white px-4 py-2 shadow-lg animate-pulse">
-                        <Star className="w-4 h-4 mr-1 fill-current" />
-                        Mais Popular
-                      </Badge>
-                    </div>
-                  )}
                   
                   <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   

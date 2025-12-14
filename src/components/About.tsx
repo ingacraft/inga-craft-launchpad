@@ -43,18 +43,15 @@ const About = () => {
             </h2>
             
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              Na IngaCraft, somos especialistas em soluções tecnológicas completas. 
-              Nossa missão é transformar ideias em realidade digital, oferecendo desenvolvimento web de alta performance, 
-              setups personalizados sob medida e educação tecnológica de excelência.
+              Na IngaCraft, somos especialistas em soluções tecnológicas completas, focadas em transformar ideias em experiências digitais de alto impacto. Atuamos com desenvolvimento web e software de alta performance, além da montagem de PCs e setups personalizados sob medida, sempre alinhando tecnologia, estratégia e inovação.
             </p>
 
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              Iniciamos nossos trabalhos em janeiro de 2026, mas nossa equipe já tem anos de experiência no mercado, 
-              combinando expertise técnica com criatividade para entregar soluções que realmente fazem a diferença no seu negócio ou carreira.
+              Nossa equipe combina expertise técnica, criatividade e visão de mercado para entregar soluções eficientes, seguras e escaláveis, seja fortalecendo a presença digital de empresas, desenvolvendo sistemas sob medida ou criando setups otimizados para máxima performance.
             </p>
 
              <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              Na IngaCraft, acreditamos que a tecnologia é mais do que uma ferramenta — é um caminho para construir o futuro. 🌐✨
+              Na IngaCraft, acreditamos que a tecnologia vai além de ferramentas: ela é a base para inovação, crescimento e resultados reais. 🌐✨
              </p>
 
             {/* Technologies */}

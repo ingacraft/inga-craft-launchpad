@@ -49,7 +49,10 @@ const Services = () => {
         " Setups para trabalho, games e programação",
         " Consultoria técnica especializada",
         " Componentes de alta performance",
-        " Organização e estética do setup"
+        " Organização e estética do setup",
+        " Configuração de sistema operacional e drivers",
+        " Testes de estabilidade e performance",
+        " Suporte pós-montagem",
       ],
       gradient: "gradient-primary",
       route: "/setups-personalizados"

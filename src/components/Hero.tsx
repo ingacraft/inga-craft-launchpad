@@ -38,7 +38,7 @@ const Hero = () => {
         </div>
         
         <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-6">
-          Desenvolvimento Web e Software • Setups Personalizados • Cursos de Tecnologia
+          Desenvolvimento Web • Desenvolvimento Software • Setups Personalizados
         </p>
         
         <p className="text-base sm:text-lg text-muted-foreground mb-10 max-w-3xl mx-auto leading-relaxed">
@@ -55,14 +55,7 @@ const Hero = () => {
             Começar Projeto
             <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
           </Button>
-          <Button 
-            variant="glass" 
-            size="lg" 
-            className="hover:scale-105 transition-transform"
-            onClick={() => document.getElementById('servicos')?.scrollIntoView({ behavior: 'smooth' })}
-          >
-            Conhecer Serviços
-          </Button>
+         
         </div>
       </FadeInUpWrapper>
 
