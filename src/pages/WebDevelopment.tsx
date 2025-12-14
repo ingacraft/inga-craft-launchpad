@@ -84,7 +84,7 @@ const WebDevelopment = () => {
       {/* Hero Section */}
       <section className="relative h-[85vh] flex items-center justify-center px-6 overflow-hidden">
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed opacity-70"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat md:bg-fixed opacity-70"
           style={{ backgroundImage: `url(${websiteOnScreen})` }}
         />
         <div className="absolute inset-0 gradient-hero opacity-60" />
@@ -96,7 +96,11 @@ const WebDevelopment = () => {
           <p className="text-xl md:text-2xl text-muted-foreground mb-8">
             Criamos sites e aplicações web que vendem, geram autoridade e destacam sua marca no digital. Soluções modernas, rápidas e escaláveis, pensadas para atrair clientes e impulsionar os resultados do seu negócio.
           </p>
-          <Button size="lg" className="gradient-primary text-white font-semibold px-8 py-3">
+          <Button 
+            size="lg" 
+            className="gradient-primary text-white font-semibold px-8 py-3"
+            onClick={() => window.open(getWhatsAppLink("Olá! Gostaria de solicitar um orçamento para desenvolvimento web."), "_blank")}
+          >
             Solicitar Orçamento
           </Button>
           </div>
@@ -273,6 +277,7 @@ const WebDevelopment = () => {
                         ? 'gradient-primary text-white shadow-lg hover:shadow-xl hover:scale-105' 
                         : 'border-2 hover:bg-primary hover:text-white hover:border-primary hover:shadow-lg'
                     }`}
+                    onClick={() => window.open(getWhatsAppLink(`Olá! Gostaria de saber mais sobre o plano ${plan.name} de desenvolvimento web.`), "_blank")}
                   >
                     Solicitar Orçamento
                   </Button>

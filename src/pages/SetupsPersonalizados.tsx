@@ -85,7 +85,7 @@ const SetupsPersonalizados = () => {
       {/* Hero Section */}
       <section className="relative h-[85vh] flex items-center justify-center px-6 overflow-hidden">
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed opacity-60"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat md:bg-fixed opacity-60"
           style={{ backgroundImage: `url(${cpuGamer})` }}
         />
         <div className="absolute inset-0 gradient-hero opacity-50" />
@@ -106,12 +106,22 @@ const SetupsPersonalizados = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="hero" size="lg" className="hover-scale">
+            <Button 
+              variant="hero" 
+              size="lg" 
+              className="hover-scale"
+              onClick={() => window.open(getWhatsAppLink("Olá! Gostaria de solicitar um orçamento para montagem de setup personalizado."), "_blank")}
+            >
               <MessageCircle className="w-5 h-5 mr-2" />
               Peça seu Orçamento
             </Button>
-            <Button variant="glass" size="lg" className="hover-scale" onClick={() => window.location.href = '/portfolio'}>
-              Ver Portfólio
+            <Button 
+              variant="glass" 
+              size="lg" 
+              className="hover-scale" 
+              onClick={() => document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              Ver Galeria
             </Button>
           </div>
         </FadeInUpWrapper>
@@ -219,7 +229,7 @@ const SetupsPersonalizados = () => {
                 <Button 
                   variant="hero" 
                   size="lg" 
-                  onClick={() => window.open('https://wa.me/5544999999999', '_blank')}
+                  onClick={() => window.open(getWhatsAppLink("Olá! Gostaria de saber mais sobre montagem de setups personalizados."), "_blank")}
                   className="hover-scale"
                 >
                   <MessageCircle className="w-5 h-5 mr-2" />
@@ -369,7 +379,12 @@ const SetupsPersonalizados = () => {
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
             Vamos conversar sobre seu projeto ideal. Nossa equipe está pronta para transformar suas ideias em realidade.
           </p>
-          <Button variant="hero" size="lg" className="hover-scale">
+          <Button 
+            variant="hero" 
+            size="lg" 
+            className="hover-scale"
+            onClick={() => window.open(getWhatsAppLink("Olá! Gostaria de montar meu setup personalizado com a IngaCraft."), "_blank")}
+          >
             <MessageCircle className="w-5 h-5 mr-2" />
             Fale com a gente no WhatsApp
           </Button>

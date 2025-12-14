@@ -8,9 +8,9 @@ import FadeInUpWrapper from "@/components/FadeInUpWrapper";
 const Hero = () => {
   return (
     <section className="relative min-h-screen gradient-hero flex items-center justify-center overflow-hidden pt-20">
-      {/* Background Image with Parallax Effect */}
+      {/* Background Image with Parallax Effect - bg-fixed removed on mobile for iOS compatibility */}
       <div 
-        className="absolute inset-0 opacity-70 bg-cover bg-center bg-no-repeat bg-fixed"
+        className="absolute inset-0 opacity-70 bg-cover bg-center bg-no-repeat md:bg-fixed"
         style={{ backgroundImage: `url(${heroImage})` }}
       />
       <div className="absolute inset-0 gradient-hero opacity-60"></div>
@@ -42,7 +42,7 @@ const Hero = () => {
         </p>
         
         <p className="text-base sm:text-lg text-muted-foreground mb-10 max-w-3xl mx-auto leading-relaxed">
-          {siteConfig.description}
+          Transforme suas ideias em soluções digitais inovadoras.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -52,10 +52,17 @@ const Hero = () => {
             className="group hover:scale-105 transition-transform"
             onClick={() => window.open(getWhatsAppLink(), "_blank")}
           >
-            Começar Projeto
+            Solicitar Orçamento
             <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
           </Button>
-         
+          <Button 
+            variant="outline" 
+            size="lg" 
+            className="hover:scale-105 transition-transform border-primary/50 hover:bg-primary/10"
+            onClick={() => document.getElementById('servicos')?.scrollIntoView({ behavior: 'smooth' })}
+          >
+            Conhecer Serviços
+          </Button>
         </div>
       </FadeInUpWrapper>
 
