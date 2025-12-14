@@ -1,7 +1,7 @@
 // Configuração centralizada do site
 export const siteConfig = {
   name: "IngaCraft",
-  description: "Desenvolvimento Web, Setups Personalizados e Cursos de Tecnologia. Transforme suas ideias em soluções digitais inovadoras.",
+  description: "Desenvolvimento Web, Desenvolvimento de Software e Setups Personalizados. Transforme suas ideias em soluções digitais inovadoras.",
   
   contact: {
     email: "ingacraftadm@gmail.com",
