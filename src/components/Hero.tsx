@@ -31,7 +31,7 @@ const Hero = () => {
         <div className="mb-8 flex justify-center">
           <img 
             src={logo} 
-            alt="IngáCraft - Desenvolvimento Web, Software e Setups Personalizados"
+            alt="IngaCraft - Desenvolvimento Web, Software e Setups Personalizados"
             className="w-64 sm:w-80 md:w-96 lg:w-[28rem] h-auto animate-pulse-slow"
             loading="eager"
           />
