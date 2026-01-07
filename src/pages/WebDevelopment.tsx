@@ -15,7 +15,7 @@ const WebDevelopment = () => {
   const plans = [
     {
       name: "Básico",
-      price: "R$ 900 - R$ 2.000",
+      price: "",
       popular: false,
       features: [
         "Site institucional simples (até 3 páginas)",
@@ -30,7 +30,7 @@ const WebDevelopment = () => {
     },
     {
       name: "Intermediário",
-      price: "R$ 2.000 - R$ 4.000",
+      price: "",
       popular: true,
       features: [
         "Site institucional completo (até 8 páginas)",
@@ -45,7 +45,7 @@ const WebDevelopment = () => {
     },
     {
       name: "Avançado",
-      price: "a partir de R$ 4.000",
+      price: "",
       popular: false,
       features: [
         "E-commerce completo ou site corporativo robusto",
@@ -62,7 +62,7 @@ const WebDevelopment = () => {
 
      {
       name: "Manutenção + Hospedagem",
-      price: "a partir de R$50 a R$150 /mês",
+      price: "",
       popular: false,
       features: [
         "Hospedagem otimizada e segura",

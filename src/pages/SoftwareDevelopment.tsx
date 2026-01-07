@@ -79,7 +79,7 @@ const SoftwareDevelopment = () => {
   const plans = [
     {
       name: "Sistema Básico",
-      price: "R$ 3.000 - R$ 8.000",
+      price: "",
       popular: false,
       features: [
         "Sistema personalizado simples",
@@ -94,7 +94,7 @@ const SoftwareDevelopment = () => {
     },
     {
       name: "Sistema Intermediário",
-      price: "R$ 8.000 - R$ 20.000",
+      price: "",
       popular: true,
       features: [
         "Sistema robusto e escalável",
@@ -109,7 +109,7 @@ const SoftwareDevelopment = () => {
     },
     {
       name: "Sistema Empresarial",
-      price: "a partir de R$ 20.000",
+      price: "",
       popular: false,
       features: [
         "ERP ou CRM completo",
@@ -125,7 +125,7 @@ const SoftwareDevelopment = () => {
     },
     {
       name: "Manutenção + Hospedagem",
-      price: "a partir de R$ 150 /mês",
+      price: "",
       popular: false,
       features: [
         "Hospedagem segura e otimizada",
