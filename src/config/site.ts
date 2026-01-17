@@ -5,8 +5,8 @@ export const siteConfig = {
   
   contact: {
     email: "ingacraftadm@gmail.com",
-    phone: "+5544998085069",
-    phoneFormatted: "(44) 99808-5069",
+    phone: "+5544999659801",
+    phoneFormatted: "(44) 99965-9801",
     whatsappMessage: "Olá! Gostaria de saber mais sobre os serviços da IngaCraft.",
     location: "Maringá - PR",
   },
