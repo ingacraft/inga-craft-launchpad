@@ -44,6 +44,11 @@ export const siteConfig = {
       description: "PCs sob medida para suas necessidades",
       route: "/setups-personalizados",
     },
+    {
+      title: "E-commerce / Loja Virtual",
+      description: "Venda online 24/7 com loja profissional",
+      route: "/ecommerce",
+    },
   ],
   
   seo: {
