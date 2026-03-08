@@ -24,6 +24,7 @@ export const siteConfig = {
     portfolio: "/portfolio",
     webDevelopment: "/desenvolvimento-web",
     setups: "/setups-personalizados",
+    ecommerce: "/ecommerce",
     courses: "/cursos/venda",
   },
   
@@ -42,6 +43,11 @@ export const siteConfig = {
       title: "Setups Personalizados",
       description: "PCs sob medida para suas necessidades",
       route: "/setups-personalizados",
+    },
+    {
+      title: "E-commerce / Loja Virtual",
+      description: "Venda online 24/7 com loja profissional",
+      route: "/ecommerce",
     },
   ],
   
