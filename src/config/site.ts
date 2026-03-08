@@ -24,6 +24,7 @@ export const siteConfig = {
     portfolio: "/portfolio",
     webDevelopment: "/desenvolvimento-web",
     setups: "/setups-personalizados",
+    ecommerce: "/ecommerce",
     courses: "/cursos/venda",
   },
   
