@@ -1,10 +1,10 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import { Monitor, Settings, Award, HeadphonesIcon, CheckCircle, MessageCircle, Lightbulb, Wrench, Package, Truck, Briefcase, Gamepad2, Palette } from "lucide-react";
-import { siteConfig, getWhatsAppLink } from "@/config/site";
+import { MessageCircle } from "lucide-react";
+import { getWhatsAppLink } from "@/config/site";
 import FadeInUpWrapper from "@/components/FadeInUpWrapper";
 import {
   Carousel,
@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 
-// Import setup images
+// Images
 import setupGamerPro from "@/assets/IMG-20251004-WA0097.jpg";
 import workstationCreative from "@/assets/cpujapa.jpg";
 import setupStreamer from "@/assets/IMG-20251004-WA0099.jpg";
@@ -22,263 +22,110 @@ import gamingCompact from "@/assets/cpujapaa.jpg";
 import devStation from "@/assets/IMG-20251004-WA0096.jpg";
 import cpuGamer from "@/assets/setup16.jpg";
 
+// Section components
+import SetupStats from "@/components/setups/SetupStats";
+import SetupBenefits from "@/components/setups/SetupBenefits";
+import SetupTypes from "@/components/setups/SetupTypes";
+import SetupItems from "@/components/setups/SetupItems";
+import SetupProcess from "@/components/setups/SetupProcess";
+import SetupAudience from "@/components/setups/SetupAudience";
+import SetupCTA from "@/components/setups/SetupCTA";
+
+const portfolioItems = [
+  { id: 1, image: setupGamerPro },
+  { id: 2, image: workstationCreative },
+  { id: 3, image: setupStreamer },
+  { id: 4, image: officePremium },
+  { id: 5, image: gamingCompact },
+  { id: 6, image: devStation },
+];
+
 const SetupsPersonalizados = () => {
-  const benefits = [
-    {
-      icon: <Monitor className="w-8 h-8 text-primary" />,
-      title: "Desempenho Máximo",
-      description: "Configurações otimizadas para seu uso específico, garantindo a melhor performance possível."
-    },
-    {
-      icon: <Settings className="w-8 h-8 text-primary" />,
-      title: "Design Exclusivo",
-      description: "Setup personalizado que reflete seu estilo e necessidades, desde estética até funcionalidade."
-    },
-    {
-      icon: <HeadphonesIcon className="w-8 h-8 text-primary" />,
-      title: "Suporte Especializado",
-      description: "Acompanhamento completo durante todo o processo e suporte técnico pós-entrega."
-    },
-    {
-      icon: <Award className="w-8 h-8 text-primary" />,
-      title: "Qualidade Garantida",
-      description: "Produtos selecionados e montagem profissional com garantia de qualidade e durabilidade."
-    }
-  ];
-
-  const portfolioItems = [
-    { id: 1, title: "", description: "", image: setupGamerPro },
-    { id: 2, title: "", description: "", image: workstationCreative },
-    { id: 3, title: "", description: "", image: setupStreamer },
-    { id: 4, title: "", description: "", image: officePremium },
-    { id: 5, title: "", description: "", image: gamingCompact },
-    { id: 6, title: "", description: "", image: devStation }
-  ];
-
-  const processSteps = [
-    {
-      icon: <Lightbulb className="w-12 h-12 text-primary" />,
-      title: "Briefing do Cliente",
-      description: "Entendemos suas necessidades, orçamento e expectativas para criar a solução perfeita."
-    },
-    {
-      icon: <Wrench className="w-12 h-12 text-primary" />,
-      title: "Planejamento",
-      description: "Selecionamos componentes, definimos layout e criamos o projeto detalhado do seu setup."
-    },
-    {
-      icon: <Package className="w-12 h-12 text-primary" />,
-      title: "Montagem",
-      description: "Montagem profissional com testes rigorosos para garantir estabilidade e performance."
-    },
-    {
-      icon: <Truck className="w-12 h-12 text-primary" />,
-      title: "Entrega",
-      description: "Instalação no local, configuração completa e treinamento para uso do seu novo setup."
-    }
-  ];
-
   return (
     <div className="min-h-screen pt-20">
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="relative h-[85vh] flex items-center justify-center px-6 overflow-hidden">
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat md:bg-fixed opacity-60"
           style={{ backgroundImage: `url(${cpuGamer})` }}
         />
         <div className="absolute inset-0 gradient-hero opacity-50" />
-        
-        <FadeInUpWrapper className="max-w-4xl mx-auto text-center relative z-10">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-white">
-            Monte seu{" "}
-            <span className="gradient-text-primary">
-              Setup dos Sonhos
-            </span>
-            {" "}
 
+        <FadeInUpWrapper className="max-w-4xl mx-auto text-center relative z-10">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
+            Monte seu{" "}
+            <span className="gradient-text-primary">Setup dos Sonhos</span>{" "}
             com a <span className="gradient-text-primary">IngaCraft</span>
           </h1>
-          
-          <p className="text-lg md:text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
-            Oferecemos setups personalizados, criados sob medida para o seu estilo e desempenho.
+
+          <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+            Setups personalizados, ergonômicos e eficientes — criados sob medida para o seu estilo, conforto e desempenho.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              variant="hero" 
-              size="lg" 
-              className="hover-scale"
-              onClick={() => window.open(getWhatsAppLink("Olá! Gostaria de solicitar um orçamento para montagem de setup personalizado."), "_blank")}
+            <Button
+              variant="hero"
+              size="lg"
+              onClick={() =>
+                window.open(
+                  getWhatsAppLink("Olá! Gostaria de solicitar um orçamento para montagem de setup personalizado."),
+                  "_blank"
+                )
+              }
             >
               <MessageCircle className="w-5 h-5 mr-2" />
               Peça seu Orçamento
             </Button>
-            <Button 
-              variant="glass" 
-              size="lg" 
-              className="hover-scale" 
-              onClick={() => document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' })}
+            <Button
+              variant="glass"
+              size="lg"
+              onClick={() => document.getElementById("stats")?.scrollIntoView({ behavior: "smooth" })}
             >
-              Ver Galeria
+              Ver Benefícios
             </Button>
           </div>
         </FadeInUpWrapper>
       </section>
 
-      {/* Why Upgrade Section */}
-      <section className="py-32 px-6 bg-background">
+      {/* Stats */}
+      <div id="stats">
+        <SetupStats />
+      </div>
+
+      {/* Benefits */}
+      <SetupBenefits />
+
+      {/* Setup Types */}
+      <SetupTypes />
+
+      {/* Gallery */}
+      <section className="py-24 px-6 bg-background/30" id="portfolio">
         <div className="max-w-7xl mx-auto">
-          {/* Header */}
-          <div className="text-center mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">
-              Seu computador deve ser seu{" "}
-              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                maior aliado
-              </span>
-            </h2>
-            <p className="text-xl text-muted-foreground leading-relaxed">
-              Quando você melhora seu PC ou investe em um setup de alto desempenho, você ganha muito mais do que velocidade: 
-              você conquista <strong className="text-foreground">produtividade, qualidade de vida e resultados melhores</strong>.
-            </p>
-          </div>
-
-          {/* Benefits Cards */}
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            {/* Para quem trabalha */}
-            <Card className="group glass-card hover:scale-105 transition-all duration-500 relative overflow-hidden border-0 shadow-lg hover:shadow-2xl">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              
-              <CardContent className="p-8 relative z-10">
-                <div className="mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-all duration-500 mb-4">
-                    <Briefcase className="w-8 h-8 text-primary" />
-                  </div>
-                  <h3 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors duration-300">
-                    Para quem trabalha
-                  </h3>
-                </div>
-                <p className="text-muted-foreground leading-relaxed group-hover:text-foreground transition-colors duration-300">
-                  Um computador lento custa <strong>tempo e dinheiro</strong>. Cada travada, cada espera, é produtividade perdida. 
-                  Com um setup otimizado, você executa tarefas mais rápido, edita vídeos com fluidez, roda softwares pesados sem dor 
-                  de cabeça e aumenta a eficiência no seu dia a dia.
-                </p>
-              </CardContent>
-            </Card>
-
-            {/* Para quem joga */}
-            <Card className="group glass-card hover:scale-105 transition-all duration-500 relative overflow-hidden border-0 shadow-lg hover:shadow-2xl">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              
-              <CardContent className="p-8 relative z-10">
-                <div className="mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-all duration-500 mb-4">
-                    <Gamepad2 className="w-8 h-8 text-primary" />
-                  </div>
-                  <h3 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors duration-300">
-                    Para quem joga
-                  </h3>
-                </div>
-                <p className="text-muted-foreground leading-relaxed group-hover:text-foreground transition-colors duration-300">
-                  Um bom setup é a diferença entre jogar no <strong>"modo sobrevivência"</strong> ou ter uma experiência imersiva 
-                  e competitiva. Mais FPS, gráficos no máximo, resposta instantânea e aquela vantagem extra nas partidas.
-                </p>
-              </CardContent>
-            </Card>
-
-            {/* Para quem cria */}
-            <Card className="group glass-card hover:scale-105 transition-all duration-500 relative overflow-hidden border-0 shadow-lg hover:shadow-2xl">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              
-              <CardContent className="p-8 relative z-10">
-                <div className="mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-all duration-500 mb-4">
-                    <Palette className="w-8 h-8 text-primary" />
-                  </div>
-                  <h3 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors duration-300">
-                    Para quem cria
-                  </h3>
-                </div>
-                <p className="text-muted-foreground leading-relaxed group-hover:text-foreground transition-colors duration-300">
-                  Designers, programadores, arquitetos e criadores de conteúdo sabem: <strong>potência é liberdade criativa</strong>. 
-                  Um computador forte abre portas para projetos maiores, softwares avançados e entregas profissionais sem limitações.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-
-          {/* Bottom CTA Section */}
-          <div className="glass-card p-8 md:p-12 text-center max-w-4xl mx-auto">
-            <div className="space-y-6">
-              <p className="text-xl md:text-2xl font-bold text-foreground">
-                💡 Melhorar seu PC não é gasto, é <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">investimento</span> em performance, 
-                produtividade e diversão.
-              </p>
-              
-              <p className="text-lg text-muted-foreground">
-                Enquanto um computador comum te limita, um setup de alto desempenho <strong className="text-foreground">expande suas possibilidades</strong>.
-              </p>
-              
-              <div className="pt-4">
-                <p className="text-xl font-semibold text-foreground mb-6">
-                  A pergunta não é se você deve melhorar, mas <span className="text-primary">quando</span>. 
-                  E quanto antes, mais rápido você vai sentir a diferença.
-                </p>
-                
-                <Button 
-                  variant="hero" 
-                  size="lg" 
-                  onClick={() => window.open(getWhatsAppLink("Olá! Gostaria de saber mais sobre montagem de setups personalizados."), "_blank")}
-                  className="hover-scale"
-                >
-                  <MessageCircle className="w-5 h-5 mr-2" />
-                  Entre em Contato
-                </Button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      
-
-      {/* Portfolio Gallery */}
-      <section className="py-32 px-6 bg-background" id="portfolio">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <FadeInUpWrapper className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4">
               Galeria de{" "}
-              <span className="gradient-text-primary">
-                Setups
-              </span>
+              <span className="gradient-text-primary">Setups</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Confira alguns dos projetos únicos que já entregamos para nossos clientes
+              Confira alguns dos projetos únicos que já entregamos
             </p>
-          </div>
+          </FadeInUpWrapper>
 
           <Carousel
-            opts={{
-              align: "start",
-              loop: true,
-            }}
-            plugins={[
-              Autoplay({
-                delay: 3000,
-                stopOnInteraction: false,
-              }),
-            ]}
+            opts={{ align: "start", loop: true }}
+            plugins={[Autoplay({ delay: 3000, stopOnInteraction: false })]}
             className="w-full"
           >
             <CarouselContent className="-ml-4">
               {portfolioItems.map((item) => (
                 <CarouselItem key={item.id} className="pl-4 md:basis-1/2 lg:basis-1/3">
-                  <Card className="glass-card transition-all duration-300 relative border-0 shadow-lg overflow-hidden">
-                    <div className="relative h-[500px] w-full flex items-center justify-center bg-black/50">
+                  <Card className="glass-card border-0 shadow-lg overflow-hidden">
+                    <div className="relative h-[500px] w-full flex items-center justify-center bg-background/50">
                       <img
                         src={item.image}
-                        alt={item.title || "Setup personalizado"}
+                        alt="Setup personalizado"
                         className="w-full h-full object-contain"
                       />
                     </div>
@@ -290,106 +137,17 @@ const SetupsPersonalizados = () => {
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-32 px-6" id="beneficios">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Por que escolher a{" "}
-              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                IngaCraft
-              </span>
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Mais do que montar computadores, criamos experiências únicas que elevam sua produtividade e diversão
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-              <Card key={index} className="group glass-card hover:scale-105 transition-all duration-500 relative overflow-hidden border-0 shadow-lg hover:shadow-2xl">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <div className="absolute top-0 right-0 w-12 h-12 bg-gradient-to-bl from-accent/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                
-                <CardContent className="p-8 text-center relative z-10">
-                  <div className="mb-6 flex justify-center">
-                    <div className="relative">
-                      <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-all duration-500 group-hover:shadow-lg">
-                        {benefit.icon}
-                      </div>
-                      <div className="absolute inset-0 rounded-full border-2 border-primary/30 scale-0 group-hover:scale-150 opacity-100 group-hover:opacity-0 transition-all duration-700" />
-                    </div>
-                  </div>
-                  <h3 className="text-xl font-semibold mb-4 group-hover:text-primary transition-colors duration-300">
-                    {benefit.title}
-                  </h3>
-                  <p className="text-muted-foreground group-hover:text-foreground transition-colors duration-300">
-                    {benefit.description}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Items */}
+      <SetupItems />
 
-      {/* Process Steps */}
-      <section className="py-32 px-6" id="processo">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Nosso{" "}
-              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                Processo
-              </span>
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Um processo estruturado e transparente para garantir que seu setup seja exatamente como você sonhou
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {processSteps.map((step, index) => (
-              <div key={index} className="text-center group">
-                <div className="relative mb-6">
-                  <div className="w-24 h-24 mx-auto glass-card rounded-full flex items-center justify-center group-hover:scale-110 transition-smooth">
-                    {step.icon}
-                  </div>
-                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-sm font-bold">
-                    {index + 1}
-                  </div>
-                </div>
-                <h3 className="text-xl font-semibold mb-3">{step.title}</h3>
-                <p className="text-muted-foreground">{step.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Process */}
+      <SetupProcess />
 
-      {/* Final CTA */}
-      <section className="py-24 px-6 gradient-hero">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Pronto para{" "}
-            <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">
-              elevar seu setup?
-            </span>
-          </h2>
-          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Vamos conversar sobre seu projeto ideal. Nossa equipe está pronta para transformar suas ideias em realidade.
-          </p>
-          <Button 
-            variant="hero" 
-            size="lg" 
-            className="hover-scale"
-            onClick={() => window.open(getWhatsAppLink("Olá! Gostaria de montar meu setup personalizado com a IngaCraft."), "_blank")}
-          >
-            <MessageCircle className="w-5 h-5 mr-2" />
-            Fale com a gente no WhatsApp
-          </Button>
-        </div>
-      </section>
+      {/* Audience */}
+      <SetupAudience />
+
+      {/* CTA */}
+      <SetupCTA />
 
       <Footer />
       <WhatsAppButton />
