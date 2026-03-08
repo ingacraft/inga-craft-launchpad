@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import WebDevelopment from "./pages/WebDevelopment";
 import SoftwareDevelopment from "./pages/SoftwareDevelopment";
+import Ecommerce from "./pages/Ecommerce";
 import SetupsPersonalizados from "./pages/SetupsPersonalizados";
 import ScrollToTop from "./components/ScrollToTop";
 
