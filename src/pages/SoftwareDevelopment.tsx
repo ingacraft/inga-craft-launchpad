@@ -12,14 +12,17 @@ import SoftDevFeatures from "@/components/softdev/SoftDevFeatures";
 import SoftDevUseCases from "@/components/softdev/SoftDevUseCases";
 import SoftDevProcess from "@/components/softdev/SoftDevProcess";
 import SoftDevCTA from "@/components/softdev/SoftDevCTA";
+import SectionShell from "@/components/SectionShell";
+import { useGsapScroll } from "@/hooks/useGsapScroll";
 
 const SoftwareDevelopment = () => {
+  useGsapScroll();
   return (
     <div className="min-h-screen bg-background pt-20">
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative h-[85vh] flex items-center justify-center px-6 overflow-hidden">
+      <section className="relative h-[85vh] flex items-center justify-center px-6 overflow-hidden rounded-b-[40px]">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat md:bg-fixed opacity-70"
           style={{ backgroundImage: `url(${devStation})` }}
@@ -54,15 +57,13 @@ const SoftwareDevelopment = () => {
         </FadeInUpWrapper>
       </section>
 
-      <div id="stats">
-        <SoftDevStats />
-      </div>
-      <SoftDevBenefits />
-      <SoftDevSystemTypes />
-      <SoftDevFeatures />
-      <SoftDevUseCases />
-      <SoftDevProcess />
-      <SoftDevCTA />
+      <SectionShell surface="b" id="stats"><SoftDevStats /></SectionShell>
+      <SectionShell surface="a"><SoftDevBenefits /></SectionShell>
+      <SectionShell surface="c"><SoftDevSystemTypes /></SectionShell>
+      <SectionShell surface="a"><SoftDevFeatures /></SectionShell>
+      <SectionShell surface="d"><SoftDevUseCases /></SectionShell>
+      <SectionShell surface="a"><SoftDevProcess /></SectionShell>
+      <SectionShell surface="b" flat><SoftDevCTA /></SectionShell>
 
       <Footer />
       <WhatsAppButton />

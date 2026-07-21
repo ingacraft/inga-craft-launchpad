@@ -30,6 +30,8 @@ import SetupItems from "@/components/setups/SetupItems";
 import SetupProcess from "@/components/setups/SetupProcess";
 import SetupAudience from "@/components/setups/SetupAudience";
 import SetupCTA from "@/components/setups/SetupCTA";
+import SectionShell from "@/components/SectionShell";
+import { useGsapScroll } from "@/hooks/useGsapScroll";
 
 const portfolioItems = [
   { id: 1, image: setupGamerPro },
@@ -41,12 +43,13 @@ const portfolioItems = [
 ];
 
 const SetupsPersonalizados = () => {
+  useGsapScroll();
   return (
     <div className="min-h-screen pt-20">
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative h-[85vh] flex items-center justify-center px-6 overflow-hidden">
+      <section className="relative h-[85vh] flex items-center justify-center px-6 overflow-hidden rounded-b-[40px]">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat md:bg-fixed opacity-60"
           style={{ backgroundImage: `url(${cpuGamer})` }}
@@ -89,19 +92,13 @@ const SetupsPersonalizados = () => {
         </FadeInUpWrapper>
       </section>
 
-      {/* Stats */}
-      <div id="stats">
-        <SetupStats />
-      </div>
-
-      {/* Benefits */}
-      <SetupBenefits />
-
-      {/* Setup Types */}
-      <SetupTypes />
+      <SectionShell surface="b" id="stats"><SetupStats /></SectionShell>
+      <SectionShell surface="a"><SetupBenefits /></SectionShell>
+      <SectionShell surface="c"><SetupTypes /></SectionShell>
 
       {/* Gallery */}
-      <section className="py-24 px-6 bg-background/30" id="portfolio">
+      <SectionShell surface="a" id="portfolio">
+      <section className="py-24 px-6">
         <div className="max-w-7xl mx-auto">
           <FadeInUpWrapper className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold mb-4">
@@ -136,18 +133,12 @@ const SetupsPersonalizados = () => {
           </Carousel>
         </div>
       </section>
+      </SectionShell>
 
-      {/* Items */}
-      <SetupItems />
-
-      {/* Process */}
-      <SetupProcess />
-
-      {/* Audience */}
-      <SetupAudience />
-
-      {/* CTA */}
-      <SetupCTA />
+      <SectionShell surface="d"><SetupItems /></SectionShell>
+      <SectionShell surface="a"><SetupProcess /></SectionShell>
+      <SectionShell surface="c"><SetupAudience /></SectionShell>
+      <SectionShell surface="b" flat><SetupCTA /></SectionShell>
 
       <Footer />
       <WhatsAppButton />
