@@ -2,11 +2,17 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { getWhatsAppLink } from "@/config/site";
 import FadeInUpWrapper from "@/components/FadeInUpWrapper";
+import n8nBg from "@/assets/n8n-automation-bg.jpg";
 
 const HomeCTA = () => {
   return (
-    <section className="border-t border-border bg-[hsl(var(--surface-d))]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+    <section
+      className="relative border-t border-border bg-[hsl(var(--surface-d))] bg-no-repeat bg-cover bg-center md:bg-fixed"
+      style={{ backgroundImage: `url(${n8nBg})` }}
+    >
+      <div className="absolute inset-0 bg-background/80 backdrop-blur-[2px]" aria-hidden="true" />
+      <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-background/40" aria-hidden="true" />
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
         <FadeInUpWrapper className="grid md:grid-cols-12 gap-8 items-end">
           <div className="md:col-span-8">
             <div className="eyebrow mb-6">Próximo passo</div>
