@@ -68,20 +68,6 @@ const About = () => {
                 responsável técnico do início ao fim.
               </p>
             </div>
-
-            <div className="mt-10 rule-t pt-8">
-              <div className="eyebrow mb-5">Stack de trabalho</div>
-              <div className="flex flex-wrap gap-2">
-                {stack.map((s) => (
-                  <span
-                    key={s}
-                    className="px-3 py-1.5 text-xs font-mono text-muted-foreground border border-border rounded"
-                  >
-                    {s}
-                  </span>
-                ))}
-              </div>
-            </div>
           </FadeInUpWrapper>
 
           {/* Right: principles list */}
@@ -106,6 +92,20 @@ const About = () => {
                 </FadeInUpWrapper>
               ))}
             </div>
+
+            <FadeInUpWrapper delay={0.1} className="mt-12 rule-t pt-8">
+              <div className="eyebrow mb-5">Stack de trabalho</div>
+              <div className="flex flex-wrap gap-2">
+                {stack.map((s) => (
+                  <span
+                    key={s}
+                    className="px-3 py-1.5 text-xs font-mono text-muted-foreground border border-border rounded"
+                  >
+                    {s}
+                  </span>
+                ))}
+              </div>
+            </FadeInUpWrapper>
           </div>
         </div>
       </div>
