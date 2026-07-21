@@ -7,8 +7,8 @@ const stats = [
     icon: Zap,
     number: "+40%",
     label: "de produtividade com sistemas automatizados",
-    color: "text-secondary",
-    borderClass: "rotating-border-green",
+    color: "text-primary",
+    borderClass: "rotating-border-blue",
   },
   {
     icon: Server,
@@ -21,8 +21,8 @@ const stats = [
     icon: ShieldCheck,
     number: "60%",
     label: "redução em erros manuais",
-    color: "text-secondary",
-    borderClass: "rotating-border-green",
+    color: "text-primary",
+    borderClass: "rotating-border-blue",
   },
   {
     icon: Gauge,

@@ -36,7 +36,7 @@ const WebDevBenefits = () => {
         <FadeInUpWrapper className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
             Por que ter um{" "}
-            <span className="gradient-text-secondary">site profissional?</span>
+            <span className="gradient-text-primary">site profissional?</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             No mundo atual, quem não está na internet perde clientes todos os dias.

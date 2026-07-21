@@ -4,11 +4,11 @@ import FadeInUpWrapper from "@/components/FadeInUpWrapper";
 
 const useCases = [
   { icon: Package, title: "Controle de Estoque", color: "text-primary" },
-  { icon: Users, title: "Gestão de Clientes (CRM)", color: "text-secondary" },
+  { icon: Users, title: "Gestão de Clientes (CRM)", color: "text-primary" },
   { icon: ClipboardList, title: "Ordens de Serviço", color: "text-primary" },
-  { icon: DollarSign, title: "Financeiro", color: "text-secondary" },
+  { icon: DollarSign, title: "Financeiro", color: "text-primary" },
   { icon: CalendarDays, title: "Agendamentos", color: "text-primary" },
-  { icon: UserCog, title: "RH e Ponto Eletrônico", color: "text-secondary" },
+  { icon: UserCog, title: "RH e Ponto Eletrônico", color: "text-primary" },
 ];
 
 const SoftDevUseCases = () => {

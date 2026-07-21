@@ -3,13 +3,13 @@ import { Gamepad2, Briefcase, Palette, Video, Code2, Building2, Sofa } from "luc
 import FadeInUpWrapper from "@/components/FadeInUpWrapper";
 
 const audiences = [
-  { icon: Gamepad2, title: "Gamers", color: "text-secondary" },
+  { icon: Gamepad2, title: "Gamers", color: "text-primary" },
   { icon: Briefcase, title: "Profissionais Home Office", color: "text-primary" },
-  { icon: Palette, title: "Designers e Editores", color: "text-secondary" },
+  { icon: Palette, title: "Designers e Editores", color: "text-primary" },
   { icon: Video, title: "Streamers e Criadores", color: "text-primary" },
-  { icon: Code2, title: "Programadores", color: "text-secondary" },
+  { icon: Code2, title: "Programadores", color: "text-primary" },
   { icon: Building2, title: "Arquitetos e Engenheiros", color: "text-primary" },
-  { icon: Sofa, title: "Quem quer conforto e estilo", color: "text-secondary" },
+  { icon: Sofa, title: "Quem quer conforto e estilo", color: "text-primary" },
 ];
 
 const SetupAudience = () => {

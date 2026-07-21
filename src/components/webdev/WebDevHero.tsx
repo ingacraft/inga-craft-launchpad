@@ -37,7 +37,7 @@ const WebDevHero = () => {
             <Button
               size="lg"
               variant="outline"
-              className="border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground font-semibold px-8 py-3 text-lg"
+              className="border-secondary text-primary hover:bg-secondary hover:text-primary-foreground font-semibold px-8 py-3 text-lg"
               onClick={() => document.getElementById("beneficios")?.scrollIntoView({ behavior: "smooth" })}
             >
               Conhecer Benefícios

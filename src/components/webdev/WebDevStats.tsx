@@ -7,8 +7,8 @@ const stats = [
     icon: Building2,
     number: "73%",
     label: "das empresas investem em site próprio",
-    color: "text-secondary",
-    borderClass: "rotating-border-green",
+    color: "text-primary",
+    borderClass: "rotating-border-blue",
   },
   {
     icon: Search,
@@ -21,8 +21,8 @@ const stats = [
     icon: Clock,
     number: "24/7",
     label: "seu negócio sempre aberto na internet",
-    color: "text-secondary",
-    borderClass: "rotating-border-green",
+    color: "text-primary",
+    borderClass: "rotating-border-blue",
   },
   {
     icon: Award,

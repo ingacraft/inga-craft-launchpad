@@ -55,7 +55,7 @@ const EcommerceStoreTypes = () => {
                   <ul className="space-y-2">
                     {store.items.map((item) => (
                       <li key={item} className="text-sm text-muted-foreground flex items-center gap-2">
-                        <span className="text-secondary">✓</span>
+                        <span className="text-primary">✓</span>
                         {item}
                       </li>
                     ))}
