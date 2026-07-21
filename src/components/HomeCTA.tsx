@@ -10,8 +10,8 @@ const HomeCTA = () => {
       className="relative border-t border-border bg-[hsl(var(--surface-d))] bg-no-repeat bg-cover bg-center md:bg-fixed"
       style={{ backgroundImage: `url(${n8nBg})` }}
     >
-      <div className="absolute inset-0 bg-background/80 backdrop-blur-[2px]" aria-hidden="true" />
-      <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-background/40" aria-hidden="true" />
+      <div className="absolute inset-0 bg-background/45 backdrop-blur-[1px]" aria-hidden="true" />
+      <div className="absolute inset-0 bg-gradient-to-r from-background/60 via-background/30 to-transparent" aria-hidden="true" />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
         <FadeInUpWrapper className="grid md:grid-cols-12 gap-8 items-end">
           <div className="md:col-span-8">
