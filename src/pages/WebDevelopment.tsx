@@ -7,17 +7,20 @@ import WebDevBenefits from "@/components/webdev/WebDevBenefits";
 import WebDevLandingPage from "@/components/webdev/WebDevLandingPage";
 import WebDevInstitutional from "@/components/webdev/WebDevInstitutional";
 import WebDevCTA from "@/components/webdev/WebDevCTA";
+import SectionShell from "@/components/SectionShell";
+import { useGsapScroll } from "@/hooks/useGsapScroll";
 
 const WebDevelopment = () => {
+  useGsapScroll();
   return (
     <div className="min-h-screen bg-background pt-20">
       <Navigation />
       <WebDevHero />
-      <WebDevStats />
-      <WebDevBenefits />
-      <WebDevLandingPage />
-      <WebDevInstitutional />
-      <WebDevCTA />
+      <SectionShell surface="b"><WebDevStats /></SectionShell>
+      <SectionShell surface="a"><WebDevBenefits /></SectionShell>
+      <SectionShell surface="c"><WebDevLandingPage /></SectionShell>
+      <SectionShell surface="a"><WebDevInstitutional /></SectionShell>
+      <SectionShell surface="d" flat><WebDevCTA /></SectionShell>
       <Footer />
       <WhatsAppButton />
     </div>
