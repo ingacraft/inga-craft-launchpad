@@ -18,79 +18,79 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-secondary border-t border-border">
+    <footer className="bg-[hsl(var(--surface-b))] border-t border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 py-16">
           {/* Brand */}
-          <div className="space-y-6">
-            <div className="flex items-center space-x-2">
-              <Code2 className="w-8 h-8 text-primary" />
-              <span className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+          <div className="lg:col-span-4 space-y-6">
+            <div className="flex items-center gap-2.5">
+              <span className="inline-block w-2 h-2 rounded-full bg-primary shadow-[0_0_12px_hsl(var(--primary)/0.7)]" />
+              <span className="font-display text-xl font-semibold tracking-tight text-foreground">
                 {siteConfig.name}
               </span>
             </div>
-            <p className="text-muted-foreground text-sm leading-relaxed">
+            <p className="text-muted-foreground text-sm leading-relaxed max-w-sm">
               {siteConfig.description}
             </p>
             {/* Social Links */}
-            <div className="flex space-x-4">
+            <div className="flex gap-2">
               <a 
                 href={siteConfig.social.instagram} 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110"
+                className="w-9 h-9 rounded-md border border-border flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-foreground/30 transition-colors"
                 aria-label="Instagram"
               >
-                <Instagram className="w-5 h-5" />
+                <Instagram className="w-4 h-4" />
               </a>
               <a 
                 href={siteConfig.social.facebook}
                 target="_blank"
                 rel="noopener noreferrer" 
-                className="text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110"
+                className="w-9 h-9 rounded-md border border-border flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-foreground/30 transition-colors"
                 aria-label="Facebook"
               >
-                <Facebook className="w-5 h-5" />
+                <Facebook className="w-4 h-4" />
               </a>
               <a 
                 href={siteConfig.social.linkedin}
                 target="_blank"
                 rel="noopener noreferrer" 
-                className="text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110"
+                className="w-9 h-9 rounded-md border border-border flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-foreground/30 transition-colors"
                 aria-label="LinkedIn"
               >
-                <Linkedin className="w-5 h-5" />
+                <Linkedin className="w-4 h-4" />
               </a>
               <a 
                 href={siteConfig.social.tiktok}
                 target="_blank"
                 rel="noopener noreferrer" 
-                className="text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110"
+                className="w-9 h-9 rounded-md border border-border flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-foreground/30 transition-colors"
                 aria-label="TikTok"
               >
-                <TikTokIcon className="w-5 h-5" />
+                <TikTokIcon className="w-4 h-4" />
               </a>
               <a 
                 href={siteConfig.social.youtube}
                 target="_blank"
                 rel="noopener noreferrer" 
-                className="text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110"
+                className="w-9 h-9 rounded-md border border-border flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-foreground/30 transition-colors"
                 aria-label="YouTube"
               >
-                <Youtube className="w-5 h-5" />
+                <Youtube className="w-4 h-4" />
               </a>
             </div>
           </div>
 
           {/* Services */}
-          <div className="space-y-6">
-            <h3 className="font-bold text-lg text-foreground">Serviços</h3>
+          <div className="lg:col-span-2 space-y-5">
+            <h3 className="eyebrow">Serviços</h3>
             <ul className="space-y-3">
               <li>
                 <Link
                   to="/desenvolvimento-web"
-                  className="text-muted-foreground hover:text-primary transition-colors text-sm block"
+                  className="text-muted-foreground hover:text-foreground transition-colors text-sm block"
                 >
                   Desenvolvimento Web
                 </Link>
@@ -98,7 +98,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/desenvolvimento-software"
-                  className="text-muted-foreground hover:text-primary transition-colors text-sm block"
+                  className="text-muted-foreground hover:text-foreground transition-colors text-sm block"
                 >
                   Desenvolvimento de Software
                 </Link>
@@ -106,22 +106,30 @@ const Footer = () => {
               <li>
                 <Link
                   to="/setups-personalizados"
-                  className="text-muted-foreground hover:text-primary transition-colors text-sm block"
+                  className="text-muted-foreground hover:text-foreground transition-colors text-sm block"
                 >
                   Setups Personalizados
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/ecommerce"
+                  className="text-muted-foreground hover:text-foreground transition-colors text-sm block"
+                >
+                  E-commerce
                 </Link>
               </li>
             </ul>
           </div>
 
           {/* Quick Links */}
-          <div className="space-y-6">
-            <h3 className="font-bold text-lg text-foreground">Links Rápidos</h3>
+          <div className="lg:col-span-2 space-y-5">
+            <h3 className="eyebrow">Empresa</h3>
             <ul className="space-y-3">
               <li>
                 <a 
                   href="/#sobre" 
-                  className="text-muted-foreground hover:text-primary transition-colors text-sm block"
+                  className="text-muted-foreground hover:text-foreground transition-colors text-sm block"
                 >
                   Sobre Nós
                 </a>
@@ -129,7 +137,7 @@ const Footer = () => {
               <li>
                 <a 
                   href="/#servicos" 
-                  className="text-muted-foreground hover:text-primary transition-colors text-sm block"
+                  className="text-muted-foreground hover:text-foreground transition-colors text-sm block"
                 >
                   Nossos Serviços
                 </a>
@@ -137,38 +145,38 @@ const Footer = () => {
               <li>
                 <a 
                   href="/#contato" 
-                  className="text-muted-foreground hover:text-primary transition-colors text-sm block"
+                  className="text-muted-foreground hover:text-foreground transition-colors text-sm block"
                 >
-                  Entre em Contato
+                  Contato
                 </a>
               </li>
             </ul>
           </div>
 
           {/* Contact */}
-          <div className="space-y-6">
-            <h3 className="font-bold text-lg text-foreground">Contato</h3>
+          <div className="lg:col-span-4 space-y-5">
+            <h3 className="eyebrow">Fale com a gente</h3>
             <ul className="space-y-4">
-              <li className="flex items-start space-x-3">
-                <Mail className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+              <li className="flex items-start gap-3">
+                <Mail className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
                 <a 
                   href={`mailto:${siteConfig.contact.email}`}
-                  className="text-muted-foreground hover:text-primary transition-colors text-sm"
+                  className="text-muted-foreground hover:text-foreground transition-colors text-sm"
                 >
                   {siteConfig.contact.email}
                 </a>
               </li>
-              <li className="flex items-start space-x-3">
-                <Phone className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+              <li className="flex items-start gap-3">
+                <Phone className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
                 <a 
                   href={`tel:${siteConfig.contact.phone}`}
-                  className="text-muted-foreground hover:text-primary transition-colors text-sm"
+                  className="text-muted-foreground hover:text-foreground transition-colors text-sm font-mono"
                 >
                   {siteConfig.contact.phoneFormatted}
                 </a>
               </li>
-              <li className="flex items-start space-x-3">
-                <MapPin className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+              <li className="flex items-start gap-3">
+                <MapPin className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
                 <span className="text-muted-foreground text-sm">
                   {siteConfig.contact.location}
                 </span>
@@ -179,15 +187,15 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-border py-8">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-muted-foreground text-sm text-center md:text-left">
-              © {currentYear} {siteConfig.name}. Todos os direitos reservados.
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-muted-foreground text-xs font-mono uppercase tracking-widest text-center md:text-left">
+              © {currentYear} {siteConfig.name} · Todos os direitos reservados
             </p>
-            <div className="flex space-x-6 text-sm">
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+            <div className="flex gap-6 text-xs font-mono uppercase tracking-widest">
+              <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
                 Política de Privacidade
               </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
                 Termos de Uso
               </a>
             </div>
