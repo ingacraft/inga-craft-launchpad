@@ -1,4 +1,5 @@
 import FadeInUpWrapper from "@/components/FadeInUpWrapper";
+import teamPhoto from "@/assets/team-collaboration.jpg";
 
 const principles = [
   {
@@ -38,11 +39,26 @@ const About = () => {
             <div className="eyebrow mb-6">A empresa</div>
             <h2 className="font-display text-3xl md:text-5xl font-semibold tracking-[-0.03em] text-foreground leading-[1.05] mb-8">
               Uma casa de engenharia<br />
-              — não uma agência genérica.
+              — <span className="text-primary">não uma agência genérica.</span>
             </h2>
+            <div className="mb-8 overflow-hidden rounded-md border border-border relative group">
+              <img
+                src={teamPhoto}
+                alt="Time Ingacraft trabalhando em um projeto"
+                width={1600}
+                height={1200}
+                loading="lazy"
+                className="w-full h-64 md:h-72 object-cover object-center transition-transform duration-700 group-hover:scale-[1.03]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
+              <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between">
+                <span className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">Time / Maringá — PR</span>
+                <span className="font-mono text-[10px] uppercase tracking-widest text-primary">Ingacraft ©</span>
+              </div>
+            </div>
             <div className="space-y-5 text-muted-foreground leading-relaxed">
               <p>
-                A Ingacraft foi fundada em Maringá para atender empresas que precisam
+                A <span className="text-foreground font-medium">Ingacraft</span> foi fundada em Maringá para atender empresas que precisam
                 de tecnologia séria: sistemas que escalam, sites que performam,
                 infraestrutura que não falha em produção.
               </p>
@@ -78,7 +94,7 @@ const About = () => {
                   delay={i * 0.08}
                   className="py-8 first:pt-0 grid grid-cols-12 gap-6 group"
                 >
-                  <div className="col-span-2 font-mono text-xs text-muted-foreground pt-1">
+                  <div className="col-span-2 font-mono text-xs text-primary pt-1">
                     {p.n}
                   </div>
                   <div className="col-span-10">

@@ -25,7 +25,7 @@ const HomeStats = () => {
               delay={i * 0.08}
               className="border-b md:border-b-0 md:border-r last:md:border-r-0 border-border py-10 md:py-12 md:px-6 first:md:pl-0"
             >
-              <div className="font-mono text-xs text-muted-foreground mb-6">{r.k}</div>
+              <div className="font-mono text-xs text-primary mb-6">{r.k}</div>
               <div className="font-display text-5xl lg:text-6xl font-semibold text-foreground tracking-[-0.04em]">
                 {r.value}
               </div>
