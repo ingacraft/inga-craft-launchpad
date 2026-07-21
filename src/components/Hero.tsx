@@ -4,6 +4,8 @@ import heroImage from "@/assets/hero-tech-setup.jpg";
 import logo from "@/assets/ingacraft-logo.png";
 import { getWhatsAppLink } from "@/config/site";
 import FadeInUpWrapper from "@/components/FadeInUpWrapper";
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
 
 const trustBadges = [
   { icon: Shield, label: "Segurança garantida" },
@@ -13,18 +15,48 @@ const trustBadges = [
 ];
 
 const Hero = () => {
+  const bgRef = useRef<HTMLDivElement>(null);
+  const logoRef = useRef<HTMLImageElement>(null);
+  const orbRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      // Logo entrance
+      gsap.from(logoRef.current, {
+        y: 40, opacity: 0, scale: 0.9, duration: 1.2, ease: "power3.out",
+      });
+      // Floating orb
+      gsap.to(orbRef.current, {
+        y: -30, duration: 3.5, ease: "sine.inOut", yoyo: true, repeat: -1,
+      });
+      // Subtle bg parallax on scroll
+      gsap.to(bgRef.current, {
+        yPercent: 20,
+        ease: "none",
+        scrollTrigger: { trigger: bgRef.current, start: "top top", end: "bottom top", scrub: true },
+      });
+    });
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <section className="relative min-h-screen gradient-hero flex items-center justify-center overflow-hidden pt-20">
-      <div 
-        className="absolute inset-0 opacity-50 bg-cover bg-center bg-no-repeat md:bg-fixed"
+    <section className="relative min-h-screen gradient-hero flex items-center justify-center overflow-hidden pt-20 rounded-b-[40px]">
+      <div
+        ref={bgRef}
+        className="absolute inset-0 opacity-25 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroImage})` }}
       />
-      <div className="absolute inset-0 gradient-hero opacity-70" />
+      {/* Warm + cool ambient glows */}
+      <div ref={orbRef} className="pointer-events-none absolute -top-32 -left-32 w-[520px] h-[520px] rounded-full opacity-40 blur-3xl"
+           style={{ background: "radial-gradient(circle, hsl(25 95% 55% / 0.55), transparent 70%)" }} />
+      <div className="pointer-events-none absolute -bottom-40 -right-32 w-[520px] h-[520px] rounded-full opacity-40 blur-3xl"
+           style={{ background: "radial-gradient(circle, hsl(270 70% 55% / 0.55), transparent 70%)" }} />
 
       <FadeInUpWrapper className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
         <div className="mb-8 flex justify-center">
-          <img 
-            src={logo} 
+          <img
+            ref={logoRef}
+            src={logo}
             alt="IngaCraft - Desenvolvimento Web, Software e Setups Personalizados"
             className="w-56 sm:w-72 md:w-80 lg:w-96 h-auto"
             loading="eager"
