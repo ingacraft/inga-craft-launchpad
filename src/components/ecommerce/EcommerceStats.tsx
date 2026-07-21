@@ -4,11 +4,11 @@ import FadeInUpWrapper from "@/components/FadeInUpWrapper";
 
 const stats = [
   { icon: TrendingUp, number: "+30%", label: "de aumento em vendas com loja virtual", color: "text-primary", borderClass: "rotating-border-blue" },
-  { icon: DollarSign, number: "R$ 2,68 bi", label: "faturamento do e-commerce brasileiro", color: "text-secondary", borderClass: "rotating-border-green" },
+  { icon: DollarSign, number: "R$ 2,68 bi", label: "faturamento do e-commerce brasileiro", color: "text-primary", borderClass: "rotating-border-blue" },
   { icon: Search, number: "87%", label: "dos consumidores pesquisam online antes de comprar", color: "text-primary", borderClass: "rotating-border-blue" },
-  { icon: Clock, number: "24/7", label: "sua loja sempre aberta", color: "text-secondary", borderClass: "rotating-border-green" },
+  { icon: Clock, number: "24/7", label: "sua loja sempre aberta", color: "text-primary", borderClass: "rotating-border-blue" },
   { icon: Smartphone, number: "60%", label: "das compras são feitas pelo celular", color: "text-primary", borderClass: "rotating-border-blue" },
-  { icon: ShoppingCart, number: "+40%", label: "de conversão com checkout otimizado", color: "text-secondary", borderClass: "rotating-border-green" },
+  { icon: ShoppingCart, number: "+40%", label: "de conversão com checkout otimizado", color: "text-primary", borderClass: "rotating-border-blue" },
 ];
 
 const EcommerceStats = () => {

@@ -28,7 +28,7 @@ const EcommerceIntegrations = () => {
               <FadeInUpWrapper key={item.title} delay={i * 0.1}>
                 <Card className={`glass-card text-center hover:scale-105 transition-all duration-300 ${item.borderClass}`}>
                   <CardContent className="pt-6 pb-6">
-                    <Icon className="w-8 h-8 mx-auto mb-3 text-secondary" />
+                    <Icon className="w-8 h-8 mx-auto mb-3 text-primary" />
                     <h3 className="font-bold text-sm mb-1">{item.title}</h3>
                     <p className="text-xs text-muted-foreground">{item.desc}</p>
                   </CardContent>

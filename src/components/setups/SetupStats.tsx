@@ -7,8 +7,8 @@ const stats = [
     icon: TrendingUp,
     number: "+30%",
     label: "de produtividade com setup ergonômico",
-    color: "text-secondary",
-    borderClass: "rotating-border-green",
+    color: "text-primary",
+    borderClass: "rotating-border-blue",
   },
   {
     icon: Server,
@@ -21,8 +21,8 @@ const stats = [
     icon: Eye,
     number: "42%",
     label: "redução de fadiga visual com monitores corretos",
-    color: "text-secondary",
-    borderClass: "rotating-border-green",
+    color: "text-primary",
+    borderClass: "rotating-border-blue",
   },
   {
     icon: Clock,

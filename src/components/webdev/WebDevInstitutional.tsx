@@ -18,11 +18,11 @@ const WebDevInstitutional = () => {
     <section className="py-24 px-6 bg-background/50">
       <div className="max-w-7xl mx-auto">
         <FadeInUpWrapper className="text-center mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full text-sm font-semibold bg-secondary/10 text-secondary border border-secondary/30 mb-4">
+          <span className="inline-block px-4 py-1.5 rounded-full text-sm font-semibold bg-secondary/10 text-primary border border-secondary/30 mb-4">
             Opção 2
           </span>
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
-            <span className="text-secondary">Site Institucional</span>
+            <span className="text-primary">Site Institucional</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             O cartão de visitas digital completo da sua empresa. Transmita credibilidade, apresente sua equipe e conquiste a confiança do cliente.
@@ -50,7 +50,7 @@ const WebDevInstitutional = () => {
 
               <Button
                 size="lg"
-                className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold w-full mt-6 text-lg"
+                className="bg-secondary hover:bg-secondary/90 text-primary-foreground font-semibold w-full mt-6 text-lg"
                 onClick={() =>
                   window.open(
                     getWhatsAppLink("Olá! Gostaria de saber mais sobre criação de Site Institucional."),
@@ -75,7 +75,7 @@ const WebDevInstitutional = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
                   <div className="absolute bottom-4 left-4 right-4">
-                    <p className="text-sm font-semibold text-secondary">Exemplo de Site Institucional</p>
+                    <p className="text-sm font-semibold text-primary">Exemplo de Site Institucional</p>
                     <p className="text-xs text-muted-foreground">Presença digital completa e profissional</p>
                   </div>
                 </div>
