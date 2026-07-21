@@ -1,7 +1,7 @@
 import FadeInUpWrapper from "@/components/FadeInUpWrapper";
 
 const rows = [
-  { k: "01", value: "50+",  label: "Projetos entregues",     detail: "Sites, sistemas e setups em produção." },
+  { k: "01", value: "50+",  label: "Projetos entregues",     detail: "Sites, sistemas e lojas em produção." },
   { k: "02", value: "3×",   label: "Mais resultado",         detail: "Média de crescimento com stack correta." },
   { k: "03", value: "100%", label: "Comprometimento",        detail: "Contratos claros, escopo definido." },
   { k: "04", value: "24/7", label: "Suporte contínuo",       detail: "Acompanhamento pós-entrega." },

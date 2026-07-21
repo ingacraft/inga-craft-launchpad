@@ -1,7 +1,7 @@
 // Configuração centralizada do site
 export const siteConfig = {
   name: "IngaCraft",
-  description: "Desenvolvimento Web, Desenvolvimento de Software e Setups Personalizados. Transforme suas ideias em soluções digitais inovadoras.",
+  description: "Desenvolvimento Web, Desenvolvimento de Software e E-commerce. Transforme suas ideias em soluções digitais inovadoras.",
   
   contact: {
     email: "ingacraftadm@gmail.com",
@@ -23,7 +23,6 @@ export const siteConfig = {
     home: "/",
     portfolio: "/portfolio",
     webDevelopment: "/desenvolvimento-web",
-    setups: "/setups-personalizados",
     ecommerce: "/ecommerce",
     courses: "/cursos/venda",
   },
@@ -40,11 +39,6 @@ export const siteConfig = {
       route: "/desenvolvimento-software",
     },
     {
-      title: "Setups Personalizados",
-      description: "PCs sob medida para suas necessidades",
-      route: "/setups-personalizados",
-    },
-    {
       title: "E-commerce / Loja Virtual",
       description: "Venda online 24/7 com loja profissional",
       route: "/ecommerce",
@@ -52,9 +46,9 @@ export const siteConfig = {
   ],
   
   seo: {
-    title: "IngaCraft - Desenvolvimento Web, Software e Setups Personalizados",
-    description: "Transformamos ideias em soluções digitais inovadoras. Desenvolvimento web profissional, software sob medida e montagem de PCs personalizados em Maringá-PR.",
-    keywords: "desenvolvimento web, criação de sites, desenvolvimento de software, setups personalizados, montagem de PC, programação, Maringá",
+    title: "IngaCraft - Desenvolvimento Web, Software e E-commerce",
+    description: "Transformamos ideias em soluções digitais inovadoras. Desenvolvimento web profissional, software sob medida e lojas virtuais em Maringá-PR.",
+    keywords: "desenvolvimento web, criação de sites, desenvolvimento de software, e-commerce, loja virtual, programação, Maringá",
   },
 };
 

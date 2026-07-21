@@ -1,4 +1,4 @@
-import { ArrowUpRight, Code2, Terminal, Cpu, ShoppingBag } from "lucide-react";
+import { ArrowUpRight, Code2, Terminal, ShoppingBag } from "lucide-react";
 import { Link } from "react-router-dom";
 import FadeInUpWrapper from "@/components/FadeInUpWrapper";
 
@@ -26,20 +26,12 @@ const secondary = [
   },
   {
     code: "03",
-    icon: Cpu,
-    title: "Setups personalizados",
-    desc: "Montagem profissional de PCs para trabalho, criação e gaming.",
-    route: "/setups-personalizados",
-  },
-];
-
-const wide = {
-  code: "04",
   icon: ShoppingBag,
   title: "E-commerce",
-  desc: "Lojas virtuais completas — checkout, pagamentos, integrações de estoque e logística.",
-  route: "/ecommerce",
-};
+    desc: "Lojas virtuais completas — checkout, pagamentos e integrações de estoque.",
+    route: "/ecommerce",
+  },
+];
 
 const Services = () => {
   return (
