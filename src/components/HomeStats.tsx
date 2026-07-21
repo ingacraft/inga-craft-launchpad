@@ -1,4 +1,5 @@
 import FadeInUpWrapper from "@/components/FadeInUpWrapper";
+import analystPhoto from "@/assets/stats-analyst.jpg";
 
 const rows = [
   { k: "01", value: "50+",  label: "Projetos entregues",     detail: "Sites, sistemas e lojas em produção." },
@@ -11,12 +12,35 @@ const HomeStats = () => {
   return (
     <section className="border-t border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-24">
-        <FadeInUpWrapper className="mb-14 max-w-2xl">
-          <div className="eyebrow mb-4">Números que sustentam</div>
-          <h2 className="font-display text-3xl md:text-5xl font-semibold tracking-tight text-foreground">
-            Menos promessa, mais entrega mensurável.
-          </h2>
-        </FadeInUpWrapper>
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 mb-14 items-end">
+          <FadeInUpWrapper className="lg:col-span-6">
+            <div className="eyebrow mb-4">Números que sustentam</div>
+            <h2 className="font-display text-3xl md:text-5xl font-semibold tracking-tight text-foreground">
+              Menos promessa, mais entrega mensurável.
+            </h2>
+            <p className="mt-6 text-muted-foreground leading-relaxed max-w-md">
+              Resultado acompanhado de perto por quem toma decisão — indicadores
+              de performance, conversão e disponibilidade sob revisão contínua.
+            </p>
+          </FadeInUpWrapper>
+          <FadeInUpWrapper delay={0.1} className="lg:col-span-6">
+            <div className="relative overflow-hidden rounded-md border border-border group">
+              <img
+                src={analystPhoto}
+                alt="Executiva analisando dashboard de resultados da Ingacraft"
+                width={1280}
+                height={960}
+                loading="lazy"
+                className="w-full h-64 md:h-80 object-cover object-center transition-transform duration-700 group-hover:scale-[1.03]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent" />
+              <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between">
+                <span className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">Dashboard executivo</span>
+                <span className="font-mono text-[10px] uppercase tracking-widest text-primary">Q2 · 2026</span>
+              </div>
+            </div>
+          </FadeInUpWrapper>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 border-t border-border">
           {rows.map((r, i) => (
