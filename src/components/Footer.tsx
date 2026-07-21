@@ -105,14 +105,6 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/setups-personalizados"
-                  className="text-muted-foreground hover:text-foreground transition-colors text-sm block"
-                >
-                  Setups Personalizados
-                </Link>
-              </li>
-              <li>
-                <Link
                   to="/ecommerce"
                   className="text-muted-foreground hover:text-foreground transition-colors text-sm block"
                 >

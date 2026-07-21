@@ -1,4 +1,4 @@
-import { ArrowUpRight, Code2, Terminal, Cpu, ShoppingBag } from "lucide-react";
+import { ArrowUpRight, Code2, Terminal, ShoppingBag } from "lucide-react";
 import { Link } from "react-router-dom";
 import FadeInUpWrapper from "@/components/FadeInUpWrapper";
 
@@ -26,20 +26,12 @@ const secondary = [
   },
   {
     code: "03",
-    icon: Cpu,
-    title: "Setups personalizados",
-    desc: "Montagem profissional de PCs para trabalho, criação e gaming.",
-    route: "/setups-personalizados",
-  },
-];
-
-const wide = {
-  code: "04",
   icon: ShoppingBag,
   title: "E-commerce",
-  desc: "Lojas virtuais completas — checkout, pagamentos, integrações de estoque e logística.",
-  route: "/ecommerce",
-};
+    desc: "Lojas virtuais completas — checkout, pagamentos e integrações de estoque.",
+    route: "/ecommerce",
+  },
+];
 
 const Services = () => {
   return (
@@ -121,35 +113,6 @@ const Services = () => {
               </Link>
             </FadeInUpWrapper>
           ))}
-
-          {/* Wide bottom tile */}
-          <FadeInUpWrapper className="lg:col-span-3" delay={0.24}>
-            <Link
-              to={wide.route}
-              className="tile group flex flex-col md:flex-row md:items-center justify-between gap-6 h-full p-6 lg:p-8"
-            >
-              <div className="flex items-start gap-6">
-                <div className="hidden md:flex w-12 h-12 rounded-md border border-border items-center justify-center flex-shrink-0">
-                  <wide.icon className="w-5 h-5 text-primary" />
-                </div>
-                <div>
-                  <div className="flex items-center gap-3 mb-2">
-                    <span className="font-mono text-xs text-muted-foreground">{wide.code}</span>
-                    <span className="h-px w-6 bg-border" />
-                    <span className="font-mono text-xs uppercase tracking-widest text-muted-foreground">Serviço</span>
-                  </div>
-                  <h3 className="font-display text-xl md:text-2xl font-semibold text-foreground tracking-tight">
-                    {wide.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed mt-1 max-w-2xl">{wide.desc}</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-2 text-sm font-medium text-foreground group-hover:text-primary transition-colors">
-                Explorar serviço
-                <ArrowUpRight className="w-4 h-4 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform" />
-              </div>
-            </Link>
-          </FadeInUpWrapper>
         </div>
       </div>
     </section>
