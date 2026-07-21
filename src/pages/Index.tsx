@@ -3,6 +3,7 @@ import Navigation from "@/components/Navigation";
 import HomeStats from "@/components/HomeStats";
 import Services from "@/components/Services";
 import About from "@/components/About";
+import Testimonials from "@/components/Testimonials";
 import HomeCTA from "@/components/HomeCTA";
 import Contact from "@/components/Contact";
 import SocialMedia from "@/components/SocialMedia";
@@ -17,6 +18,7 @@ const Index = () => {
       <HomeStats />
       <Services />
       <About />
+      <Testimonials />
       <HomeCTA />
       <Contact />
       <SocialMedia />
