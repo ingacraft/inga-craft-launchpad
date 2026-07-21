@@ -6,36 +6,34 @@ interface FadeInUpWrapperProps {
   delay?: number;
   duration?: number;
   className?: string;
+  as?: "div" | "section" | "article" | "header";
 }
 
-const FadeInUpWrapper = ({ 
-  children, 
-  delay = 0, 
-  duration = 0.8,
-  className = "" 
+/**
+ * Calm, once-only reveal. Enterprise motion: 24px slide, 0.6s ease-out.
+ * No repeat, no exit — content stays put after entering (professional feel).
+ */
+const FadeInUpWrapper = ({
+  children,
+  delay = 0,
+  duration = 0.6,
+  className = "",
+  as = "div",
 }: FadeInUpWrapperProps) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { 
-    once: false,
-    margin: "-100px",
-    amount: 0.3
-  });
+  const isInView = useInView(ref, { once: true, margin: "-80px", amount: 0.2 });
+  const MotionTag = motion[as] as typeof motion.div;
 
   return (
-    <motion.div
+    <MotionTag
       ref={ref}
-      initial={{ opacity: 0, y: 50 }}
-      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-      exit={{ opacity: 0, y: -50 }}
-      transition={{
-        duration,
-        delay,
-        ease: "easeOut"
-      }}
+      initial={{ opacity: 0, y: 24 }}
+      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 24 }}
+      transition={{ duration, delay, ease: [0.22, 1, 0.36, 1] }}
       className={className}
     >
       {children}
-    </motion.div>
+    </MotionTag>
   );
 };
 
