@@ -2,13 +2,13 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { getWhatsAppLink } from "@/config/site";
 import FadeInUpWrapper from "@/components/FadeInUpWrapper";
-import n8nBg from "@/assets/n8n-automation-bg.jpg";
+import n8nBg from "@/assets/n8n-workflow-bg.jpeg.asset.json";
 
 const HomeCTA = () => {
   return (
     <section
       className="relative border-t border-border bg-[hsl(var(--surface-d))] bg-no-repeat bg-cover bg-center md:bg-fixed"
-      style={{ backgroundImage: `url(${n8nBg})` }}
+      style={{ backgroundImage: `url(${n8nBg.url})` }}
     >
       <div className="absolute inset-0 bg-background/45 backdrop-blur-[1px]" aria-hidden="true" />
       <div className="absolute inset-0 bg-gradient-to-r from-background/60 via-background/30 to-transparent" aria-hidden="true" />

@@ -26,7 +26,7 @@ const principles = [
 
 const stack = [
   "React", "Next.js", "TypeScript", "Node.js", "Python",
-  "PostgreSQL", "AWS", "Docker", "Tailwind", "Supabase", "WordPress", "NuvemShop",
+  "PostgreSQL", "AWS", "Docker", "Tailwind", "Supabase", "WordPress", "NuvemShop", "Automações n8n",
 ];
 
 const About = () => {
