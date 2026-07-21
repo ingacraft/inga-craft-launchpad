@@ -1,36 +1,33 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight } from "lucide-react";
 import { getWhatsAppLink } from "@/config/site";
 import FadeInUpWrapper from "@/components/FadeInUpWrapper";
 
 const HomeCTA = () => {
   return (
-    <section className="py-24 px-6 bg-background/30">
-      <div className="max-w-4xl mx-auto text-center">
-        <FadeInUpWrapper>
-          <Card className="glass-card border-primary/20 shadow-glow overflow-hidden relative">
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-secondary/10" />
-            <CardContent className="pt-12 pb-12 relative z-10">
-              <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-4">Vamos conversar?</p>
-              <h2 className="text-3xl md:text-5xl font-bold mb-6">
-                <span className="gradient-text-primary">
-                  Pronto para levar seu negócio ao próximo nível?
-                </span>
-              </h2>
-              <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-                Entre em contato e descubra como podemos transformar suas ideias em soluções digitais de alto impacto.
-              </p>
-              <Button
-                size="lg"
-                className="gradient-primary text-primary-foreground font-semibold px-12 py-6 text-lg hover:scale-105 transition-transform group"
-                onClick={() => window.open(getWhatsAppLink(), "_blank")}
-              >
-                Solicitar Orçamento
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </CardContent>
-          </Card>
+    <section className="border-t border-border bg-[hsl(var(--surface-d))]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+        <FadeInUpWrapper className="grid md:grid-cols-12 gap-8 items-end">
+          <div className="md:col-span-8">
+            <div className="eyebrow mb-6">Próximo passo</div>
+            <h2 className="font-display text-3xl md:text-5xl lg:text-6xl font-semibold tracking-[-0.035em] text-foreground leading-[1.02]">
+              Vamos conversar sobre o seu próximo projeto.
+            </h2>
+            <p className="mt-6 text-muted-foreground max-w-xl leading-relaxed">
+              Resposta em até 24 horas úteis. Diagnóstico técnico e proposta comercial sem custo.
+            </p>
+          </div>
+          <div className="md:col-span-4 flex md:justify-end gap-3">
+            <Button
+              variant="hero"
+              size="lg"
+              className="group"
+              onClick={() => window.open(getWhatsAppLink(), "_blank")}
+            >
+              Iniciar conversa
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </div>
         </FadeInUpWrapper>
       </div>
     </section>

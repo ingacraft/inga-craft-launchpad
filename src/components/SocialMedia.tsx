@@ -1,4 +1,5 @@
 import { Instagram, Facebook, Linkedin, Youtube } from "lucide-react";
+import FadeInUpWrapper from "@/components/FadeInUpWrapper";
 
 const TikTokIcon = ({ className }: { className?: string }) => (
   <svg
@@ -11,79 +12,43 @@ const TikTokIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
-const SocialMedia = () => {
-  const socialLinks = [
-    {
-      name: "Instagram",
-      icon: Instagram,
-      url: "https://www.instagram.com/ingacrafttec/",
-      colorClass: "instagram-gradient",
-      hoverClass: "hover:scale-110 hover:shadow-instagram"
-    },
-    {
-      name: "Facebook", 
-      icon: Facebook,
-      url: "https://www.facebook.com/profile.php?id=61572777965370",
-      colorClass: "facebook-blue",
-      hoverClass: "hover:scale-110 hover:shadow-facebook"
-    },
-    {
-      name: "LinkedIn",
-      icon: Linkedin, 
-      url: "https://www.linkedin.com/in/ing%C3%A1craft-tecnologia-01a870388/",
-      colorClass: "linkedin-blue",
-      hoverClass: "hover:scale-110 hover:shadow-linkedin"
-    },
-    {
-      name: "TikTok",
-      icon: TikTokIcon,
-      url: "https://www.tiktok.com/@ingacrafttech", 
-      colorClass: "tiktok-gradient",
-      hoverClass: "hover:scale-110 hover:shadow-tiktok"
-    },
-    {
-      name: "YouTube",
-      icon: Youtube,
-      url: "https://www.youtube.com/@ingacraft",
-      colorClass: "youtube-red", 
-      hoverClass: "hover:scale-110 hover:shadow-youtube"
-    }
-  ];
+const socialLinks = [
+  { name: "Instagram", icon: Instagram, url: "https://www.instagram.com/ingacrafttec/" },
+  { name: "Facebook",  icon: Facebook,  url: "https://www.facebook.com/profile.php?id=61572777965370" },
+  { name: "LinkedIn",  icon: Linkedin,  url: "https://www.linkedin.com/in/ing%C3%A1craft-tecnologia-01a870388/" },
+  { name: "TikTok",    icon: TikTokIcon, url: "https://www.tiktok.com/@ingacrafttech" },
+  { name: "YouTube",   icon: Youtube,   url: "https://www.youtube.com/@ingacraft" },
+];
 
+const SocialMedia = () => {
   return (
-    <section className="py-20 bg-gradient-card">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Siga-nos nas Redes Sociais
-          </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            Conecte-se conosco para ficar por dentro das novidades, projetos e conteúdos exclusivos
-          </p>
-        </div>
-        
-        <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
-          {socialLinks.map((social) => {
-            const IconComponent = social.icon;
-            return (
-              <a
-                key={social.name}
-                href={social.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`
-                  flex items-center justify-center w-16 h-16 md:w-20 md:h-20 
-                  rounded-full transition-smooth cursor-pointer
-                  ${social.colorClass} ${social.hoverClass}
-                  backdrop-blur-sm border border-white/10
-                `}
-                aria-label={`Seguir no ${social.name}`}
-              >
-                <IconComponent className="w-8 h-8 md:w-10 md:h-10 text-white" />
-              </a>
-            );
-          })}
-        </div>
+    <section className="border-t border-border bg-[hsl(var(--surface-c))]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+        <FadeInUpWrapper className="grid md:grid-cols-12 gap-8 items-center">
+          <div className="md:col-span-6">
+            <div className="eyebrow mb-4">Presença digital</div>
+            <h2 className="font-display text-2xl md:text-3xl font-semibold tracking-tight text-foreground">
+              Acompanhe nossos projetos e bastidores.
+            </h2>
+          </div>
+          <div className="md:col-span-6 flex md:justify-end flex-wrap gap-3">
+            {socialLinks.map((s) => {
+              const Icon = s.icon;
+              return (
+                <a
+                  key={s.name}
+                  href={s.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Seguir no ${s.name}`}
+                  className="w-11 h-11 rounded-md border border-border flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-primary hover:bg-secondary transition-colors"
+                >
+                  <Icon className="w-4 h-4" />
+                </a>
+              );
+            })}
+          </div>
+        </FadeInUpWrapper>
       </div>
     </section>
   );
