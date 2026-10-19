@@ -6,7 +6,7 @@ interface FadeInUpWrapperProps {
   delay?: number;
   duration?: number;
   className?: string;
-  as?: "div" | "section" | "article" | "header";
+  as?: "div" | "section" | "article" | "header" | "li";
 }
 
 /**
