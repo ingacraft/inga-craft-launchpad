@@ -26,7 +26,9 @@ export const siteConfig = {
     home: "/",
     webDevelopment: "/desenvolvimento-web",
     softwareDevelopment: "/desenvolvimento-software",
+    internalSystems: "/sistemas-internos",
     ecommerce: "/ecommerce",
+    automations: "/integracoes-e-automacoes",
   },
 
   // Âncoras da home usadas pelo header e pelo footer
@@ -50,9 +52,19 @@ export const siteConfig = {
       route: "/desenvolvimento-software",
     },
     {
+      title: "Sistemas internos",
+      description: "Painéis, dashboards e plataformas digitais",
+      route: "/sistemas-internos",
+    },
+    {
       title: "E-commerce / Loja Virtual",
       description: "Venda online 24/7 com loja profissional",
       route: "/ecommerce",
+    },
+    {
+      title: "Integrações e automações",
+      description: "Ferramentas conectadas e tarefas automatizadas",
+      route: "/integracoes-e-automacoes",
     },
   ],
 

@@ -1,9 +1,11 @@
-import { ArrowRight, Check, Clock } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Check, Clock } from "lucide-react";
+import { Link } from "react-router-dom";
 import FadeInUpWrapper from "@/components/FadeInUpWrapper";
 import CampaignSeal from "@/components/campaign/CampaignSeal";
 import { Button } from "@/components/ui/button";
 import { campaignConfig, isCampaignActive } from "@/config/campaign";
 import { openWhatsApp } from "@/config/site";
+import { cn } from "@/lib/utils";
 
 const formatDate = (iso: string) =>
   new Date(`${iso}T12:00:00`).toLocaleDateString("pt-BR", { day: "2-digit", month: "long" });
@@ -68,9 +70,19 @@ const BlackNovember = () => {
           </FadeInUpWrapper>
         </div>
 
-        <ul className="mt-16 grid gap-5 md:grid-cols-3">
+        {/* Grade assimétrica: 3 cards na primeira linha e 2 mais largos na segunda (desktop) */}
+        <ul className="mt-16 grid gap-5 md:grid-cols-2 lg:grid-cols-6">
           {offers.map((offer, i) => (
-            <FadeInUpWrapper as="li" key={offer.id} delay={i * 0.08} className="h-full">
+            <FadeInUpWrapper
+              as="li"
+              key={offer.id}
+              delay={(i % 3) * 0.08}
+              className={cn(
+                "h-full",
+                i < 3 ? "lg:col-span-2" : "lg:col-span-3",
+                i === offers.length - 1 && offers.length % 2 === 1 && "md:col-span-2",
+              )}
+            >
               <article className="group flex h-full flex-col rounded-sm border border-white/15 bg-ink-soft p-6 lg:p-7 transition-all duration-300 hover:-translate-y-1 hover:border-lime hover:shadow-[6px_6px_0_0_hsl(var(--coral))]">
                 <div className="flex items-center justify-between border-b border-border pb-4">
                   <span className="font-mono text-xs text-lime">Oferta 0{i + 1}</span>
@@ -122,6 +134,13 @@ const BlackNovember = () => {
                     Quero esta condição
                     <ArrowRight className="group-hover/btn:translate-x-1 transition-transform" />
                   </Button>
+                  <Link
+                    to={offer.route}
+                    className="mt-3 flex items-center justify-center gap-1.5 py-1 text-sm font-semibold text-muted-foreground underline-offset-4 hover:text-foreground hover:underline"
+                  >
+                    Ver detalhes da solução
+                    <ArrowUpRight aria-hidden className="h-4 w-4" />
+                  </Link>
                 </div>
               </article>
             </FadeInUpWrapper>

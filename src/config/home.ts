@@ -109,8 +109,8 @@ export const solutions: Solution[] = [
     description:
       "Painéis, dashboards e plataformas que centralizam informações e organizam a operação.",
     benefit: "Dados em tempo real para decisões mais seguras.",
-    route: siteConfig.routes.softwareDevelopment,
-    routeLabel: "Ver tipos de sistema",
+    route: siteConfig.routes.internalSystems,
+    routeLabel: "Ver sistemas internos",
     whatsappMessage: "Olá! Quero conversar sobre um sistema interno ou plataforma digital.",
   },
   {
@@ -131,8 +131,8 @@ export const solutions: Solution[] = [
     description:
       "Conectamos as ferramentas que sua empresa já usa e automatizamos tarefas repetitivas, inclusive com n8n.",
     benefit: "Menos trabalho manual e menos erros operacionais.",
-    route: siteConfig.routes.softwareDevelopment,
-    routeLabel: "Ver automação de processos",
+    route: siteConfig.routes.automations,
+    routeLabel: "Ver integrações e automações",
     whatsappMessage: "Olá! Quero conversar sobre integrações e automações para minha empresa.",
   },
 ];
@@ -180,7 +180,7 @@ export const buildableSolutions = [
     alt: "Exemplo ilustrativo de dashboard de sistema web",
     type: "Sistema web",
     description: "Painéis e dashboards para acompanhar a operação em tempo real.",
-    route: siteConfig.routes.softwareDevelopment,
+    route: siteConfig.routes.internalSystems,
   },
   {
     image: ecommerceModa,
@@ -201,7 +201,7 @@ export const buildableSolutions = [
     alt: "Exemplo ilustrativo de fluxo de automação",
     type: "Automação",
     description: "Fluxos que conectam sistemas e eliminam tarefas repetitivas.",
-    route: siteConfig.routes.softwareDevelopment,
+    route: siteConfig.routes.automations,
   },
 ];
 
@@ -254,7 +254,7 @@ export const faqItems: FaqItem[] = [
 
 export const campaignFaq: FaqItem = {
   q: "A promoção Black Friday é válida para quais soluções?",
-  a: "A campanha Black November contempla sites institucionais, landing pages e e-commerce ou soluções digitais sob medida. As condições são apresentadas durante a conversa no WhatsApp, de acordo com o escopo do projeto.",
+  a: "A campanha Black November contempla todas as soluções da IngaCraft: sites institucionais e landing pages, software sob medida, sistemas internos e plataformas digitais, e-commerce e integrações e automações. As condições são apresentadas durante a conversa no WhatsApp, de acordo com o escopo do projeto.",
 };
 
 export const finalCta = {

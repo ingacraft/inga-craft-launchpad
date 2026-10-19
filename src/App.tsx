@@ -9,6 +9,8 @@ import NotFound from "./pages/NotFound";
 import WebDevelopment from "./pages/WebDevelopment";
 import SoftwareDevelopment from "./pages/SoftwareDevelopment";
 import Ecommerce from "./pages/Ecommerce";
+import ServiceDetail from "./pages/ServiceDetail";
+import { internalSystemsPage, automationsPage } from "./config/servicePages";
 import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
@@ -27,6 +29,8 @@ const App = () => (
             <Route path="/desenvolvimento-web" element={<WebDevelopment />} />
             <Route path="/desenvolvimento-software" element={<SoftwareDevelopment />} />
             <Route path="/ecommerce" element={<Ecommerce />} />
+            <Route path={internalSystemsPage.route} element={<ServiceDetail key="sistemas-internos" content={internalSystemsPage} />} />
+            <Route path={automationsPage.route} element={<ServiceDetail key="automacoes" content={automationsPage} />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

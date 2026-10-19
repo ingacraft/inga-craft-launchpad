@@ -8,6 +8,8 @@
  * Preencha `discount` e `deadline` das ofertas SOMENTE com condições confirmadas.
  */
 
+import { siteConfig } from "@/config/site";
+
 export interface CampaignOffer {
   id: string;
   name: string;
@@ -15,6 +17,8 @@ export interface CampaignOffer {
   includes: string[];
   /** Prazo estimado — apenas quando houver informação confiável */
   deadline?: string;
+  /** Página da solução */
+  route: string;
   whatsappMessage: string;
 }
 
@@ -57,44 +61,75 @@ export const campaignConfig: CampaignConfig = {
     "Olá! Vi a campanha Black November da IngaCraft e quero saber das condições especiais.",
   offers: [
     {
-      id: "site-institucional",
-      name: "Site institucional",
-      audience: "Empresas que precisam apresentar a marca com credibilidade e organizar sua presença digital.",
+      id: "sites-landing-pages",
+      name: "Sites institucionais e landing pages",
+      audience: "Empresas que querem apresentar a marca com credibilidade, captar contatos ou divulgar uma oferta.",
       includes: [
-        "Múltiplas páginas organizadas",
-        "Portfólio de trabalhos e projetos",
-        "Apresentação da equipe e da história",
+        "Site com múltiplas páginas organizadas",
+        "Ou landing page focada em um único objetivo",
+        "Estrutura pensada para conversão",
         "Layout responsivo com SSL",
       ],
+      route: siteConfig.routes.webDevelopment,
       whatsappMessage:
-        "Olá! Quero saber das condições Black November para um site institucional.",
+        "Olá! Quero saber das condições Black November para um site institucional ou landing page.",
     },
     {
-      id: "landing-page",
-      name: "Landing page",
-      audience: "Negócios que querem captar contatos, divulgar uma oferta ou lançar um produto.",
+      id: "software-sob-medida",
+      name: "Desenvolvimento de software sob medida",
+      audience: "Empresas que precisam de um sistema construído a partir da forma como realmente trabalham.",
       includes: [
-        "Página única focada em um objetivo",
-        "Estrutura pensada para conversão",
-        "Ideal para lançamentos e promoções",
-        "Implementação rápida",
+        "Sistemas web, mobile ou desktop",
+        "Login e controle de acesso",
+        "Suporte a múltiplos usuários",
+        "Levantamento de requisitos e prototipagem",
       ],
+      route: siteConfig.routes.softwareDevelopment,
       whatsappMessage:
-        "Olá! Quero saber das condições Black November para uma landing page.",
+        "Olá! Quero saber das condições Black November para um software sob medida.",
     },
     {
-      id: "ecommerce-sob-medida",
-      name: "E-commerce ou solução sob medida",
-      audience: "Empresas que querem vender online ou digitalizar um processo interno.",
+      id: "sistemas-internos",
+      name: "Sistemas internos e plataformas digitais",
+      audience: "Equipes que querem centralizar informações e organizar a operação em um só lugar.",
       includes: [
-        "Loja virtual com catálogo, carrinho e checkout",
-        "Pagamentos, frete e gestão de estoque",
-        "Ou sistema web sob medida para sua operação",
-        "Integrações com as ferramentas que você já usa",
+        "Dashboard interativo",
+        "Relatórios personalizáveis",
+        "Notificações e alertas",
+        "Backup automático",
       ],
-      deadline: "E-commerce: entre 15 e 30 dias, conforme a complexidade",
+      route: siteConfig.routes.internalSystems,
       whatsappMessage:
-        "Olá! Quero saber das condições Black November para e-commerce ou uma solução sob medida.",
+        "Olá! Quero saber das condições Black November para um sistema interno ou plataforma digital.",
+    },
+    {
+      id: "ecommerce",
+      name: "E-commerce e lojas virtuais",
+      audience: "Negócios que querem vender online 24 horas por dia, 7 dias por semana.",
+      includes: [
+        "Catálogo, carrinho e checkout seguro",
+        "Múltiplas formas de pagamento",
+        "Cálculo de frete e gestão de estoque",
+        "Cupons e promoções",
+      ],
+      deadline: "entre 15 e 30 dias, conforme a complexidade",
+      route: siteConfig.routes.ecommerce,
+      whatsappMessage:
+        "Olá! Quero saber das condições Black November para uma loja virtual.",
+    },
+    {
+      id: "integracoes-automacoes",
+      name: "Integrações e automações digitais",
+      audience: "Empresas que querem conectar suas ferramentas e acabar com tarefas repetitivas.",
+      includes: [
+        "APIs e integrações entre sistemas",
+        "Fluxos automatizados com n8n",
+        "Integração com WhatsApp e e-mail",
+        "Relatórios automáticos",
+      ],
+      route: siteConfig.routes.automations,
+      whatsappMessage:
+        "Olá! Quero saber das condições Black November para integrações e automações.",
     },
   ],
 };
