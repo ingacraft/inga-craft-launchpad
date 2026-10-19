@@ -12,15 +12,15 @@ interface SectionShellProps {
 }
 
 /**
- * Stacks page sections with alternating white surfaces and a 40px
- * curved bottom, creating an immersive layered scroll experience.
+ * Alterna superfícies claras (a, b, c) e a superfície escura em tinta (d),
+ * criando o ritmo editorial entre seções.
  */
 const SectionShell = ({ children, surface = "a", flat = false, className, id }: SectionShellProps) => (
   <div
     id={id}
     data-surface={surface}
     data-flat={flat ? "true" : undefined}
-    className={cn("rhythm-section", className)}
+    className={cn("rhythm-section", surface === "d" && "theme-ink", className)}
   >
     {children}
   </div>

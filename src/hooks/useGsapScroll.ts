@@ -15,6 +15,9 @@ gsap.registerPlugin(ScrollTrigger);
  */
 export function useGsapScroll() {
   useEffect(() => {
+    // Respeita prefers-reduced-motion: o CSS já mostra o conteúdo sem animação
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
     const ctx = gsap.context(() => {
       // Rhythm sections: cinematic reveal as each stacked panel enters
       gsap.utils.toArray<HTMLElement>(".rhythm-section").forEach((el) => {
