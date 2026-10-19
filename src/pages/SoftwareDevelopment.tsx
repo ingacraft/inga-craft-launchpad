@@ -1,10 +1,8 @@
-import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import devStation from "@/assets/dev-station.jpg";
-import { getWhatsAppLink } from "@/config/site";
-import FadeInUpWrapper from "@/components/FadeInUpWrapper";
+import ServiceHero from "@/components/service/ServiceHero";
 import SoftDevStats from "@/components/softdev/SoftDevStats";
 import SoftDevBenefits from "@/components/softdev/SoftDevBenefits";
 import SoftDevSystemTypes from "@/components/softdev/SoftDevSystemTypes";
@@ -14,57 +12,42 @@ import SoftDevProcess from "@/components/softdev/SoftDevProcess";
 import SoftDevCTA from "@/components/softdev/SoftDevCTA";
 import SectionShell from "@/components/SectionShell";
 import { useGsapScroll } from "@/hooks/useGsapScroll";
+import { usePageMeta } from "@/hooks/usePageMeta";
 
 const SoftwareDevelopment = () => {
   useGsapScroll();
+  usePageMeta(
+    "Desenvolvimento de software sob medida | IngaCraft",
+    "Sistemas personalizados, escaláveis e seguros para empresas e projetos que precisam de tecnologia real.",
+  );
   return (
-    <div className="min-h-screen bg-background pt-20">
+    <div className="min-h-screen bg-background">
       <Navigation />
-      
-      {/* Hero Section */}
-      <section className="relative h-[85vh] flex items-center justify-center px-6 overflow-hidden rounded-b-[40px]">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat md:bg-fixed opacity-70"
-          style={{ backgroundImage: `url(${devStation})` }}
+      <main>
+        <ServiceHero
+          eyebrow="Software sob medida"
+          title={
+            <>
+              Desenvolvimento de software <span className="text-coral">sob medida.</span>
+            </>
+          }
+          description="Sistemas personalizados, escaláveis e seguros para empresas e projetos que precisam de tecnologia real."
+          image={devStation}
+          imageAlt="Estação de trabalho de desenvolvimento de software"
+          primaryLabel="Solicitar orçamento"
+          whatsappMessage="Olá! Gostaria de solicitar um orçamento para desenvolvimento de software."
+          secondaryLabel="Ver funcionalidades"
+          secondaryTarget="stats"
         />
-        <div className="absolute inset-0 gradient-hero opacity-60" />
-        <FadeInUpWrapper className="relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              <span className="gradient-text-primary">Desenvolvimento de Software Sob Medida</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-8">
-              Sistemas personalizados, escaláveis e seguros para empresas e projetos que precisam de tecnologia real.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                size="lg" 
-                className="gradient-primary text-primary-foreground font-semibold px-8 py-3"
-                onClick={() => window.open(getWhatsAppLink("Olá! Gostaria de solicitar um orçamento para desenvolvimento de software."), "_blank")}
-              >
-                Solicitar Orçamento
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline"
-                className="font-semibold px-8 py-3"
-                onClick={() => document.getElementById('stats')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                Ver Funcionalidades
-              </Button>
-            </div>
-          </div>
-        </FadeInUpWrapper>
-      </section>
 
-      <SectionShell surface="b" id="stats"><SoftDevStats /></SectionShell>
-      <SectionShell surface="a"><SoftDevBenefits /></SectionShell>
-      <SectionShell surface="c"><SoftDevSystemTypes /></SectionShell>
-      <SectionShell surface="a"><SoftDevFeatures /></SectionShell>
-      <SectionShell surface="d"><SoftDevUseCases /></SectionShell>
-      <SectionShell surface="a"><SoftDevProcess /></SectionShell>
-      <SectionShell surface="b" flat><SoftDevCTA /></SectionShell>
-
+        <SectionShell surface="b" id="stats"><SoftDevStats /></SectionShell>
+        <SectionShell surface="a"><SoftDevBenefits /></SectionShell>
+        <SectionShell surface="c"><SoftDevSystemTypes /></SectionShell>
+        <SectionShell surface="a"><SoftDevFeatures /></SectionShell>
+        <SectionShell surface="d"><SoftDevUseCases /></SectionShell>
+        <SectionShell surface="a"><SoftDevProcess /></SectionShell>
+        <SoftDevCTA />
+      </main>
       <Footer />
       <WhatsAppButton />
     </div>

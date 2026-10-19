@@ -15,24 +15,31 @@ import EcommerceFAQ from "@/components/ecommerce/EcommerceFAQ";
 import EcommerceCTA from "@/components/ecommerce/EcommerceCTA";
 import SectionShell from "@/components/SectionShell";
 import { useGsapScroll } from "@/hooks/useGsapScroll";
+import { usePageMeta } from "@/hooks/usePageMeta";
 
 const Ecommerce = () => {
   useGsapScroll();
+  usePageMeta(
+    "E-commerce e lojas virtuais | IngaCraft",
+    "Lojas virtuais profissionais e seguras, com checkout, pagamentos, frete e gestão de estoque para vender 24 horas por dia.",
+  );
   return (
-    <div className="min-h-screen bg-background pt-20">
+    <div className="min-h-screen bg-background">
       <Navigation />
-      <EcommerceHero />
-      <SectionShell surface="b"><EcommerceStats /></SectionShell>
-      <SectionShell surface="a"><EcommerceBenefits /></SectionShell>
-      <SectionShell surface="c"><EcommerceStoreTypes /></SectionShell>
-      <SectionShell surface="a"><EcommerceFeatures /></SectionShell>
-      <SectionShell surface="d"><EcommercePayments /></SectionShell>
-      <SectionShell surface="a"><EcommerceIntegrations /></SectionShell>
-      <SectionShell surface="b"><EcommerceProcess /></SectionShell>
-      <SectionShell surface="a"><EcommerceAdvantages /></SectionShell>
-      <SectionShell surface="c"><EcommerceAudience /></SectionShell>
-      <SectionShell surface="a"><EcommerceFAQ /></SectionShell>
-      <SectionShell surface="d" flat><EcommerceCTA /></SectionShell>
+      <main>
+        <EcommerceHero />
+        <SectionShell surface="b"><EcommerceStats /></SectionShell>
+        <SectionShell surface="a"><EcommerceBenefits /></SectionShell>
+        <SectionShell surface="c"><EcommerceStoreTypes /></SectionShell>
+        <SectionShell surface="a"><EcommerceFeatures /></SectionShell>
+        <SectionShell surface="d"><EcommercePayments /></SectionShell>
+        <SectionShell surface="a"><EcommerceIntegrations /></SectionShell>
+        <SectionShell surface="b"><EcommerceProcess /></SectionShell>
+        <SectionShell surface="a"><EcommerceAdvantages /></SectionShell>
+        <SectionShell surface="c"><EcommerceAudience /></SectionShell>
+        <SectionShell surface="a"><EcommerceFAQ /></SectionShell>
+        <EcommerceCTA />
+      </main>
       <Footer />
       <WhatsAppButton />
     </div>

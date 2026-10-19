@@ -210,6 +210,7 @@
   /* ---- Utilitários legados (mantidos, reajustados à nova identidade) ---- */
   .gradient-primary { background: hsl(var(--coral)); color: hsl(var(--ink)); }
   .gradient-secondary { background: hsl(var(--ink)); color: hsl(var(--paper)); }
+  .gradient-secondary svg { color: hsl(var(--lime)); }
   .gradient-hero { background: var(--gradient-hero); }
   .gradient-card { background: hsl(var(--card)); }
   .glass-card {
