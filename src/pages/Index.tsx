@@ -9,8 +9,7 @@ import Projects from "@/components/home/Projects";
 import AboutSection from "@/components/home/AboutSection";
 import Faq from "@/components/home/Faq";
 import FinalCta from "@/components/home/FinalCta";
-import BlackNovember from "@/components/campaign/BlackNovember";
-import CampaignStrip from "@/components/campaign/CampaignStrip";
+import BlackNovemberLanding from "@/components/campaign/BlackNovemberLanding";
 import { siteConfig } from "@/config/site";
 import { usePageMeta } from "@/hooks/usePageMeta";
 
@@ -27,14 +26,13 @@ const Index = () => {
       </a>
       <Navigation />
       <main id="conteudo">
+        {/* Campanha temporária no topo — desative em src/config/campaign.ts */}
+        <BlackNovemberLanding />
         <HomeHero />
         <Positioning />
         <Solutions />
         <Process />
         <Projects />
-        {/* Campanha temporária — desative em src/config/campaign.ts */}
-        <CampaignStrip className="bg-[linear-gradient(hsl(var(--surface-b))_50%,hsl(var(--ink))_50%)]" />
-        <BlackNovember />
         <AboutSection />
         <Faq />
         <FinalCta />
