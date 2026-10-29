@@ -1,7 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import HomeHero from "@/components/home/HomeHero";
 import Positioning from "@/components/home/Positioning";
 import Solutions from "@/components/home/Solutions";
 import Process from "@/components/home/Process";
@@ -30,7 +29,7 @@ const Index = () => {
         {/* Campanha temporária em primeiro — desative em src/config/campaign.ts */}
         <BlackNovember />
         <CampaignStrip className="bg-[linear-gradient(hsl(var(--ink))_50%,hsl(var(--background))_50%)]" />
-        <HomeHero />
+        {/* Hero institucional fora do ar temporariamente — para voltar, reinclua <HomeHero /> aqui */}
         <Positioning />
         <Solutions />
         <Process />

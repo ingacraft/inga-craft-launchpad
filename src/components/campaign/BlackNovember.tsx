@@ -45,40 +45,15 @@ const BlackNovember = () => {
               </span>
             </div>
 
-            <h2
+            <h1
               id="black-november-title"
               className="font-display text-[2.6rem] leading-[0.92] sm:text-6xl lg:text-7xl xl:text-[5.5rem] font-black tracking-[-0.05em] text-balance"
             >
               {title.lead} <span className="text-coral">{title.highlight}</span>
               {title.tail}
-            </h2>
+            </h1>
 
             <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground">{description}</p>
-
-            {/* CTA principal da campanha: leva à página de captação de contatos */}
-            <a
-              href={contactUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Clique aqui e fale com a gente (abre em nova aba)"
-              className="group relative mt-10 inline-flex w-full items-center gap-5 rounded-sm border-2 border-lime bg-lime py-4 pl-6 pr-4 text-ink shadow-[6px_6px_0_0_hsl(var(--coral))] transition-all duration-300 hover:-translate-y-1 hover:shadow-[10px_10px_0_0_hsl(var(--coral))] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-paper focus-visible:ring-offset-4 focus-visible:ring-offset-ink sm:w-auto"
-            >
-              <span aria-hidden className="relative flex h-3 w-3 shrink-0">
-                <span className="absolute inset-0 rounded-full bg-coral motion-safe:animate-ping" />
-                <span className="relative h-3 w-3 rounded-full bg-coral" />
-              </span>
-              <span className="flex flex-col text-left">
-                <span className="font-display text-xl sm:text-2xl font-black leading-tight tracking-[-0.03em]">
-                  Clique aqui e fale com a gente
-                </span>
-                <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.18em] text-ink/70">
-                  Garanta sua condição Black November
-                </span>
-              </span>
-              <span className="ml-auto flex h-11 w-11 shrink-0 items-center justify-center rounded-sm bg-ink text-lime transition-transform duration-300 group-hover:rotate-45">
-                <ArrowUpRight aria-hidden className="h-5 w-5" />
-              </span>
-            </a>
           </FadeInUpWrapper>
 
           <FadeInUpWrapper delay={0.1} className="lg:col-span-4 flex flex-col items-start gap-6 lg:items-end">
@@ -92,6 +67,31 @@ const BlackNovember = () => {
                 Válido até {formatDate(validUntil)}
               </p>
             )}
+
+            {/* CTA principal da campanha: leva à página de captação de contatos */}
+            <a
+              href={contactUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Clique aqui e fale com a gente (abre em nova aba)"
+              className="group relative mt-2 inline-flex w-full items-center gap-5 rounded-sm border-2 border-lime bg-lime py-4 pl-6 pr-4 text-ink shadow-[6px_6px_0_0_hsl(var(--coral))] transition-all duration-300 hover:-translate-y-1 hover:shadow-[10px_10px_0_0_hsl(var(--coral))] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-paper focus-visible:ring-offset-4 focus-visible:ring-offset-ink sm:w-auto"
+            >
+              <span aria-hidden className="relative flex h-3 w-3 shrink-0">
+                <span className="absolute inset-0 rounded-full bg-coral motion-safe:animate-ping" />
+                <span className="relative h-3 w-3 rounded-full bg-coral" />
+              </span>
+              <span className="flex flex-col text-left">
+                <span className="font-display text-xl sm:text-2xl lg:text-xl xl:text-2xl font-black leading-tight tracking-[-0.03em]">
+                  Clique aqui e fale com a gente
+                </span>
+                <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.18em] text-ink/70">
+                  Garanta sua condição Black November
+                </span>
+              </span>
+              <span className="ml-auto flex h-11 w-11 shrink-0 items-center justify-center rounded-sm bg-ink text-lime transition-transform duration-300 group-hover:rotate-45">
+                <ArrowUpRight aria-hidden className="h-5 w-5" />
+              </span>
+            </a>
           </FadeInUpWrapper>
         </div>
 
