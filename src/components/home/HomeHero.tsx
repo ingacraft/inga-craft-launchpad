@@ -5,16 +5,23 @@ import { Button } from "@/components/ui/button";
 import { heroContent } from "@/config/home";
 import { siteConfig, openWhatsApp } from "@/config/site";
 import BriefingForm from "@/components/home/BriefingForm";
+import { isCampaignActive } from "@/config/campaign";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
+// Revela ao entrar na tela: com a campanha ativa, este hero fica abaixo da dobra
 const fadeUp = (delay: number) => ({
   initial: { opacity: 0, y: 28 },
-  animate: { opacity: 1, y: 0 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true, amount: 0.2 },
   transition: { duration: 0.8, delay, ease },
 });
 
-const HomeHero = () => (
+const HomeHero = () => {
+  // O h1 da página passa a ser o da campanha enquanto ela estiver ativa
+  const Title = isCampaignActive() ? motion.h2 : motion.h1;
+
+  return (
   <section aria-labelledby="hero-title" className="relative overflow-hidden border-b border-border">
     <div aria-hidden className="pointer-events-none absolute inset-0 bg-grid [mask-image:linear-gradient(to_bottom,black,transparent_85%)]" />
 
@@ -26,7 +33,7 @@ const HomeHero = () => (
             {heroContent.eyebrow}
           </motion.p>
 
-          <motion.h1
+          <Title
             id="hero-title"
             {...fadeUp(0.08)}
             className="font-display font-black text-[2.9rem] leading-[0.92] sm:text-7xl xl:text-[6.25rem] tracking-[-0.05em] text-balance"
@@ -36,7 +43,7 @@ const HomeHero = () => (
               {heroContent.title.highlight}
               <span aria-hidden className="absolute left-0 right-[0.3em] -bottom-1 h-2 sm:h-3 bg-lime -z-10" />
             </span>
-          </motion.h1>
+          </Title>
 
           <motion.p {...fadeUp(0.16)} className="mt-8 max-w-xl text-lg sm:text-xl leading-relaxed text-muted-foreground">
             {heroContent.description}
@@ -80,7 +87,8 @@ const HomeHero = () => (
         {/* Composição visual */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.9, delay: 0.2, ease }}
           className="relative lg:col-span-6 xl:col-span-5"
         >
@@ -132,6 +140,7 @@ const HomeHero = () => (
       </div>
     </div>
   </section>
-);
+  );
+};
 
 export default HomeHero;
