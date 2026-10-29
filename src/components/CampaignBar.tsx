@@ -8,7 +8,7 @@ const CampaignBar = () => {
 
   return (
     <Link
-      to={{ pathname: "/", hash: "#ofertas" }}
+      to={{ pathname: "/", hash: "#black-november" }}
       className="block bg-ink text-lime border-b border-white/10 hover:bg-ink-soft transition-colors"
       aria-label={`${campaignConfig.campaignName}: ver ofertas especiais`}
     >

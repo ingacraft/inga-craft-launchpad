@@ -253,8 +253,8 @@ export const faqItems: FaqItem[] = [
 ];
 
 export const campaignFaq: FaqItem = {
-  q: "A promoção Black November é válida para quais soluções?",
-  a: "Site institucional, landing page e e-commerce saem com 50% OFF e valores fechados, para contratações feitas até 30 de novembro de 2026. Para software sob medida, sistemas internos e integrações e automações, as condições são apresentadas na conversa no WhatsApp, de acordo com o escopo do projeto.",
+  q: "A promoção Black Friday é válida para quais soluções?",
+  a: "A campanha Black November contempla todas as soluções da IngaCraft: sites institucionais e landing pages, software sob medida, sistemas internos e plataformas digitais, e-commerce e integrações e automações. As condições são apresentadas durante a conversa no WhatsApp, de acordo com o escopo do projeto.",
 };
 
 export const finalCta = {
