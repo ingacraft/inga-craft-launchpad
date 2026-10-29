@@ -35,6 +35,8 @@ export interface CampaignConfig {
   title: { lead: string; highlight: string; tail: string };
   description: string;
   whatsappMessage: string;
+  /** Página externa de captação de contatos da campanha */
+  contactUrl: string;
   offers: CampaignOffer[];
 }
 
@@ -59,6 +61,7 @@ export const campaignConfig: CampaignConfig = {
     "Durante a Black Friday da IngaCraft, empresas podem contratar soluções digitais com condições especiais e começar o próximo ciclo com uma presença digital mais forte.",
   whatsappMessage:
     "Olá! Vi a campanha Black November da IngaCraft e quero saber das condições especiais.",
+  contactUrl: "https://captador-de-leads-ingacraft.vercel.app/",
   offers: [
     {
       id: "sites-landing-pages",

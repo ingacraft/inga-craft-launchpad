@@ -27,14 +27,14 @@ const Index = () => {
       </a>
       <Navigation />
       <main id="conteudo">
+        {/* Campanha temporária em primeiro — desative em src/config/campaign.ts */}
+        <BlackNovember />
+        <CampaignStrip className="bg-[linear-gradient(hsl(var(--ink))_50%,hsl(var(--background))_50%)]" />
         <HomeHero />
         <Positioning />
         <Solutions />
         <Process />
         <Projects />
-        {/* Campanha temporária — desative em src/config/campaign.ts */}
-        <CampaignStrip className="bg-[linear-gradient(hsl(var(--surface-b))_50%,hsl(var(--ink))_50%)]" />
-        <BlackNovember />
         <AboutSection />
         <Faq />
         <FinalCta />
